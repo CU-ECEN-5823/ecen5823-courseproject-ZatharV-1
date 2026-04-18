@@ -29,8 +29,8 @@
 #ifndef SRC_GPIO_H_
 #define SRC_GPIO_H_
 
-
-
+#define VCNL4040_INT_port gpioPortA
+#define VCNL4040_INT_pin (3)
 
 // Function prototypes
 void gpioInit();

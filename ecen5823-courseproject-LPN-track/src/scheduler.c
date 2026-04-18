@@ -22,6 +22,10 @@
 #define INCLUDE_LOG_DEBUG 1
 #include "src/log.h"
 
+volatile uint64_t lap_time_ms = 0;
+volatile uint64_t prev_car_pass_time_ms = 0;
+volatile uint64_t curr_car_pass_time_ms = 0;
+
 EVENTS_t APP_event;
 
 /**
@@ -33,6 +37,7 @@ void schedulerSetEvent_LE_UF()
   CORE_ENTER_CRITICAL();        // Enter critical section
   // Accessing LE_event
   APP_event |= LETIMER0_UF;  // Set LETIMER0 UF event flag
+  LETIMER0_current_time += LETIMER_PERIOD_MS;
   CORE_EXIT_CRITICAL();         // Exit critical section
 }
 
@@ -61,6 +66,26 @@ void schedulerSetEvent_I2C_Transfer_Complete()
 }
 
 /**
+ * @brief Sets event for VCNL4040_INT
+ */
+void schedulerSetEvent_VCNL4040_INT()
+{
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();        // Enter critical section
+  // Accessing LE_event
+  curr_car_pass_time_ms = get_LETIMER_ms();
+  if(!prev_car_pass_time_ms){
+      prev_car_pass_time_ms = curr_car_pass_time_ms;
+  }
+  else {
+      lap_time_ms = curr_car_pass_time_ms - prev_car_pass_time_ms;
+      prev_car_pass_time_ms = curr_car_pass_time_ms;
+  }
+  APP_event |= VCNL4040_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
+  CORE_EXIT_CRITICAL();         // Exit critical section
+}
+
+/**
  * @brief   Reads the events and returns the next event to run
  * @return  Next Event
  */
@@ -83,6 +108,11 @@ EVENTS_t getNextEvent()
       event = LETIMER0_COMP1;
       APP_event &= ~LETIMER0_COMP1;
   }
+  else if(APP_event & VCNL4040_INT)
+  {
+      event = VCNL4040_INT;
+      APP_event &= ~VCNL4040_INT;
+  }
   else if(APP_event & I2C_TRANSFER_COMPLETE)
   {
       event = I2C_TRANSFER_COMPLETE;
@@ -97,6 +127,15 @@ EVENTS_t getNextEvent()
 
   return event;
 }
+
+/*---------VCNL4040 Code---------*/
+
+
+void lap_time_logic()
+{
+  LOG_INFO("LAP Time recorded: %lu.%03lus\r", (uint32_t)(lap_time_ms/1000), (uint32_t)(lap_time_ms%1000));
+}
+
 
 
 /*---------SI7021 Code---------*/

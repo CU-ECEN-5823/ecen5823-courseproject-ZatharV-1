@@ -2,10 +2,11 @@
  * irq.h
  *
  *  Created on: 28-Jan-2026
- *      Author: Atharv More
+ *      Author: Atharv More, Shruti Kalyankar
  *
  *  @file       irq.h
  *  @author     Atharv More, atharv.more@colorado.edu
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      IRQ functions header file
  */

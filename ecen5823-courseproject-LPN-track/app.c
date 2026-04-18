@@ -200,15 +200,15 @@ SL_WEAK void app_init(void)
  * comment out this function. Wait loops are a bad idea in general.
  * We'll discuss how to do this a better way in the next assignment.
  *****************************************************************************/
-static void delayApprox(int delay)
-{
-  volatile int i;
-
-  for (i = 0; i < delay; ) {
-      i=i+1;
-  }
-
-} // delayApprox()
+//static void delayApprox(int delay)
+//{
+//  volatile int i;
+//
+//  for (i = 0; i < delay; ) {
+//      i=i+1;
+//  }
+//
+//} // delayApprox()
 
 
 
@@ -226,20 +226,24 @@ SL_WEAK void app_process_action(void)
   //         later assignments.
 
 
-//  EVENTS_t event = getNextEvent();
-//
-//  switch(event)
-//  {
-//    case LETIMER0_UF:
-//      si7021_init();
-//      break;
-//    case LETIMER0_COMP1:
-//    case I2C_TRANSFER_COMPLETE:
+  EVENTS_t event = getNextEvent();
+
+  switch(event)
+  {
+    case LETIMER0_UF:
+      break;
+    case VCNL4040_INT:
+      VCNL4040_clear_interrupt();
+      lap_time_logic();
+//      LOG_INFO("VCNL_INT_triggerred\r");
+      break;
+    case LETIMER0_COMP1:
+    case I2C_TRANSFER_COMPLETE:
 //      si7021_I2C();
-//      break;
-//    default:
-//      break;
-//  }
+      break;
+    default:
+      break;
+  }
 
 
 //  while(1)
@@ -261,7 +265,21 @@ SL_WEAK void app_process_action(void)
 //      }
 //  }
 
-  VCNL4040_read_proximity();
+//  VCNL4040_read_proximity();
+//  VCNL4040_clear_interrupt();
+
+//  static int led_status = 0;
+//  if(led_status)
+//  {
+//    gpioLed0SetOff();
+//    led_status = 0;
+//  }
+//  else
+//  {
+//      led_status = 1;
+//      gpioLed0SetOn();
+//  }
+
 
 //  if(read_int_pin())
 //  {
@@ -271,7 +289,7 @@ SL_WEAK void app_process_action(void)
 //  {
 //      LOG_INFO("Pin Clear\r");
 //  }
-  delayApprox(1000);
+//  delayApprox(1000);
 
 
 } // app_process_action()

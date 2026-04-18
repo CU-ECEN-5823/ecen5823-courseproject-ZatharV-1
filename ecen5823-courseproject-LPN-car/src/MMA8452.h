@@ -2,7 +2,7 @@
  * MMA8452.h
  *
  *  Created on: 16-Apr-2026
- *      Author: athar
+ *      Author: Atharv More, Shruti Kalyankar
  */
 
 #ifndef SRC_MMA8452_H_
@@ -16,7 +16,7 @@ typedef struct {
 
 mma_data_t MMA8452Q_read_val();
 void MMA8452Q_init();
-void clear_interrupt();
+void MMA8452_clear_interrupt();
 
 
 #endif /* SRC_MMA8452_H_ */

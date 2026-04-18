@@ -74,7 +74,7 @@
 //           to call one of the LOG_***() functions from.
 
 // Include logging specifically for this .c file
-#define INCLUDE_LOG_DEBUG 0
+#define INCLUDE_LOG_DEBUG 1
 #include "src/log.h"
 
 
@@ -186,7 +186,7 @@ SL_WEAK void app_init(void)
 #endif
 
   I2C0_init();
-  MMA8452Q_init();
+//  MMA8452Q_init();
 
 
 } // app_init()
@@ -226,33 +226,36 @@ SL_WEAK void app_process_action(void)
   //         later assignments.
 
 
-//  EVENTS_t event = getNextEvent();
-//
-//  switch(event)
-//  {
-//    case LETIMER0_UF:
-//      si7021_init();
-//      break;
-//    case LETIMER0_COMP1:
-//    case I2C_TRANSFER_COMPLETE:
+  EVENTS_t event = getNextEvent();
+
+  switch(event)
+  {
+    case LETIMER0_UF:
+      break;
+    case MMA8452_INT:
+      MMA8452_clear_interrupt();
+      LOG_INFO("Car Crash detected\r");
+      break;
+    case LETIMER0_COMP1:
+    case I2C_TRANSFER_COMPLETE:
 //      si7021_I2C();
-//      break;
-//    default:
-//      break;
-//  }
+      break;
+    default:
+      break;
+  }
 
 //  MMA8452Q_read_val();
 
-  if(read_int_pin())
-  {
-//      LOG_INFO("Pin set\r");
-  }
-  else
-  {
-      LOG_INFO("Pin Clear\r");
-      clear_interrupt();
-  }
-  delayApprox(100);
+//  if(read_int_pin())
+//  {
+////      LOG_INFO("Pin set\r");
+//  }
+//  else
+//  {
+//      LOG_INFO("Pin Clear\r");
+//      MMA8452_clear_interrupt();
+//  }
+//  delayApprox(100);
 
 } // app_process_action()
 

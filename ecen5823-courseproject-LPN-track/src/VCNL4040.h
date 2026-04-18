@@ -2,7 +2,7 @@
  * VCNL4040.h
  *
  *  Created on: 15-Apr-2026
- *      Author: athar
+ *      Author: Atharv More, Shruti Kalyankar
  */
 
 #ifndef SRC_VCNL4040_H_

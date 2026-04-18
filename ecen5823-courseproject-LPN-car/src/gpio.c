@@ -47,8 +47,8 @@
 #define SI7021_port   gpioPortD
 #define SI7021_EN_pin (15)
 
-#define VCNL4040_INT_port gpioPortA
-#define VCNL4040_INT_pin (3)
+//#define MMA8452_INT_port gpioPortA
+//#define MMA8452_INT_pin (3)
 
 
 // Set GPIO drive strengths and modes of operation
@@ -66,7 +66,12 @@ void gpioInit()
 	GPIO_PinModeSet(LED_port, LED1_pin, gpioModePushPull, false);
 	GPIO_PinModeSet(LED_port, LED1_pin, gpioModePushPull, false);
 
-	GPIO_PinModeSet(VCNL4040_INT_port, VCNL4040_INT_pin, gpioModeInputPull, true);
+	GPIO_PinModeSet(MMA8452_INT_port, MMA8452_INT_pin, gpioModeInputPull, true);
+	GPIO_ExtIntConfig(MMA8452_INT_port, MMA8452_INT_pin, MMA8452_INT_pin, false, true, true);
+
+	// Enable NVIC interrupt
+  NVIC_ClearPendingIRQ(GPIO_ODD_IRQn);
+  NVIC_EnableIRQ(GPIO_ODD_IRQn);
 
 } // gpioInit()
 
@@ -106,8 +111,7 @@ void disable_SI7021()
 
 int read_int_pin()
 {
-  return GPIO_PinInGet(VCNL4040_INT_port, VCNL4040_INT_pin);
-//  return GPIO_PinInGet(gpioPortF, 6);
+  return GPIO_PinInGet(MMA8452_INT_port, MMA8452_INT_pin);
 }
 
 

@@ -2,10 +2,11 @@
  * scheduler.c
  *
  *  Created on: 04-Feb-2026
- *      Author: Atharv More
+ *      Author: Atharv More, Shruti Kalyankar
  *
- *  @file       irq.c
+ *  @file       scheduler.c
  *  @author     Atharv More, atharv.more@colorado.edu
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the Event schedulers this file
  */
@@ -83,6 +84,11 @@ EVENTS_t getNextEvent()
       event = LETIMER0_COMP1;
       APP_event &= ~LETIMER0_COMP1;
   }
+  else if(APP_event & MMA8452_INT)
+  {
+      event = MMA8452_INT;
+      APP_event &= ~MMA8452_INT;
+  }
   else if(APP_event & I2C_TRANSFER_COMPLETE)
   {
       event = I2C_TRANSFER_COMPLETE;
@@ -96,6 +102,20 @@ EVENTS_t getNextEvent()
   CORE_EXIT_CRITICAL();         // Exit critical section
 
   return event;
+}
+
+
+/*---------MMA8452 Code---------*/
+
+/**
+ * @brief Sets event for VCNL4040_INT
+ */
+void schedulerSetEvent_MMA8452_INT()
+{
+  CORE_DECLARE_IRQ_STATE;
+  CORE_ENTER_CRITICAL();        // Enter critical section
+  APP_event |= MMA8452_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
+  CORE_EXIT_CRITICAL();         // Exit critical section
 }
 
 

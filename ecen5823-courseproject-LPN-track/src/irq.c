@@ -2,10 +2,11 @@
  * irq.c
  *
  *  Created on: 28-Jan-2026
- *      Author: Atharv More
+ *      Author: Atharv More, Shruti Kalyankar
  *
  *  @file       irq.c
  *  @author     Atharv More, atharv.more@colorado.edu
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the IRQs of interrupts in this file
  */
@@ -16,6 +17,7 @@
 #include "scheduler.h"
 #include "timers.h"
 #include "em_i2c.h"
+#include "em_gpio.h"
 
 #define INCLUDE_LOG_DEBUG 1
 #include "src/log.h"
@@ -73,4 +75,20 @@ void I2C0_IRQHandler(void)
   {
       LOG_ERROR("I2C_Transfer: I2C failed: Error Code: %d\r", I2C_Transfer_status);
   }
+}
+
+
+/**
+ * @brief GPIO ODD pin handler
+ */
+void GPIO_ODD_IRQHandler(void)
+{
+  uint32_t interrupt_flags = GPIO_IntGet();
+  GPIO_IntClear(interrupt_flags); // Clear Flag
+
+  if(interrupt_flags & (1 << VCNL4040_INT_pin))
+  {
+      schedulerSetEvent_VCNL4040_INT();
+  }
+
 }

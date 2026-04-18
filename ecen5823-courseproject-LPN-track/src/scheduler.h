@@ -18,7 +18,8 @@ typedef enum
   EVT_NONE,
   LETIMER0_UF = 1,
   LETIMER0_COMP1 = 2,
-  I2C_TRANSFER_COMPLETE = 4
+  I2C_TRANSFER_COMPLETE = 4,
+  VCNL4040_INT = 8
 }EVENTS_t;
 
 extern EVENTS_t APP_event;
@@ -27,6 +28,9 @@ void schedulerSetEvent_LE_UF();
 EVENTS_t getNextEvent();
 void schedulerSetEvent_I2C_Transfer_Complete();
 void schedulerSetEvent_LE_COMP1();
+void schedulerSetEvent_VCNL4040_INT();
+
+void lap_time_logic();
 
 void si7021_init();
 void si7021_I2C();

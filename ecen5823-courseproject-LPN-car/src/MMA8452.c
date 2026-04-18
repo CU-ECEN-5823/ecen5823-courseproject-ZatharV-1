@@ -2,7 +2,7 @@
  * MMA8452.c
  *
  *  Created on: 14-Apr-2026
- *      Author: Atharv More
+ *      Author: Atharv More, Shruti Kalyankar
  */
 
 
@@ -103,9 +103,9 @@ mma_data_t MMA8452Q_read_val()
 }
 
 
-void clear_interrupt()
+void MMA8452_clear_interrupt()
 {
   uint8_t src_reg_val;
-  I2C0_read_reg(MMA8452Q_ADDR, 0x1E, &src_reg_val, 1);
+  I2C0_read_reg(MMA8452Q_ADDR, TRANSIENT_SRC, &src_reg_val, 1);
   LOG_INFO("Interrupt Cleared. Source Register: 0x%02X\r\n", src_reg_val);
 }

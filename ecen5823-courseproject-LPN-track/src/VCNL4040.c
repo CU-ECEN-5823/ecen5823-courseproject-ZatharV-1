@@ -2,7 +2,8 @@
  * VCNL4040.c
  *
  *  Created on: 14-Apr-2026
- *      Author: Atharv More
+ *      Author: Atharv More, Shruti Kalyankar
+ *
  */
 
 #include "VCNL4040.h"
@@ -18,7 +19,8 @@
 #include "src/log.h"
 
 #define VCNL4040_I2C_ADDR 0x60
-#define PS_THDH_THRESHOLD 100
+#define PS_THDH_THRESHOLD 50
+#define PS_THDL_THRESHOLD 35
 
 /**
  * @brief Initializes sensor and configures interrupt pin.
@@ -33,18 +35,28 @@ void VCNL4040_init()
   app_assert_status_f(I2C0_read_reg(VCNL4040_I2C_ADDR, VCNL4040_ID, device_id, 2),
                       "Failed to Communicate with sensor VCNL4040");
 
-  app_assert_status_f((device_id[0] != VCNL4040_DEVICE_ID_LSB), "VCNL4040 ID mismatch, read ID = 0x%x\r", device_id[0]);
+  app_assert_status_f((device_id[0] != VCNL4040_DEVICE_ID_LSB),
+                      "VCNL4040 ID mismatch, read ID = 0x%x\r", device_id[0]);
 
-  uint8_t thd_payload[3] = {
+  uint8_t thdh_payload[3] = {
       VCNL4040_PS_THDH,
       (uint8_t)(PS_THDH_THRESHOLD & 0xFF),
       (uint8_t)(PS_THDH_THRESHOLD >> 8)
   };
-  I2C0_write(VCNL4040_I2C_ADDR, thd_payload, 3);
+  I2C0_write(VCNL4040_I2C_ADDR, thdh_payload, 3);
+
+  uint8_t thdl_payload[3] = {
+      VCNL4040_PS_THDL,
+      (uint8_t)(PS_THDL_THRESHOLD & 0xFF),
+      (uint8_t)(PS_THDL_THRESHOLD >> 8)
+    };
+    I2C0_write(VCNL4040_I2C_ADDR, thdl_payload, 3);
+
+
 
   uint8_t ps_conf[3] = {
       VCNL4040_PS_CONF1,
-      VCNL4040_PS_IT_8T | VCNL4040_PS_PERS_1 | VCNL4040_PS_DUTY_160,
+      VCNL4040_PS_IT_2T | VCNL4040_PS_PERS_1 | VCNL4040_PS_DUTY_160,
       VCNL4040_PS_HD_16_BIT | VCNL4040_PS_INT_CLOSE
   };
   I2C0_write(VCNL4040_I2C_ADDR, ps_conf, 3);
@@ -56,6 +68,7 @@ void VCNL4040_init()
   };
   I2C0_write(VCNL4040_I2C_ADDR, ps_conf3_MS, 3);
 
+  VCNL4040_clear_interrupt();
 
   LOG_INFO("Initialized\r");
 }
@@ -64,16 +77,16 @@ void VCNL4040_init()
 /**
  * @brief   Clears the interrupt
  */
-void VCNL4040_clear_interrupt(void)
+void VCNL4040_clear_interrupt()
 {
-    uint8_t flags[2];
-
-    // Reading the interrupt flag registers, clears the interrupt
-    if(I2C0_read_reg(VCNL4040_I2C_ADDR, VCNL4040_INT_FLAG, flags, 2))
+  uint8_t int_flags[2];
+  if (I2C0_read_reg(VCNL4040_I2C_ADDR, VCNL4040_INT_FLAG, int_flags, 2) == 0) {
+//      LOG_INFO("VCNL4040 Int Cleared: 0x%02X 0x%02X\r\n", int_flags[1], int_flags[0]);
+  }
+  else
     {
-        LOG_INFO("I2C read interrupt flags failed!");
+      LOG_ERROR("VCNL clear interrupt \r");
     }
-
 }
 
 
@@ -101,6 +114,13 @@ uint16_t VCNL4040_read_proximity(void) {
     uint16_t pr = (uint16_t)((data[1] << 8) | data[0]);
     LOG_INFO("PROXIMITY: %d\r", pr);
 
-    LOG_INFO("GPIO_level: %d\r\n", read_int_pin());
+    int pin_level = read_int_pin();
+
+    LOG_INFO("GPIO_level: %d\r\n", pin_level);
+
+    if(pin_level == 0)
+    {
+        VCNL4040_clear_interrupt();
+    }
     return pr;
 }

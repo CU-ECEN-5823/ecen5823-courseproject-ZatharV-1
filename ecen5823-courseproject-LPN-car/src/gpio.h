@@ -29,8 +29,8 @@
 #ifndef SRC_GPIO_H_
 #define SRC_GPIO_H_
 
-
-
+#define MMA8452_INT_port gpioPortA
+#define MMA8452_INT_pin (3)
 
 // Function prototypes
 void gpioInit();

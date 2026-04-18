@@ -26,6 +26,8 @@
 #define INCLUDE_LOG_DEBUG 1
 #include "log.h"
 
+volatile uint64_t LETIMER0_current_time = 0;
+
 /**
  * @brief   Initializes LETIMER0 with predefined LED on time and period
  */
@@ -160,4 +162,13 @@ void test_timerWaitUs_irq()
   uint32_t test_time[9] = {0, 1E1, 1E2, 1E3, 1E4, 1E5, 1E6, 1E7, 1E8};
 
   (void)test_time;
+}
+
+uint64_t get_LETIMER_ms()
+{
+#if LOWEST_ENERGY_MODE == 3
+  return LETIMER0_current_time + LETIMER0_PERIOD_COUNT - LETIMER_CounterGet(LETIMER0);
+#else
+  return LETIMER0_current_time + ((LETIMER0_PERIOD_COUNT * 1000) / LETIMER0_CLK_FREQ) - LETIMER_CounterGet(LETIMER0);
+#endif
 }
