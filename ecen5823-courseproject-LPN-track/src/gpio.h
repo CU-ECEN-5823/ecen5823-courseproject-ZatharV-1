@@ -42,8 +42,10 @@ void gpioLed1SetOff();
 void disable_SI7021();
 void enable_SI7021();
 
-int read_int_pin();
+void gpioSensorEnSetOn();
 
+int read_int_pin();
+void gpioSetDisplayExtcomin(bool value);
 
 
 #endif /* SRC_GPIO_H_ */

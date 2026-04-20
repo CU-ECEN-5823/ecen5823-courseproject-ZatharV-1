@@ -50,6 +50,10 @@
 #define VCNL4040_INT_port gpioPortA
 #define VCNL4040_INT_pin (3)
 
+#define LCD_port   gpioPortD
+#define LCD_EN_pin (15)
+#define LCD_EXTCOMIN_pin (13)
+
 
 // Set GPIO drive strengths and modes of operation
 void gpioInit()
@@ -106,7 +110,12 @@ void enable_SI7021()
 
 void disable_SI7021()
 {
-  GPIO_PinOutClear(SI7021_port, SI7021_EN_pin);
+//  GPIO_PinOutClear(SI7021_port, SI7021_EN_pin);
+}
+
+void gpioSensorEnSetOn()
+{
+  GPIO_PinOutSet(LCD_port, LCD_EN_pin);
 }
 
 int read_int_pin()
@@ -114,4 +123,15 @@ int read_int_pin()
   return GPIO_PinInGet(VCNL4040_INT_port, VCNL4040_INT_pin);
 }
 
+void gpioSetDisplayExtcomin(bool value)
+{
+  if(value)
+  {
+      GPIO_PinOutSet(LCD_port, LCD_EXTCOMIN_pin);
+  }
+  else
+  {
+      GPIO_PinOutClear(LCD_port, LCD_EXTCOMIN_pin);
+  }
+}
 
