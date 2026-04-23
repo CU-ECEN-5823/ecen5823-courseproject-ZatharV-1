@@ -2,13 +2,12 @@
  * irq.h
  *
  *  Created on: 28-Jan-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *      Author: Atharv More
  *
- *  @file       irq.c
+ *  @file       irq.h
  *  @author     Atharv More, atharv.more@colorado.edu
- *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
- *  @brief      Add all the IRQs of interrupts in this file
+ *  @brief      IRQ functions header file
  */
 
 #ifndef SRC_IRQ_H_

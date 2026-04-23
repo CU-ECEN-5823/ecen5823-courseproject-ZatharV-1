@@ -1,14 +1,13 @@
 /*
- * scheduler.c
+ * scheduler.h
  *
  *  Created on: 04-Feb-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *      Author: Atharv More
  *
- *  @file       scheduler.c
+ *  @file       irq.h
  *  @author     Atharv More, atharv.more@colorado.edu
- *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
- *  @brief      Add all the Event schedulers this file
+ *  @brief      Event schedulers header file
  */
 
 #ifndef SRC_SCHEDULER_H_

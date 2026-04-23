@@ -2,11 +2,10 @@
  * scheduler.c
  *
  *  Created on: 04-Feb-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *      Author: Atharv More
  *
- *  @file       scheduler.c
+ *  @file       irq.c
  *  @author     Atharv More, atharv.more@colorado.edu
- *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the Event schedulers this file
  */
@@ -21,7 +20,7 @@
 #define SI7021_PWRUP_TIME_us        80000
 
 #define INCLUDE_LOG_DEBUG 1
-#include "src/log.h"
+#include "log.h"
 
 EVENTS_t APP_event;
 

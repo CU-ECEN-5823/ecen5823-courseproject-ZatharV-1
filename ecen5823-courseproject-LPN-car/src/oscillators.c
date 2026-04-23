@@ -15,7 +15,7 @@
  */
 
 #include "oscillators.h"
-#include "app.h"
+//#include "app.h"
 #include "em_cmu.h"
 
 

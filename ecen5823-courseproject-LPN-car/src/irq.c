@@ -2,11 +2,10 @@
  * irq.c
  *
  *  Created on: 28-Jan-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *      Author: Atharv More
  *
  *  @file       irq.c
  *  @author     Atharv More, atharv.more@colorado.edu
- *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the IRQs of interrupts in this file
  */
@@ -20,7 +19,7 @@
 #include "em_gpio.h"
 
 #define INCLUDE_LOG_DEBUG 1
-#include "src/log.h"
+#include "log.h"
 
 static uint32_t LETIMER0_UF_count;
 

@@ -49,6 +49,8 @@
 #include "src/timers.h"
 #include "src/scheduler.h"
 #include "src/irq.h"
+#include "src/mesh.h"
+#include "sl_btmesh_api.h"
 
 
 // *************************************************
@@ -231,6 +233,10 @@ SL_WEAK void app_process_action(void)
   switch(event)
   {
     case LETIMER0_UF:
+      if(mesh_lpn_is_active()){
+          mma_data_t data = MMA8452Q_read_val();
+          mesh_publish_car_health(data.x, data.y, data.z, false);
+      }
       break;
     case MMA8452_INT:
       MMA8452_clear_interrupt();
@@ -277,17 +283,21 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
 {
 
   // Just a trick to hide a compiler warning about unused input parameter evt.
-  (void) evt;
 
-  // For A5 onward:
-  // Some events require responses from our application code,
-  // and don’t necessarily advance our state machines.
-  // For A5 uncomment the next 2 function calls
-  // handle_ble_event(evt); // put this code in ble.c/.h
+  switch (SL_BT_MSG_ID(evt->header))
+  {
+      case sl_bt_evt_system_boot_id:
+          // Initialize mesh node after BT stack boots
+          sl_btmesh_node_init();
+          break;
 
-  // sequence through states driven by events
-  // state_machine(evt);    // put this code in scheduler.c/.h
-
-
+      default:
+          break;
+  }
 } // sl_bt_on_event()
+
+void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
+{
+  handle_mesh_event(evt);
+}
 

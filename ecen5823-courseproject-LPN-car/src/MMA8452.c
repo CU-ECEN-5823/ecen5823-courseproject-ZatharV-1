@@ -2,18 +2,18 @@
  * MMA8452.c
  *
  *  Created on: 14-Apr-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *      Author: Atharv More
  */
 
 
 #include "MMA8452.h"
 #include "MMA8452_reg.h"
 
-#include "src/i2c.h"
+#include "i2c.h"
 #include "app_assert.h"
 
 #define INCLUDE_LOG_DEBUG 0
-#include "src/log.h"
+#include "log.h"
 
 #define MMA8452_DEVICE_ID 0x2A
 

@@ -14,7 +14,7 @@
 #define SRC_OSCILLATORS_H_
 
 #include "stdint.h"
-#include "app.h"
+//#include "app.h"
 
 uint32_t LETIMER_osc_init();
 
