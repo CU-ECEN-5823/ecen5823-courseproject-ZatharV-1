@@ -54,6 +54,7 @@ SL_WEAK void sl_bt_on_event(sl_bt_msg_t* evt)
 
 void sl_bt_process_event(sl_bt_msg_t *evt)
 {
+  sl_btmesh_bgapi_listener(evt);
   sl_bt_on_event(evt);
 }
 

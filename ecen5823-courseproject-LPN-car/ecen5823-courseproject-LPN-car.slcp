@@ -33,6 +33,8 @@ component:
 - {id: bluetooth_stack}
 - {id: bootloader_interface}
 - {id: brd4104a}
+- {id: btmesh_stack}
+- {id: btmesh_stack_test}
 - {id: cmsis_dsp}
 - {id: component_catalog}
 - {id: dmd_memlcd}

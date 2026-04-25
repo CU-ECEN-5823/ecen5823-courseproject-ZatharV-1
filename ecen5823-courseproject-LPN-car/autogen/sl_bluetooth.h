@@ -5,7 +5,9 @@
 #include "sl_power_manager.h"
 #include "sl_bluetooth_config.h"
 #include "sl_bt_api.h"
-#define SL_BT_COMPONENT_ADVERTISERS 0
+#include "sl_btmesh.h"
+
+#define SL_BT_COMPONENT_ADVERTISERS (0 + SL_BTMESH_COMPONENT_ADVERTISERS)
 
 #define SL_BT_COMPONENT_CONNECTIONS 0
 
