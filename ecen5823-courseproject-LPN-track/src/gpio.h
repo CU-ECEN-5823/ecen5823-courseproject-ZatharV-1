@@ -32,6 +32,10 @@
 #define VCNL4040_INT_port gpioPortA
 #define VCNL4040_INT_pin (3)
 
+#define switch_port   gpioPortF
+#define switch0_pin   6
+#define switch1_pin   7
+
 // Function prototypes
 void gpioInit();
 void gpioLed0SetOn();
@@ -46,6 +50,9 @@ void gpioSensorEnSetOn();
 
 int read_int_pin();
 void gpioSetDisplayExtcomin(bool value);
+
+bool is_Switch0_pressed();
+bool is_Switch1_pressed();
 
 
 #endif /* SRC_GPIO_H_ */

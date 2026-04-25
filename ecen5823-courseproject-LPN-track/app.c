@@ -50,6 +50,7 @@
 #include "src/scheduler.h"
 #include "src/irq.h"
 #include "src/VCNL4040.h"
+#include "src/BLE_mesh.h"
 
 
 // *************************************************
@@ -187,7 +188,8 @@ SL_WEAK void app_init(void)
 
   I2C0_init();
 
-  VCNL4040_init();
+  BTMESH_init();
+//  VCNL4040_init();
 
 } // app_init()
 
@@ -312,13 +314,13 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
 {
 
   // Just a trick to hide a compiler warning about unused input parameter evt.
-  (void) evt;
+//  (void) evt;
 
   // For A5 onward:
   // Some events require responses from our application code,
   // and don’t necessarily advance our state machines.
   // For A5 uncomment the next 2 function calls
-  // handle_ble_event(evt); // put this code in ble.c/.h
+   handle_ble_event(evt); // put this code in ble.c/.h
 
   // sequence through states driven by events
   // state_machine(evt);    // put this code in scheduler.c/.h

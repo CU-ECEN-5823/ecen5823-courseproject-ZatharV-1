@@ -14,13 +14,17 @@
 #include "sl_board_control.h"
 #include "sl_sleeptimer.h"
 #include "app_log.h"
+#include "app_timer.h"
 #include "sl_bluetooth.h"
+#include "sl_btmesh_wstk_lcd.h"
 #include "sl_debug_swo.h"
 #include "sl_i2cspm_instances.h"
 #include "sl_iostream_stdlib_config.h"
 #include "sl_iostream_init_usart_instances.h"
 #include "sl_mbedtls.h"
 #include "sl_mpu.h"
+#include "nvm3_default.h"
+#include "sl_btmesh.h"
 #include "sl_iostream_init_instances.h"
 #include "sl_power_manager.h"
 #include "sl_cos.h"
@@ -38,6 +42,7 @@ void sl_platform_init(void)
   sl_device_init_emu();
   sl_board_init();
   bootloader_init();
+  nvm3_initDefault();
   sl_power_manager_init();
 }
 
@@ -63,12 +68,14 @@ void sl_stack_init(void)
   sl_rail_util_pa_init();
   sl_rail_util_pti_init();
   sl_bt_init();
+  sl_btmesh_init();
   sl_rail_util_power_manager_init();
 }
 
 void sl_internal_app_init(void)
 {
   app_log_init();
+  sl_btmesh_LCD_init();
 }
 
 void sl_platform_process_action(void)
@@ -77,11 +84,13 @@ void sl_platform_process_action(void)
 
 void sl_service_process_action(void)
 {
+  sli_app_timer_step();
 }
 
 void sl_stack_process_action(void)
 {
   sl_bt_step();
+  sl_btmesh_step();
 }
 
 void sl_internal_app_process_action(void)

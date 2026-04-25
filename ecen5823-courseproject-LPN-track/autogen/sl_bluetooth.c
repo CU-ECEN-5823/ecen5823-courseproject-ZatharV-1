@@ -5,6 +5,7 @@
 #include "sl_assert.h"
 #include "sl_bt_stack_init.h"
 #include "sl_component_catalog.h"
+#include "sl_btmesh_event_log.h"
 #if !defined(SL_CATALOG_KERNEL_PRESENT)
 /**
  * Override @ref PendSV_Handler for the Link Layer task when Bluetooth runs
@@ -54,6 +55,8 @@ SL_WEAK void sl_bt_on_event(sl_bt_msg_t* evt)
 
 void sl_bt_process_event(sl_bt_msg_t *evt)
 {
+  sl_btmesh_log_bt_connection_events(evt);
+  sl_btmesh_bgapi_listener(evt);
   sl_bt_on_event(evt);
 }
 

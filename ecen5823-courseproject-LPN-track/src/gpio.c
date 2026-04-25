@@ -70,6 +70,10 @@ void gpioInit()
 	GPIO_PinModeSet(LED_port, LED1_pin, gpioModePushPull, false);
 	GPIO_PinModeSet(LED_port, LED1_pin, gpioModePushPull, false);
 
+  // Set GPIO to input interrupt
+  GPIO_PinModeSet(switch_port, switch0_pin, gpioModeInputPullFilter, true);
+  GPIO_PinModeSet(switch_port, switch1_pin, gpioModeInputPullFilter, true);
+
 	GPIO_PinModeSet(VCNL4040_INT_port, VCNL4040_INT_pin, gpioModeInputPull, true);
 	GPIO_ExtIntConfig(VCNL4040_INT_port, VCNL4040_INT_pin, VCNL4040_INT_pin, false, true, true);
 
@@ -133,5 +137,16 @@ void gpioSetDisplayExtcomin(bool value)
   {
       GPIO_PinOutClear(LCD_port, LCD_EXTCOMIN_pin);
   }
+}
+
+
+bool is_Switch0_pressed()
+{
+  return (GPIO_PinInGet(switch_port, switch0_pin) == 0);  // active low switch
+}
+
+bool is_Switch1_pressed()
+{
+    return (GPIO_PinInGet(switch_port, switch1_pin) == 0); // active low
 }
 
