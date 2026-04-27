@@ -10,11 +10,11 @@
 #include "sl_bt_api.h"
 #include "app_assert.h"
 #include "lcd.h"
-#include "log.h"
 #include "MMA8452.h"
 #include "i2c.h"
 
 #define INCLUDE_LOG_DEBUG 1
+#include "src/log.h"
 
 // LPN retry parameters
 #define LPN_FRIEND_TIMEOUT_MS     6000

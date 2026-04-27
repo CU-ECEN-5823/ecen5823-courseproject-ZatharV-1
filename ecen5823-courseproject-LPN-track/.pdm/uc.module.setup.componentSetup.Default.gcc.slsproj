@@ -79,7 +79,6 @@
           <file name="sl_assert.c" uri="studio:/sdk/platform/common/src/sl_assert.c"/>
           <file name="sl_string.c" uri="studio:/sdk/platform/common/src/sl_string.c"/>
           <file name="sl_slist.c" uri="studio:/sdk/platform/common/src/sl_slist.c"/>
-          <file name="sl_status.c" uri="studio:/sdk/platform/common/src/sl_status.c"/>
         </folder>
         <folder name="toolchain">
           <folder name="src">
@@ -107,6 +106,26 @@
           <file name="btl_reset_info.h" uri="studio:/sdk/platform/bootloader/api/btl_reset_info.h"/>
         </folder>
       </folder>
+      <folder name="driver">
+        <folder name="button">
+          <folder name="src">
+            <file name="sl_button.c" uri="studio:/sdk/platform/driver/button/src/sl_button.c"/>
+            <file name="sl_simple_button.c" uri="studio:/sdk/platform/driver/button/src/sl_simple_button.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_button.h" uri="studio:/sdk/platform/driver/button/inc/sl_button.h"/>
+            <file name="sl_simple_button.h" uri="studio:/sdk/platform/driver/button/inc/sl_simple_button.h"/>
+          </folder>
+        </folder>
+        <folder name="debug">
+          <folder name="src">
+            <file name="sl_debug_swo.c" uri="studio:/sdk/platform/driver/debug/src/sl_debug_swo.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_debug_swo.h" uri="studio:/sdk/platform/driver/debug/inc/sl_debug_swo.h"/>
+          </folder>
+        </folder>
+      </folder>
       <folder name="CMSIS">
         <folder name="Core">
           <folder name="Include">
@@ -116,24 +135,6 @@
             <file name="cmsis_gcc.h" uri="studio:/sdk/platform/CMSIS/Core/Include/cmsis_gcc.h"/>
             <file name="core_cm4.h" uri="studio:/sdk/platform/CMSIS/Core/Include/core_cm4.h"/>
             <file name="mpu_armv7.h" uri="studio:/sdk/platform/CMSIS/Core/Include/mpu_armv7.h"/>
-          </folder>
-        </folder>
-      </folder>
-      <folder name="driver">
-        <folder name="debug">
-          <folder name="src">
-            <file name="sl_debug_swo.c" uri="studio:/sdk/platform/driver/debug/src/sl_debug_swo.c"/>
-          </folder>
-          <folder name="inc">
-            <file name="sl_debug_swo.h" uri="studio:/sdk/platform/driver/debug/inc/sl_debug_swo.h"/>
-          </folder>
-        </folder>
-        <folder name="i2cspm">
-          <folder name="src">
-            <file name="sl_i2cspm.c" uri="studio:/sdk/platform/driver/i2cspm/src/sl_i2cspm.c"/>
-          </folder>
-          <folder name="inc">
-            <file name="sl_i2cspm.h" uri="studio:/sdk/platform/driver/i2cspm/inc/sl_i2cspm.h"/>
           </folder>
         </folder>
       </folder>
@@ -237,6 +238,14 @@
         <folder name="common">
           <folder name="inc">
             <file name="ecode.h" uri="studio:/sdk/platform/emdrv/common/inc/ecode.h"/>
+          </folder>
+        </folder>
+        <folder name="gpiointerrupt">
+          <folder name="src">
+            <file name="gpiointerrupt.c" uri="studio:/sdk/platform/emdrv/gpiointerrupt/src/gpiointerrupt.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="gpiointerrupt.h" uri="studio:/sdk/platform/emdrv/gpiointerrupt/inc/gpiointerrupt.h"/>
           </folder>
         </folder>
         <folder name="nvm3">
@@ -491,6 +500,10 @@
           <folder name="app_assert">
             <file name="app_assert.h" uri="studio:/sdk/app/common/util/app_assert/app_assert.h"/>
             <file name="sl_app_assert.h" uri="studio:/sdk/app/common/util/app_assert/sl_app_assert.h"/>
+          </folder>
+          <folder name="app_button_press">
+            <file name="app_button_press.c" uri="studio:/sdk/app/common/util/app_button_press/app_button_press.c"/>
+            <file name="app_button_press.h" uri="studio:/sdk/app/common/util/app_button_press/app_button_press.h"/>
           </folder>
           <folder name="app_log">
             <file name="app_log.c" uri="studio:/sdk/app/common/util/app_log/app_log.c"/>
@@ -865,31 +878,21 @@
       </folder>
     </folder>
   </folder>
-  <file name="main.c" uri="studio:/project/main.c"/>
-  <file name="app.c" uri="studio:/project/app.c"/>
-  <file name="app_properties.c" uri="studio:/project/app_properties.c"/>
-  <file name="app.h" uri="studio:/project/app.h"/>
-  <file name="create_bl_files.bat" uri="studio:/project/create_bl_files.bat"/>
-  <file name="create_bl_files.sh" uri="studio:/project/create_bl_files.sh"/>
-  <file name="readme_img0.png" uri="studio:/project/readme_img0.png"/>
-  <file name="readme_img1.png" uri="studio:/project/readme_img1.png"/>
-  <file name="readme_img2.png" uri="studio:/project/readme_img2.png"/>
-  <file name="readme_img3.png" uri="studio:/project/readme_img3.png"/>
-  <file name="readme_img4.png" uri="studio:/project/readme_img4.png"/>
-  <file name="readme.html" uri="file:/C:/Users/Applications/Simplicity%20Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.2/app/bluetooth/documentation/example/soc_empty/readme.html"/>
+  <file name="app.c" uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client/app.c"/>
+  <file name="app_properties.c" uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client/app_properties.c"/>
+  <file name="main.c" uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client/main.c"/>
+  <file name="app.h" uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client/app.h"/>
+  <file name="create_bl_files.bat" uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client/create_bl_files.bat"/>
+  <file name="create_bl_files.sh" uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client/create_bl_files.sh"/>
   <excludedPath>create_bl_files.bat</excludedPath>
   <excludedPath>create_bl_files.sh</excludedPath>
-  <excludedPath>readme_img0.png</excludedPath>
-  <excludedPath>readme_img1.png</excludedPath>
-  <excludedPath>readme_img2.png</excludedPath>
-  <excludedPath>readme_img3.png</excludedPath>
-  <excludedPath>readme_img4.png</excludedPath>
   <excludedPath>gecko_sdk_4.3.2/protocol/bluetooth/api/sl_bt.xapi</excludedPath>
   <excludedPath>gecko_sdk_4.3.2/protocol/bluetooth/api/sl_btmesh.xapi</excludedPath>
-  <includePath uri="studio:/project/"/>
+  <includePath uri="file:/C:/Users/athar/SimplicityStudio/v5_workspace/btmesh_vendor_client"/>
   <includePath uri="studio:/sdk/platform/Device/SiliconLabs/EFR32BG13P/Include"/>
   <includePath uri="studio:/sdk/app/common/util/app_assert"/>
   <includePath uri="studio:/sdk/app/btmesh/common/app_btmesh_util"/>
+  <includePath uri="studio:/sdk/app/common/util/app_button_press"/>
   <includePath uri="studio:/sdk/app/common/util/app_log"/>
   <includePath uri="studio:/sdk/app/common/util/app_timer"/>
   <includePath uri="studio:/sdk/platform/common/inc"/>
@@ -901,6 +904,7 @@
   <includePath uri="studio:/sdk/app/btmesh/common/btmesh_event_log"/>
   <includePath uri="studio:/sdk/app/btmesh/common/btmesh_lpn"/>
   <includePath uri="studio:/sdk/app/btmesh/common/btmesh_wstk_lcd"/>
+  <includePath uri="studio:/sdk/platform/driver/button/inc"/>
   <includePath uri="studio:/sdk/platform/CMSIS/Core/Include"/>
   <includePath uri="studio:/sdk/util/third_party/cmsis_dsp/DSP/Include"/>
   <includePath uri="studio:/sdk/util/third_party/cmsis_dsp/DSP/Include/dsp"/>
@@ -913,7 +917,7 @@
   <includePath uri="studio:/sdk/platform/emdrv/common/inc"/>
   <includePath uri="studio:/sdk/platform/emlib/inc"/>
   <includePath uri="studio:/sdk/platform/middleware/glib/glib"/>
-  <includePath uri="studio:/sdk/platform/driver/i2cspm/inc"/>
+  <includePath uri="studio:/sdk/platform/emdrv/gpiointerrupt/inc"/>
   <includePath uri="studio:/sdk/platform/service/iostream/inc"/>
   <includePath uri="studio:/sdk/hardware/driver/memlcd/src/ls013b7dh03"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/config"/>

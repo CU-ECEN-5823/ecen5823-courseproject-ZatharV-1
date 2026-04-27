@@ -35,8 +35,8 @@ extern "C" {
 
 const uint8_t __mesh_dcd[] = {
   U16TOA(0x02ff), /* Company ID */
-  U16TOA(0xffff), /* Product ID */
-  U16TOA(0x0502), /* Version Number */
+  U16TOA(0x0001), /* Product ID */
+  U16TOA(0x2110), /* Version Number */
   U16TOA(SL_BTMESH_CONFIG_RPL_SIZE), /* Capacity of Replay Protection List */
   U16TOA(SL_BTMESH_FEATURE_BITMASK), /* Features Bitmask */
   /* Main */

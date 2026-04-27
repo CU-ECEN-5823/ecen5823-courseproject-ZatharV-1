@@ -190,6 +190,8 @@ SL_WEAK void app_init(void)
   I2C0_init();
 //  MMA8452Q_init();
 
+  car_lpn_init();
+
 
 } // app_init()
 

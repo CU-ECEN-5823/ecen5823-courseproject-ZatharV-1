@@ -1,8 +1,8 @@
 {
   "composition_data": {
     "cid": "0x02ff",
-    "pid": "0xffff",
-    "vid": "0x0502",
+    "pid": "0x0001",
+    "vid": "0x02110",
     "elements": [
       {
         "name": "Main",
