@@ -53,7 +53,6 @@
 #include "sl_btmesh_api.h"
 #include "sl_bt_api.h"
 #include "sl_simple_timer.h"
-#include "sl_sensor_rht.h"
 
 #include "em_cmu.h"
 #include "em_gpio.h"
@@ -104,33 +103,30 @@
 #define BUTTON_PRESS_BUTTON_0                       0
 #define BUTTON_PRESS_BUTTON_1                       1
 
-static uint8_t temperature[TEMP_DATA_LENGTH] = {0, 0, 0, 0}; // DOS: temperature measurement that the server maintains
-static unit_t unit[UNIT_DATA_LENGTH] = {
-  celsius
-};
+//static uint8_t temperature[TEMP_DATA_LENGTH] = {0, 0, 0, 0}; // DOS: temperature measurement that the server maintains
+//static unit_t unit[UNIT_DATA_LENGTH] = {
+//  celsius
+//};
 // Check section 4.2.2.2 of Mesh Profile Specification 1.0 for format
-static uint8_t update_interval[UPDATE_INTERVAL_LENGTH] = {
-  0
-};
+//static uint8_t update_interval[UPDATE_INTERVAL_LENGTH] = {
+//  0
+//};
+//
+//static uint32_t periodic_timer_ms = 0;
 
-static uint32_t periodic_timer_ms = 0;
-
-static my_model_t my_model = { // DOS: declare storage for saving important model values
+static my_model_t my_model = {
   .elem_index = PRIMARY_ELEMENT,
   .vendor_id = MY_VENDOR_ID,
   .model_id = MY_MODEL_SERVER_ID,
   .publish = 1,
   .opcodes_len = NUMBER_OF_OPCODES,
-  .opcodes_data[0] = temperature_get,
-  .opcodes_data[1] = temperature_status,
-  .opcodes_data[2] = unit_get,
-  .opcodes_data[3] = unit_set,
-  .opcodes_data[4] = unit_set_unack,
-  .opcodes_data[5] = unit_status,
-  .opcodes_data[6] = update_interval_get,
-  .opcodes_data[7] = update_interval_set,
-  .opcodes_data[8] = update_interval_set_unack,
-  .opcodes_data[9] = update_interval_status
+  .opcodes_data[0] = lap_count_get,
+  .opcodes_data[1] = lap_count_status,
+  .opcodes_data[2] = lap_time_get,
+  .opcodes_data[3] = lap_time_status,
+  .opcodes_data[4] = lap_data_update,
+  .opcodes_data[5] = car_health_status,
+  .opcodes_data[6] = crash_alert,
 };
 
 
@@ -152,8 +148,6 @@ uint8_t          myAddressType;
 
 
 static void factory_reset(void);
-static void read_temperature(void);
-static void setup_periodcal_update(uint8_t interval);
 static void delay_reset_ms(uint32_t ms);
 
 
@@ -188,30 +182,13 @@ uint32_t get_logger_timestamp() {
 SL_WEAK void app_init(void)
 {
   app_log("=================\r\n");
-  app_log("Server/Friend\r\n");
+  app_log("Friend/Dashboard\r\n");
   app_button_press_enable();
 
-  // DOS: For LCD
-  GPIO_PinModeSet(Si7021SENSOR_EN_port, Si7021SENSOR_EN_pin, gpioModePushPull, false);
-  GPIO_PinOutSet(Si7021SENSOR_EN_port, Si7021SENSOR_EN_pin);
+  sl_btmesh_LCD_write("Dashboard", LCD_ROW_1);
 
-  char   device_type[LCD_ROW_LEN];
-  memset(device_type, 0, LCD_ROW_LEN);
-  // handle % format, no printf() capability in sl_btmesh_LCD_write(), by
-  // using snprintf() prior to calling sl_btmesh_LCD_write() as snprintf() can
-  // handle all of the % format conversion characters
-  snprintf(device_type, LCD_ROW_LEN, "Server/Friend");
-  sl_btmesh_LCD_write(device_type, LCD_ROW_1);
-
-  // DOS:
-  // Run a periodic timer for logging timestamp
   static sl_simple_timer_t logging_timer;
-  sl_simple_timer_start(&logging_timer,
-                        500,   // every 500 ms
-                        logging_timer_cb, // a callback that increments a timestamp for logging
-                        NULL,  // pointer to callback data
-                        true); // is periodic
-
+  sl_simple_timer_start(&logging_timer, 500, logging_timer_cb, NULL, true);
 }
 
 /**************************************************************************//**
@@ -289,59 +266,7 @@ void sl_bt_on_event(struct sl_bt_msg *evt)
                    );
           sl_btmesh_LCD_write(myAddressStr, LCD_ROW_4);
       }
-
       break;
-
-    // -------------------------------
-    // Handle Button Presses
-    // DOS: See app_button_press_cb() below.
-    case sl_bt_evt_system_external_signal_id: {
-
-      uint8_t opcode = 0, length = 0, *data = NULL;
-
-      // check if external signal triggered by button 0 press
-      if(evt->data.evt_system_external_signal.extsignals & EX_B0_PRESS) {
-          read_temperature(); // DOS: This reads the temp & publishes to the Client, see publish below
-          opcode = temperature_status;
-          length = TEMP_DATA_LENGTH;
-          data = temperature;
-          app_log("B0 Pressed.\r\n");
-      }
-
-      // check if external signal triggered by button 1 press
-      if(evt->data.evt_system_external_signal.extsignals & EX_B1_PRESS) {
-          opcode = unit_status;
-          length = UNIT_DATA_LENGTH;
-          data = unit;
-          app_log("B1 Pressed.\r\n");
-      }
-
-      // DOS: Set the message data to publish, i.e. queue the data for publishing.
-      //      Publish temperature or publish units to the Client.
-      sc = sl_btmesh_vendor_model_set_publication(my_model.elem_index,
-                                                  my_model.vendor_id,
-                                                  my_model.model_id,
-                                                  opcode,
-                                                  1, // DOS: the final payload "chunk"
-                                                  length,
-                                                  data);
-      if(sc != SL_STATUS_OK) {
-          app_log("Set publication error: 0x%04lX\r\n", sc);
-      } else {
-          app_log("Set publication done. Publishing...\r\n");
-          // DOS: Publish the queued message to the group address.
-          sc = sl_btmesh_vendor_model_publish(my_model.elem_index,
-                                              my_model.vendor_id,
-                                              my_model.model_id);
-          if(sc != SL_STATUS_OK) {
-              app_log("Publish error: 0x%04lX\r\n", sc);
-          } else {
-              app_log("Publish done push.\r\n");
-          }
-      }
-      break;
-    }
-
     // -------------------------------
     // Default event handler.
     default:
@@ -513,190 +438,65 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
     // -------------------------------
     // Handle vendor model messages
     case sl_btmesh_evt_vendor_model_receive_id: {
+      sl_btmesh_evt_vendor_model_receive_t *rx_evt =
+          (sl_btmesh_evt_vendor_model_receive_t *)&evt->data;
 
-      // DOS: get the pointer to the vendor message
-      sl_btmesh_evt_vendor_model_receive_t *rx_evt = (sl_btmesh_evt_vendor_model_receive_t *)&evt->data;
+      uint8_t *data = rx_evt->payload.data;
+      char lcd_buf[LCD_ROW_LEN];
 
-      uint8_t action_req = 0, opcode = 0, payload_len = 0, *payload_data = NULL;
+      app_log("Dashboard received opcode: 0x%02X from 0x%04X\r\n",
+              rx_evt->opcode, rx_evt->source_address);
 
-      // DOS: log the received data
-      app_log("Server: Vendor model data received.\r\n"
-              "  Element index = %d\r\n"
-              "  Vendor id = 0x%04X\r\n"
-              "  Model id = 0x%04X\r\n"
-              "  Source address = 0x%04X\r\n"
-              "  Destination address = 0x%04X\r\n"
-              "  Destination label UUID index = 0x%02X\r\n"
-              "  App key index = 0x%04X\r\n"
-              "  Non-relayed = 0x%02X\r\n"
-              "  Opcode = 0x%02X\r\n"
-              "  Final = 0x%04X\r\n"
-              "  Payload: ",
-              rx_evt->elem_index,
-              rx_evt->vendor_id,
-              rx_evt->model_id,
-              rx_evt->source_address,
-              rx_evt->destination_address,
-              rx_evt->va_index,
-              rx_evt->appkey_index,
-              rx_evt->nonrelayed,
-              rx_evt->opcode,
-              rx_evt->final);
-      for(int i = 0; i < evt->data.evt_vendor_model_receive.payload.len; i++) {
-          app_log("%x ", evt->data.evt_vendor_model_receive.payload.data[i]);
-      }
-      app_log("\r\n");
-
-      // DOS: Handle the opcode from the Client.
-      //      This is the code that handles messages/requests/commands from the Client.
       switch (rx_evt->opcode) {
 
-        // Server
-        case temperature_get:
-          app_log("Sending/publishing temperature status as response to "
-                  "temperature get from client...\r\n");
-          // DOS: This reads the temp & publishes to the Client in response to the "temperature_get" message.
-          read_temperature();
-          action_req = ACK_REQ;
-          opcode = temperature_status;
-          payload_len = TEMP_DATA_LENGTH;
-          payload_data = temperature;
+        case lap_data_update: {
+          uint32_t lap_count = data[0] | (data[1] << 8) |
+                               (data[2] << 16) | (data[3] << 24);
+          uint32_t lap_time  = data[4] | (data[5] << 8) |
+                               (data[6] << 16) | (data[7] << 24);
+
+          app_log("LAP %lu: %lu.%03lus\r\n",
+                  lap_count, lap_time/1000, lap_time%1000);
+
+          memset(lcd_buf, 0, LCD_ROW_LEN);
+          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
+          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
+
+          memset(lcd_buf, 0, LCD_ROW_LEN);
+          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus", lap_time/1000, lap_time%1000);
+          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
           break;
+        }
 
-        // Server
-        case unit_get:
-          app_log("Sending/publishing unit status as response to unit get from "
-                  "client...\r\n");
-          action_req = ACK_REQ;
-          opcode = unit_status;
-          payload_len = UNIT_DATA_LENGTH;
-          payload_data = (uint8_t *) unit;
+        case car_health_status: {
+          int16_t x = (int16_t)((data[0] << 8) | data[1]);
+          int16_t y = (int16_t)((data[2] << 8) | data[3]);
+          int16_t z = (int16_t)((data[4] << 8) | data[5]);
+
+          app_log("Car health: x=%d y=%d z=%d\r\n", x, y, z);
+
+          memset(lcd_buf, 0, LCD_ROW_LEN);
+          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
+          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
           break;
+        }
 
-        // Server
-        case unit_set:
-          app_log("Sending/publishing unit status as response to unit set from "
-                  "client...\r\n");
-          memcpy(unit, rx_evt->payload.data, rx_evt->payload.len);
-          action_req = ACK_REQ | STATUS_UPDATE_REQ;
-          opcode = unit_status;
-          payload_len = UNIT_DATA_LENGTH;
-          payload_data = (uint8_t *) unit;
+        case crash_alert: {
+          int16_t x = (int16_t)((data[0] << 8) | data[1]);
+          int16_t y = (int16_t)((data[2] << 8) | data[3]);
+          int16_t z = (int16_t)((data[4] << 8) | data[5]);
+
+          app_log("*** CRASH DETECTED! x=%d y=%d z=%d\r\n", x, y, z);
+
+          sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
           break;
+        }
 
-        // Server
-        case unit_set_unack:
-          app_log("Publishing unit status as response to unit set unacknowledged "
-                  "from client...\r\n");
-          memcpy(unit, rx_evt->payload.data, rx_evt->payload.len);
-          action_req = STATUS_UPDATE_REQ;
-          opcode = unit_status;
-          payload_len = UNIT_DATA_LENGTH;
-          payload_data = (uint8_t *) unit;
-          break;
-
-          // DOS: Not used in the Client
-//        case update_interval_get:
-//          app_log("Publishing Update Interval status as response to Update "
-//                  "interval get from client...\r\n");
-//          action_req = ACK_REQ;
-//          opcode = update_interval_status;
-//          payload_len = UPDATE_INTERVAL_LENGTH;
-//          payload_data = update_interval;
-//          break;
-
-          // DOS: Not used in the Client
-//        case update_interval_set:
-//          app_log("Publishing Update Interval (%d) status as response to "
-//                  "update_interval_set from client...\r\n", update_interval[0]); // DOS
-//          memcpy(update_interval,
-//                 rx_evt->payload.data,
-//                 rx_evt->payload.len);
-//          action_req = ACK_REQ | STATUS_UPDATE_REQ;
-//          opcode = update_interval_status;
-//          payload_len = UPDATE_INTERVAL_LENGTH;
-//          payload_data = update_interval;
-//          setup_periodcal_update(update_interval[0]);
-//          break;
-
-        case update_interval_set_unack:
-          memcpy(update_interval,       // destination
-                 rx_evt->payload.data,  // source
-                 rx_evt->payload.len);
-          app_log("Publishing Update Interval (0x%x) status as response to "
-                            "update_interval_set_unack from client...\r\n", update_interval[0]); // DOS
-          action_req = STATUS_UPDATE_REQ;
-          opcode = update_interval_status;
-          payload_len = UPDATE_INTERVAL_LENGTH;
-          payload_data = update_interval;
-          setup_periodcal_update(update_interval[0]);
-          break;
-
-        // Add more cases here if more opcodes are defined
         default:
           break;
 
-      } // switch (rx_evt->opcode)
-
-      if(action_req & ACK_REQ) {
-          // DOS: Send an Acknowledge to the Client
-          //      *** This function sends a message to a specific destination/node.
-          
-          // Student edit: Un-comment this code to send the Acknowledge message back to the specific Client node.
-          
-           sc = sl_btmesh_vendor_model_send(rx_evt->source_address, // destination address, use evt source address to send to
-                                            rx_evt->va_index,
-                                            rx_evt->appkey_index,
-                                            my_model.elem_index,
-                                            my_model.vendor_id,
-                                            my_model.model_id,
-                                            rx_evt->nonrelayed,
-                                            opcode,
-                                            1,
-                                            payload_len,
-                                            payload_data);
-           // Errors that are returned from this function are usually due to low
-           // memory. Low memory is non-critical and we can try sending again later.
-           if(sc != SL_STATUS_OK) {
-               app_log("Vendor model send error: 0x%04lX\r\n", sc);
-           } else {
-               app_log("Acknowledge sent.\r\n");
-           }
-
-       } // if
-
-      if(action_req & STATUS_UPDATE_REQ) {
-          app_log("Publishing status update.\r\n");
-          // DOS: Set the message data to publish, i.e. queue the data for publishing.
-          sc = sl_btmesh_vendor_model_set_publication(my_model.elem_index,
-                                                      my_model.vendor_id,
-                                                      my_model.model_id,
-                                                      opcode,
-                                                      1,  // DOS: the final payload "chunk"
-                                                      payload_len,
-                                                      payload_data);
-          if(sc != SL_STATUS_OK) {
-              app_log("Set publication error: 0x%04lX\r\n", sc);
-          } else {
-              app_log("Set publication done. Publishing ...\r\n");
-              // DOS: Publish the queued message.
-              //      *** This function sends (broadcasts) to the group address.
-              //          All nodes subscribing to messages in the group, receive this message.
-              sc = sl_btmesh_vendor_model_publish(my_model.elem_index,
-                                                  my_model.vendor_id,
-                                                  my_model.model_id);
-              if(sc != SL_STATUS_OK) {
-                  app_log("Publish error: 0x%04lX\r\n", sc);
-              } else {
-                  app_log("Status Update Publish done.\r\n");
-              }
-          }
-      }
-
-      app_log("\r\n"); // DOS, added an extra blank line after message reception
-
+      } // switch opcode
       break;
-
     } // case sl_btmesh_evt_vendor_model_receive_id:
 
 
@@ -775,38 +575,6 @@ void app_button_press_cb(uint8_t button, uint8_t duration)
   }
 }
 
-/// Read the Temperature
-static void read_temperature(void)
-{
-  uint32_t rel_hum;
-  float temp;
-  // DOS: The function sl_sensor_rht_get() resides in sl_sensor_rht_mock.c
-  //      which is a "stub" that simulates reading a temperature sensor.
-  //      As currently configured it returns values that sequence on each
-  //      "get" from -20C to +20C, incrementing by 1, and then back to -20C etc.
-  //      Note: Values are returned in:
-  //            millicelsius, and
-  //            millipercentage
-  //
-  //      temperature is a global variable
-  //      rel_hum is a local variable
-  if(sl_sensor_rht_get(&rel_hum, (int32_t *)temperature) != SL_STATUS_OK) {
-    app_log("Error while reading temperature sensor. Clear the buffer.\r\n");
-    memset(temperature, 0, sizeof(temperature));
-    return; // DOS: added exit if error detected
-  }
-
-//  app_log(" ***TEMP milliC = %d\r\n", * ((int32_t *) &temperature[0])); // DOS
-
-  if (unit[0] == fahrenheit) {
-    temp = (float) (*(int32_t *) temperature / 1000); // DOS: convert millicelsius to celsius, and to float data type
-    temp = (temp * 1.8) + 32; // convert to F
-    *(int32_t *) temperature = (int32_t) (temp * 1000); // DOS: convert to millifahrenheit
-
-//    app_log(" ***TEMP milliF = %d\r\n", * ((int32_t *) &temperature[0])); // DOS
-  }
-}
-
 
 /// Reset
 static void factory_reset(void)
@@ -847,88 +615,5 @@ static void delay_reset_ms(uint32_t ms)
 
 }
 
-/// Update Interval
-static void periodic_update_timer_cb(sl_simple_timer_t *handle, void *data)
-{
-  (void)handle;
-  (void)data;
-  sl_status_t sc;
-
-  app_log("New temperature update cb\r\n");
-  read_temperature();
-  // DOS: Set the message data to publish, i.e. queue the data for publishing.
-  sc = sl_btmesh_vendor_model_set_publication(my_model.elem_index,
-                                              my_model.vendor_id,
-                                              my_model.model_id,
-                                              temperature_status,
-                                              1, // DOS: the final payload "chunk"
-                                              TEMP_DATA_LENGTH,
-                                              temperature);
-  if(sc != SL_STATUS_OK) {
-    app_log("Set publication error: 0x%04lX\r\n", sc);
-  } else {
-    app_log("Set publication done. Publishing...\r\n");
-    // DOS: Publish the queued message to the group address.
-    sc = sl_btmesh_vendor_model_publish(my_model.elem_index,
-                                        my_model.vendor_id,
-                                        my_model.model_id);
-    if (sc != SL_STATUS_OK) {
-      app_log("Publish error: 0x%04lX\r\n", sc);
-    } else {
-      app_log("Periodic Publish cb done.\r\n");
-    }
-  }
-}
-
-static void parse_period(uint8_t interval)
-{
-
-  app_log ("  parse_period() interval = 0x%x\r\n", interval); // DOS
-
-  switch (interval & STEP_RES_BIT_MASK) {
-    case STEP_RES_100_MILLI:
-      periodic_timer_ms = 100 * (interval & (~STEP_RES_BIT_MASK));
-      break;
-    case STEP_RES_1_SEC:
-      periodic_timer_ms = 1000 * (interval & (~STEP_RES_BIT_MASK));
-      break;
-    case STEP_RES_10_SEC:
-      periodic_timer_ms = 10000 * (interval & (~STEP_RES_BIT_MASK));
-      break;
-    case STEP_RES_10_MIN:
-      // 10 min = 600000ms
-      periodic_timer_ms = 600000 * (interval & (~STEP_RES_BIT_MASK));
-      break;
-    default:
-      break;
-  }
-  if (periodic_timer_ms) { // DOS: Added from Client implementation
-        app_log("Update period [hh:mm:ss:ms]= %02ld:%02ld:%02ld:%04ld\r\n",
-                (periodic_timer_ms / (1000 * 60 * 60)),
-                (periodic_timer_ms % (1000 * 60 * 60)) / (1000 * 60),
-                (periodic_timer_ms % (1000 * 60)) / 1000,
-                ((periodic_timer_ms % (1000)) / 1000) * 100);
-    } else {
-        app_log("  *** Periodic update off.\r\n");
-    }
-}
-
-static app_timer_t periodic_update_timer;
-static void setup_periodcal_update(uint8_t interval)
-{
-  app_log ("  setup_periodcal_update() interval = 0x%x\r\n", interval); // DOS
-  parse_period(interval);
-  // DOS: There was a bug in the code whereby intervals == 0 were not stopping
-  //      the timer and periodic_update_timer_cb() was continued to be called.
-  if (interval == 0) {                              // DOS
-      app_timer_stop(&periodic_update_timer); // DOS: bug fix
-  } else {                                          // DOS
-      app_timer_start(&periodic_update_timer,
-                             periodic_timer_ms,
-                             periodic_update_timer_cb,
-                             NULL,  // pointer to callback data
-                             true); // is periodic
-  }
-}
 
 
