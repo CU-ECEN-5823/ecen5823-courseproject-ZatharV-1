@@ -16,6 +16,7 @@
 #include "i2c.h"
 #include "timers.h"
 #include "sl_power_manager.h"
+#include "BLE_mesh.h"
 
 #define SI7021_PWRUP_TIME_us        80000
 
@@ -131,9 +132,25 @@ EVENTS_t getNextEvent()
 /*---------VCNL4040 Code---------*/
 
 
-void lap_time_logic()
+void lap_time_logic(void)
 {
-  LOG_INFO("LAP Time recorded: %lu.%03lus\r", (uint32_t)(lap_time_ms/1000), (uint32_t)(lap_time_ms%1000));
+  static uint32_t lap_count = 0;
+  static uint32_t last_lap_start_time = 0;
+  uint32_t current_time = get_LETIMER_ms();
+  uint32_t lap_time_ms = 0;
+
+  if (lap_count > 0) {
+    lap_time_ms = current_time - last_lap_start_time;
+
+    // Publish to mesh Friend node
+    publish_lap_data(lap_count, lap_time_ms);
+
+    // Update LCD
+    // lcd_update_lap_info(lap_count, lap_time_ms);
+  }
+
+  lap_count++;
+  last_lap_start_time = current_time;
 }
 
 

@@ -59,6 +59,8 @@ enum LCD_ROW {
   LCD_ROW_9
 };
 
+#define LOWEST_ENERGY_MODE  3
+
 
 
 

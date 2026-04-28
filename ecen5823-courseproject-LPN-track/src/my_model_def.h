@@ -57,23 +57,26 @@
 
 #define INDEX_OF(x)                     ((x) - 1)
 
-typedef enum { // DOS: these are the commands exchanged between mesh nodes.
-  temperature_get = 0x1,
-  temperature_status,
-  unit_get,
-  unit_set,
-  unit_set_unack,
-  unit_status,
+// Replace temperature opcodes with lap timing opcodes
+typedef enum {
+  lap_count_get = 0x1,
+  lap_count_status,
+  lap_time_get,
+  lap_time_status,
+  lap_data_update,      // Combined lap count + time
+  lap_reset,
+  lap_reset_unack,
+  // Keep these if needed
   update_interval_get,
   update_interval_set,
-  update_interval_set_unack,
   update_interval_status
 } my_msg_t;
 
-typedef enum {
-  celsius = 0x1,
-  fahrenheit
-} unit_t;
+// Data lengths
+#define LAP_COUNT_LENGTH    4  // uint32_t
+#define LAP_TIME_LENGTH     4  // uint32_t (milliseconds)
+#define LAP_DATA_LENGTH     8  // count + time
+
 
 typedef struct { // DOS: data structure for values we need to save for each model
   uint16_t elem_index;

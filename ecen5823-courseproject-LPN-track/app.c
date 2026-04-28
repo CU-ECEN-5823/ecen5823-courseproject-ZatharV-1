@@ -187,9 +187,9 @@ SL_WEAK void app_init(void)
 #endif
 
   I2C0_init();
+  VCNL4040_init();
 
   BTMESH_init();
-//  VCNL4040_init();
 
 } // app_init()
 
@@ -228,24 +228,24 @@ SL_WEAK void app_process_action(void)
   //         later assignments.
 
 
-//  EVENTS_t event = getNextEvent();
-//
-//  switch(event)
-//  {
-//    case LETIMER0_UF:
-//      break;
-//    case VCNL4040_INT:
-//      VCNL4040_clear_interrupt();
-//      lap_time_logic();
-////      LOG_INFO("VCNL_INT_triggerred\r");
-//      break;
-//    case LETIMER0_COMP1:
-//    case I2C_TRANSFER_COMPLETE:
-////      si7021_I2C();
-//      break;
-//    default:
-//      break;
-//  }
+  EVENTS_t event = getNextEvent();
+
+  switch(event)
+  {
+    case LETIMER0_UF:
+      break;
+    case VCNL4040_INT:
+      VCNL4040_clear_interrupt();
+      lap_time_logic();
+//      LOG_INFO("VCNL_INT_triggerred\r");
+      break;
+    case LETIMER0_COMP1:
+    case I2C_TRANSFER_COMPLETE:
+//      si7021_I2C();
+      break;
+    default:
+      break;
+  }
 
 
 //  while(1)
