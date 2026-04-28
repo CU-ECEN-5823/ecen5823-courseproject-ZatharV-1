@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ecen5823-courseproject-LPN-track</name>
+	<name>btmesh_vendor_client</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,6 +30,16 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
+		<link>
+			<name>gecko_sdk_4.3.2/platform/driver/i2cspm/inc/sl_i2cspm.h</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/platform/driver/i2cspm/inc/sl_i2cspm.h</locationURI>
+		</link>
+		<link>
+			<name>gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/platform/driver/i2cspm/src/sl_i2cspm.c</locationURI>
+		</link>
 		<link>
 			<name>gecko_sdk_4.3.2/protocol/bluetooth/lib/EFR32XG13/GCC/libbtmesh_advertiser_deprecated.a</name>
 			<type>1</type>

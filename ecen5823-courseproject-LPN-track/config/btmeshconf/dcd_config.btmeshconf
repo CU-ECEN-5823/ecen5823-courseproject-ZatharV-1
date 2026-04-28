@@ -26,16 +26,5 @@
         ]
       }
     ]
-  },
-  "vendor_model_descriptors": [
-    {
-      "name": "Vendor Model 0",
-      "mid": "0x2222",
-      "cid": "0x1111",
-      "multiplicity": "0..*",
-      "element_constraint": "any",
-      "corresponds": [],
-      "extends": []
-    }
-  ]
+  }
 }

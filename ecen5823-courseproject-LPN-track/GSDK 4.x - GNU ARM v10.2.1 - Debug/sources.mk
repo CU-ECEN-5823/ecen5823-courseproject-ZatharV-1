@@ -22,7 +22,6 @@ gecko_sdk_4.3.2/app/btmesh/common/app_btmesh_util \
 gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log \
 gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn \
 gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd \
-gecko_sdk_4.3.2/app/common/util/app_button_press \
 gecko_sdk_4.3.2/app/common/util/app_log \
 gecko_sdk_4.3.2/app/common/util/app_timer \
 gecko_sdk_4.3.2/hardware/board/src \
@@ -35,10 +34,9 @@ gecko_sdk_4.3.2/platform/bootloader/api \
 gecko_sdk_4.3.2/platform/bootloader/app_properties \
 gecko_sdk_4.3.2/platform/common/src \
 gecko_sdk_4.3.2/platform/common/toolchain/src \
-gecko_sdk_4.3.2/platform/driver/button/src \
 gecko_sdk_4.3.2/platform/driver/debug/src \
+gecko_sdk_4.3.2/platform/driver/i2cspm/src \
 gecko_sdk_4.3.2/platform/emdrv/dmadrv/src \
-gecko_sdk_4.3.2/platform/emdrv/gpiointerrupt/src \
 gecko_sdk_4.3.2/platform/emdrv/nvm3/src \
 gecko_sdk_4.3.2/platform/emlib/src \
 gecko_sdk_4.3.2/platform/middleware/glib/dmd/display \
@@ -60,4 +58,5 @@ gecko_sdk_4.3.2/platform/service/udelay/src \
 gecko_sdk_4.3.2/protocol/bluetooth/src \
 gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager \
 gecko_sdk_4.3.2/util/third_party/mbedtls/library \
+src \
 

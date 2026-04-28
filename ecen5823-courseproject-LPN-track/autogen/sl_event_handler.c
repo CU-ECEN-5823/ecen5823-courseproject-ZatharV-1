@@ -13,19 +13,17 @@
 #include "btl_interface.h"
 #include "sl_board_control.h"
 #include "sl_sleeptimer.h"
-#include "app_button_press.h"
 #include "app_log.h"
 #include "app_timer.h"
 #include "sl_bluetooth.h"
 #include "sl_btmesh_wstk_lcd.h"
 #include "sl_debug_swo.h"
-#include "gpiointerrupt.h"
+#include "sl_i2cspm_instances.h"
 #include "sl_iostream_stdlib_config.h"
 #include "sl_iostream_init_usart_instances.h"
 #include "sl_mbedtls.h"
 #include "sl_mpu.h"
 #include "nvm3_default.h"
-#include "sl_simple_button_instances.h"
 #include "sl_btmesh.h"
 #include "sl_iostream_init_instances.h"
 #include "sl_power_manager.h"
@@ -51,8 +49,7 @@ void sl_platform_init(void)
 void sl_driver_init(void)
 {
   sl_debug_swo_init();
-  GPIOINT_Init();
-  sl_simple_button_init_instances();
+  sl_i2cspm_init_instances();
   sl_cos_send_config();
 }
 
@@ -77,7 +74,6 @@ void sl_stack_init(void)
 
 void sl_internal_app_init(void)
 {
-  app_button_press_init();
   app_log_init();
   sl_btmesh_LCD_init();
 }
@@ -88,7 +84,6 @@ void sl_platform_process_action(void)
 
 void sl_service_process_action(void)
 {
-  app_button_press_step();
   sli_app_timer_step();
 }
 

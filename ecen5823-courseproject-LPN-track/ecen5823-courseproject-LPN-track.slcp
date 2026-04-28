@@ -20,7 +20,6 @@ toolchain_settings: []
 component:
 - {id: EFR32BG13P632F512GM48}
 - {id: app_assert}
-- {id: app_button_press}
 - {id: app_log}
 - {id: bootloader_interface}
 - {id: brd4001a}
@@ -29,7 +28,6 @@ component:
 - {id: btmesh_lpn}
 - {id: btmesh_proxy}
 - {id: btmesh_stack}
-- {id: btmesh_stack_relay}
 - {id: btmesh_stack_test}
 - {id: btmesh_stack_vendor_model}
 - {id: btmesh_wstk_lcd}
