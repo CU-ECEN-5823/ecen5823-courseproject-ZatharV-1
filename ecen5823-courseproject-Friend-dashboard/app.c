@@ -115,18 +115,21 @@
 //static uint32_t periodic_timer_ms = 0;
 
 static my_model_t my_model = {
-  .elem_index = PRIMARY_ELEMENT,
-  .vendor_id = MY_VENDOR_ID,
-  .model_id = MY_MODEL_SERVER_ID,
-  .publish = 1,
-  .opcodes_len = NUMBER_OF_OPCODES,
-  .opcodes_data[0] = lap_count_get,
-  .opcodes_data[1] = lap_count_status,
-  .opcodes_data[2] = lap_time_get,
-  .opcodes_data[3] = lap_time_status,
-  .opcodes_data[4] = lap_data_update,
-  .opcodes_data[5] = car_health_status,
-  .opcodes_data[6] = crash_alert,
+    .elem_index = PRIMARY_ELEMENT,
+    .vendor_id = MY_VENDOR_ID,
+    .model_id = MY_MODEL_SERVER_ID,  // ✅ Use SERVER not CLIENT
+    .publish = 1,
+    .opcodes_len = NUMBER_OF_OPCODES,
+    .opcodes_data[0] = lap_count_get,
+    .opcodes_data[1] = lap_count_status,
+    .opcodes_data[2] = lap_time_get,
+    .opcodes_data[3] = lap_time_status,
+    .opcodes_data[4] = lap_data_update,
+    .opcodes_data[5] = lap_reset,
+    .opcodes_data[6] = lap_reset_unack,
+    .opcodes_data[7] = update_interval_get,
+    .opcodes_data[8] = update_interval_set,
+    .opcodes_data[9] = update_interval_status
 };
 
 
