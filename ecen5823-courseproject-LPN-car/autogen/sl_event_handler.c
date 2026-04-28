@@ -14,7 +14,9 @@
 #include "sl_board_control.h"
 #include "sl_sleeptimer.h"
 #include "app_log.h"
+#include "app_timer.h"
 #include "sl_bluetooth.h"
+#include "sl_btmesh_wstk_lcd.h"
 #include "sl_debug_swo.h"
 #include "sl_i2cspm_instances.h"
 #include "sl_iostream_stdlib_config.h"
@@ -73,6 +75,7 @@ void sl_stack_init(void)
 void sl_internal_app_init(void)
 {
   app_log_init();
+  sl_btmesh_LCD_init();
 }
 
 void sl_platform_process_action(void)
@@ -81,6 +84,7 @@ void sl_platform_process_action(void)
 
 void sl_service_process_action(void)
 {
+  sli_app_timer_step();
 }
 
 void sl_stack_process_action(void)

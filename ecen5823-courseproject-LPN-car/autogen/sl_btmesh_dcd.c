@@ -35,17 +35,19 @@ extern "C" {
 
 const uint8_t __mesh_dcd[] = {
   U16TOA(0x02ff), /* Company ID */
-  U16TOA(0xffff), /* Product ID */
-  U16TOA(0x0502), /* Version Number */
+  U16TOA(0x0001), /* Product ID */
+  U16TOA(0x2110), /* Version Number */
   U16TOA(SL_BTMESH_CONFIG_RPL_SIZE), /* Capacity of Replay Protection List */
   U16TOA(SL_BTMESH_FEATURE_BITMASK), /* Features Bitmask */
   /* Main */
     U16TOA(0x0000), /* Location */
     0x02, /* Number of SIG Models = 2 */
-    0x00, /* Number of Vendor Models = 0 */
+    0x01, /* Number of Vendor Models = 1 */
     /* SIG Models */
       U16TOA(0x0000), /* Configuration Server */
       U16TOA(0x0002), /* Health Server */
+    /* Vendor Models */
+      U16TOA(0x1111), U16TOA(0x2222), /* Vendor Model 0 */
 };
 
 const size_t __mesh_dcd_len = sizeof(__mesh_dcd);

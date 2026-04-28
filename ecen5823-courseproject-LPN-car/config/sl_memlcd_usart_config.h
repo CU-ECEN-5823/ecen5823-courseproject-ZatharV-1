@@ -46,6 +46,12 @@
 
 // <gpio optional=true> SL_MEMLCD_EXTCOMIN
 // $[GPIO_SL_MEMLCD_EXTCOMIN]
+#ifndef SL_MEMLCD_EXTCOMIN_PORT                 
+#define SL_MEMLCD_EXTCOMIN_PORT                  gpioPortD
+#endif
+#ifndef SL_MEMLCD_EXTCOMIN_PIN                  
+#define SL_MEMLCD_EXTCOMIN_PIN                   13
+#endif
 // [GPIO_SL_MEMLCD_EXTCOMIN]$
 
 // <<< sl:end pin_tool >>>

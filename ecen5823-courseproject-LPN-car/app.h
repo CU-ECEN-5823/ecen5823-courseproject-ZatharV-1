@@ -26,39 +26,50 @@
  *    misrepresented as being the original software.
  * 3. This notice may not be removed or altered from any source distribution.
  *
- *
- * Editor: Feb 26, 2022, Dave Sluiter
- * Change: Added comment about use of .h files.
- *
- *
- *
- * Student edit: Add your name and email address here:
- * @student    Atharv More, atharv.more@colorado.edu
- *
- *
  ******************************************************************************/
-
-// Students: Remember, a header file (a .h file) defines an interface
-//           for functions defined within an implementation file (a .c file).
-//           The .h file defines what a caller (a user) of a .c file requires.
-//           At a minimum, the .h file should define the publicly callable
-//           functions, i.e. define the function prototypes. #define and type
-//           definitions can be added if the caller requires theses.
 
 #ifndef APP_H
 #define APP_H
 
-// Select Energy Modes EM0 -> 0, and respectively
-#define LOWEST_ENERGY_MODE 3
+// -------------------------------------------------------------------------
+// DOS: These are here so any .c file that needs them can include this file.
+// -------------------------------------------------------------------------
+// push button 0
+#define PB0_port    gpioPortF
+#define PB0_pin     6
 
-/**************************************************************************//**
+// SENSOR_ENABLE (Si7021) = DISP_ENABLE (LCD) on the main PCB
+#define Si7021SENSOR_EN_port    (gpioPortD) // Sensor Enable for I2C Si7021
+#define Si7021SENSOR_EN_pin     (15)        // Sensor Enable for I2C Si7021 at PD15
+
+// LCD row definitions. Note: The WSTK Software Component : sl_btmesh_wstk_lcd
+// uses physical rows 1, 2 and 3 on the LCD. So row 1 here is physically
+// row 4 on the LCD. I can tell you from experiments I've run in the past, that
+// it is possible to reclaim physical rows 1, 2 and 3. You'll have to do some
+// reading/research.
+enum LCD_ROW {
+  LCD_ROW_1 = 1,
+  LCD_ROW_2,
+  LCD_ROW_3,
+  LCD_ROW_4,
+  LCD_ROW_5,
+  LCD_ROW_6,
+  LCD_ROW_7,
+  LCD_ROW_8,
+  LCD_ROW_9
+};
+
+
+
+
+/***************************************************************************//**
  * Application Init.
- *****************************************************************************/
+ ******************************************************************************/
 void app_init(void);
 
-/**************************************************************************//**
+/***************************************************************************//**
  * Application Process Action.
- *****************************************************************************/
+ ******************************************************************************/
 void app_process_action(void);
 
 #endif // APP_H

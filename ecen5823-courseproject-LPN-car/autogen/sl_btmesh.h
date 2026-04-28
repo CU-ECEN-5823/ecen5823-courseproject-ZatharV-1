@@ -9,9 +9,9 @@
 #include "sl_bt_api.h"
 #include "sl_btmesh_bgapi.h"
 
-#define SL_BTMESH_COMPONENT_ADVERTISERS 3
+#define SL_BTMESH_COMPONENT_ADVERTISERS (3 + SL_BTMESH_CONFIG_MAX_NETKEYS)
 
-#define SL_BTMESH_FEATURE_BITMASK 0
+#define SL_BTMESH_FEATURE_BITMASK 10
 
 // Initialize Bluetooth core functionality
 void sl_btmesh_init(void);

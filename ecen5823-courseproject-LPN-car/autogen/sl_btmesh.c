@@ -3,12 +3,18 @@
 #include <sl_common.h>
 #include "sl_btmesh.h"
 #include "sl_component_catalog.h"
+#include "sl_btmesh_event_log.h"
+#include "sl_btmesh_lpn.h"
 
 /** @brief Table of used BGAPI classes */
 static const struct sli_bgapi_class * const btmesh_class_table[] =
 {
   SL_BTMESH_BGAPI_CLASS(health_server),
+  SL_BTMESH_BGAPI_CLASS(lpn),
+  SL_BTMESH_BGAPI_CLASS(proxy),
+  SL_BTMESH_BGAPI_CLASS(proxy_server),
   SL_BTMESH_BGAPI_CLASS(test),
+  SL_BTMESH_BGAPI_CLASS(vendor_model),
   SL_BTMESH_BGAPI_CLASS(node),
   NULL
 };
@@ -25,6 +31,8 @@ SL_WEAK void sl_btmesh_on_event(sl_btmesh_msg_t* evt)
 
 void sl_btmesh_process_event(sl_btmesh_msg_t *evt)
 {
+  sl_btmesh_log_btmesh_events(evt);
+  sl_btmesh_lpn_on_event(evt);
   sl_btmesh_on_event(evt);
 }
 

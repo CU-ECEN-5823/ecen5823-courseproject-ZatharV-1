@@ -47,8 +47,12 @@
 #define SI7021_port   gpioPortD
 #define SI7021_EN_pin (15)
 
-//#define MMA8452_INT_port gpioPortA
-//#define MMA8452_INT_pin (3)
+#define VCNL4040_INT_port gpioPortA
+#define VCNL4040_INT_pin (3)
+
+#define LCD_port   gpioPortD
+#define LCD_EN_pin (15)
+#define LCD_EXTCOMIN_pin (13)
 
 
 // Set GPIO drive strengths and modes of operation
@@ -66,8 +70,12 @@ void gpioInit()
 	GPIO_PinModeSet(LED_port, LED1_pin, gpioModePushPull, false);
 	GPIO_PinModeSet(LED_port, LED1_pin, gpioModePushPull, false);
 
-	GPIO_PinModeSet(MMA8452_INT_port, MMA8452_INT_pin, gpioModeInputPull, true);
-	GPIO_ExtIntConfig(MMA8452_INT_port, MMA8452_INT_pin, MMA8452_INT_pin, false, true, true);
+  // Set GPIO to input interrupt
+  GPIO_PinModeSet(switch_port, switch0_pin, gpioModeInputPullFilter, true);
+  GPIO_PinModeSet(switch_port, switch1_pin, gpioModeInputPullFilter, true);
+
+	GPIO_PinModeSet(VCNL4040_INT_port, VCNL4040_INT_pin, gpioModeInputPull, true);
+	GPIO_ExtIntConfig(VCNL4040_INT_port, VCNL4040_INT_pin, VCNL4040_INT_pin, false, true, true);
 
 	// Enable NVIC interrupt
   NVIC_ClearPendingIRQ(GPIO_ODD_IRQn);
@@ -106,12 +114,39 @@ void enable_SI7021()
 
 void disable_SI7021()
 {
-  GPIO_PinOutClear(SI7021_port, SI7021_EN_pin);
+//  GPIO_PinOutClear(SI7021_port, SI7021_EN_pin);
+}
+
+void gpioSensorEnSetOn()
+{
+  GPIO_PinOutSet(LCD_port, LCD_EN_pin);
 }
 
 int read_int_pin()
 {
-  return GPIO_PinInGet(MMA8452_INT_port, MMA8452_INT_pin);
+  return GPIO_PinInGet(VCNL4040_INT_port, VCNL4040_INT_pin);
 }
 
+void gpioSetDisplayExtcomin(bool value)
+{
+  if(value)
+  {
+      GPIO_PinOutSet(LCD_port, LCD_EXTCOMIN_pin);
+  }
+  else
+  {
+      GPIO_PinOutClear(LCD_port, LCD_EXTCOMIN_pin);
+  }
+}
+
+
+bool is_Switch0_pressed()
+{
+  return (GPIO_PinInGet(switch_port, switch0_pin) == 0);  // active low switch
+}
+
+bool is_Switch1_pressed()
+{
+    return (GPIO_PinInGet(switch_port, switch1_pin) == 0); // active low
+}
 

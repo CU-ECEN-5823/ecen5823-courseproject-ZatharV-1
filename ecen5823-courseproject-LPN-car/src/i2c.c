@@ -18,7 +18,7 @@
 #include "sl_power_manager.h"
 
 #define INCLUDE_LOG_DEBUG 0
-#include "log.h"
+#include "src/log.h"
 
 #define I2C0_PORT     gpioPortC
 #define I2C0_SCL_PIN  11

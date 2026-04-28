@@ -2,10 +2,11 @@
  * irq.c
  *
  *  Created on: 28-Jan-2026
- *      Author: Atharv More
+ *      Author: Atharv More, Shruti Kalyankar
  *
  *  @file       irq.c
  *  @author     Atharv More, atharv.more@colorado.edu
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the IRQs of interrupts in this file
  */
@@ -19,7 +20,7 @@
 #include "em_gpio.h"
 
 #define INCLUDE_LOG_DEBUG 1
-#include "log.h"
+#include "src/log.h"
 
 static uint32_t LETIMER0_UF_count;
 
@@ -85,9 +86,9 @@ void GPIO_ODD_IRQHandler(void)
   uint32_t interrupt_flags = GPIO_IntGet();
   GPIO_IntClear(interrupt_flags); // Clear Flag
 
-  if(interrupt_flags & (1 << MMA8452_INT_pin))
+  if(interrupt_flags & (1 << VCNL4040_INT_pin))
   {
-      schedulerSetEvent_MMA8452_INT();
+      schedulerSetEvent_VCNL4040_INT();
   }
 
 }

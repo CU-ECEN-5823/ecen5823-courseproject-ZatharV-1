@@ -22,6 +22,8 @@
 #define LETIMER_PERIOD_MS   2250
 */
 
+extern volatile uint64_t LETIMER0_current_time;
+
 // Interrupt period
 #define LETIMER_PERIOD_MS     1000
 #define LETIMER0_PERIOD_COUNT (LETIMER0_CLK_FREQ * LETIMER_PERIOD_MS) / 1000
@@ -33,7 +35,6 @@ void test_timerWaitUs_polled();
 void timerWaitUs_polled(uint32_t us_wait);
 void timerWaitUs_irq(uint32_t us_wait);
 void letimer0_init();
-
 uint64_t get_LETIMER_ms();
 
 #endif /* SRC_TIMERS_H_ */
