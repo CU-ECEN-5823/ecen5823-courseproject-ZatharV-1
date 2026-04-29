@@ -75,6 +75,7 @@ src/scheduler.o: ../src/scheduler.c ../src/scheduler.h \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\protocol\bluetooth\inc\sl_bt_api.h \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\protocol\bluetooth\inc\sl_bgapi.h \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
+ ../src/lcd.h \
  C:\Users\athar\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-track/src/log.h \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\app\common\util\app_log\app_log.h \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\service\iostream\inc\sl_iostream.h \
@@ -167,6 +168,7 @@ c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\em_core_gene
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\protocol\bluetooth\inc\sl_bt_api.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\protocol\bluetooth\inc\sl_bgapi.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\protocol\bluetooth\inc\sl_bt_api_compatibility.h:
+../src/lcd.h:
 C:\Users\athar\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-track/src/log.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\app\common\util\app_log\app_log.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\service\iostream\inc\sl_iostream.h:

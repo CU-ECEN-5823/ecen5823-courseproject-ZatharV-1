@@ -27,6 +27,8 @@
 
 #include "src/my_model_def.h"
 
+#include "lcd.h"
+
 #define INCLUDE_LOG_DEBUG 1
 #include "log.h"
 
@@ -191,6 +193,10 @@ void handle_ble_event(struct sl_bt_msg *evt)
       sc = sl_btmesh_node_init();
       app_assert_status_f(sc, "Failed to init node\r\n");
 
+      displayInit();  // Initialize Display
+      displayPrintf(DISPLAY_ROW_NAME, "Track LPN");
+      displayPrintf(DISPLAY_ROW_ASSIGNMENT, "Course Project");
+
       // get our BT Device Address and type
       // address type: 0: public
       //               1: static random
@@ -211,6 +217,13 @@ void handle_ble_event(struct sl_bt_msg *evt)
 //                   myAddress.addr[1],
 //                   myAddress.addr[0]
 //                   );
+//          displayPrintf(DISPLAY_ROW_BTADDR, "%02X:%02X:%02X:%02X:%02X:%02X",
+//                        myAddress.addr[5],
+//                        myAddress.addr[4],
+//                        myAddress.addr[3],
+//                        myAddress.addr[2],
+//                        myAddress.addr[1],
+//                        myAddress.addr[0]);
 //          sl_btmesh_LCD_write(myAddressStr, LCD_ROW_4);
       }
 
@@ -490,6 +503,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 //      memset(friend_status, 0, LCD_ROW_LEN);
 //      snprintf(friend_status, LCD_ROW_LEN, "Friend Failed"); // friendship failed
 //      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
+      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Failed");
 
       app_log("  ***Friendship Failed\r\n"); // DOS
 
@@ -499,6 +513,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 //      memset(friend_status, 0, LCD_ROW_LEN);
 //      snprintf(friend_status, LCD_ROW_LEN, "Friend Est."); // friendship established
 //      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
+      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Est.");
 
       app_log("  ***Friendship Established\r\n"); // DOS
 
@@ -509,6 +524,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 //      memset(friend_status, 0, LCD_ROW_LEN);
 //      snprintf(friend_status, LCD_ROW_LEN, "Friend Term."); // friendship terminated
 //      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
+      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Term.");
 
 #if (COUNT_FRIENDSHIP_TERMINATED_EVENTS == 1)
       friend_term_count++;
@@ -588,6 +604,7 @@ static void factory_reset(void)
 //  snprintf(reset_status, LCD_ROW_LEN, "Factory Reset");
 //  sl_btmesh_LCD_write(reset_status, LCD_ROW_2);
 
+  displayPrintf(DISPLAY_ROW_RESETSTATUS, "Factory Reset");
   sl_btmesh_node_reset();
 
   delay_reset_ms(100);
@@ -669,7 +686,7 @@ void publish_lap_data(uint32_t lap_count, uint32_t lap_time_ms)
                                          my_model.vendor_id,
                                          my_model.model_id,
                                          lap_data_update,  // opcode
-                                         0,  // final = 0 (not final segment)
+                                         1,  // final = 0 (not final segment)
                                          LAP_DATA_LENGTH,
                                          data);
   if (sc != SL_STATUS_OK) {

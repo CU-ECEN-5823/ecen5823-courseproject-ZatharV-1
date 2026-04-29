@@ -17,6 +17,7 @@
 #include "timers.h"
 #include "sl_power_manager.h"
 #include "BLE_mesh.h"
+#include "lcd.h"
 
 #define SI7021_PWRUP_TIME_us        80000
 
@@ -28,6 +29,8 @@ volatile uint64_t prev_car_pass_time_ms = 0;
 volatile uint64_t curr_car_pass_time_ms = 0;
 
 EVENTS_t APP_event;
+
+static void lcd_update_lap_info(uint32_t lap_count, uint32_t lap_time_ms);
 
 /**
  * @brief Sets Event for LETIMER0_UF
@@ -146,7 +149,7 @@ void lap_time_logic(void)
     publish_lap_data(lap_count, lap_time_ms);
 
     // Update LCD
-    // lcd_update_lap_info(lap_count, lap_time_ms);
+    lcd_update_lap_info(lap_count, lap_time_ms);
   }
 
   lap_count++;
@@ -220,6 +223,12 @@ void si7021_I2C()
       state = SI7021_SEND_CMD;    //Reset for next read
       break;
   }
+}
+
+static void lcd_update_lap_info(uint32_t lap_count, uint32_t lap_time_ms)
+{
+  displayPrintf(DISPLAY_ROW_LAPTIME, "Lap Time = %ld.%03lds", lap_time_ms/1000, lap_time_ms%1000);
+  displayPrintf(DISPLAY_ROW_LAPNUM, "Lap Number = %lu", lap_count);
 }
 
 

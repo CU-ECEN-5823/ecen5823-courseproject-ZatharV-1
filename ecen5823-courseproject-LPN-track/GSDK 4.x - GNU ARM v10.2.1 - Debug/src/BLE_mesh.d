@@ -99,7 +99,7 @@ src/BLE_mesh.o: ../src/BLE_mesh.c \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\em_gpio.h \
  c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\em_rtcc.h \
  C:\Users\athar\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-track/src/my_model_def.h \
- ../src/log.h
+ ../src/lcd.h ../src/log.h
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\em_common.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\device\siliconlabs\efr32bg13p\include\em_device.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p632f512gm48.h:
@@ -200,4 +200,5 @@ c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\sli_em_cmu.h
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\em_gpio.h:
 c:\users\athar\simplicitystudio\sdks\gecko_sdk_3\platform\emlib\inc\em_rtcc.h:
 C:\Users\athar\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-track/src/my_model_def.h:
+../src/lcd.h:
 ../src/log.h:
