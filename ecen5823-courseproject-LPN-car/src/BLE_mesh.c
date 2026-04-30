@@ -46,7 +46,7 @@
 // Group Addresses
 // Choose any 16-bit address starting at 0xC000
 #define CUSTOM_STATUS_GRP_ADDR                      0xC001  // Server PUB address
-#define CUSTOM_CTRL_GRP_ADDR                        0xC002  // Server SUB address
+#define CUSTOM_CTRL_GRP_ADDR_CAR                    0xC003  // Server SUB address
 
 // The default settings of the network and the node
 #define NET_KEY_IDX                                 0
@@ -155,13 +155,13 @@ uint32_t logging_timestamp = 0; // in ms
 /**************************************************************************//**
  * Logging timer callback
  *****************************************************************************/
-static void logging_timer_cb(sl_simple_timer_t *handle, void *data)
-{
-  (void)handle;
-  (void)data;
-
-  logging_timestamp += 500; // increment the timestamp
-}
+//static void logging_timer_cb(sl_simple_timer_t *handle, void *data)
+//{
+//  (void)handle;
+//  (void)data;
+//
+//  logging_timestamp += 500; // increment the timestamp
+//}
 
 bool lpn_is_active(void)
 {
@@ -179,13 +179,16 @@ uint32_t get_logger_timestamp() {
 
 void BTMESH_init()
 {
+  app_log("=================\r\n");
+  app_log("Car LPN\r\n");
+
   // Run a periodic timer for logging timestamp
-  static sl_simple_timer_t logging_timer;
-  sl_simple_timer_start(&logging_timer,
-                        500,   // every 500 ms
-                        logging_timer_cb, // a callback that increments a timestamp for logging
-                        NULL,  // pointer to callback data
-                        true); // is periodic
+//  static sl_simple_timer_t logging_timer;
+//  sl_simple_timer_start(&logging_timer,
+//                        500,   // every 500 ms
+//                        logging_timer_cb, // a callback that increments a timestamp for logging
+//                        NULL,  // pointer to callback data
+//                        true); // is periodic
 }
 
 
@@ -383,7 +386,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
                                               &period,
                                               &retrans,
                                               &credentials);
-      if (!sc && pub_address == CUSTOM_STATUS_GRP_ADDR) {
+      if (!sc && pub_address == CUSTOM_CTRL_GRP_ADDR_CAR) {
         app_log("Configuration done already.\r\n");
       } else {
         app_log("Pub setting result = 0x%04lX, pub setting address = 0x%04X\r\n", sc, pub_address);
@@ -406,7 +409,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
                                                 APP_KEY_IDX,
                                                 my_model.vendor_id,
                                                 my_model.model_id,
-                                                CUSTOM_STATUS_GRP_ADDR,
+                                                CUSTOM_CTRL_GRP_ADDR_CAR,
                                                 DEFAULT_TTL,
                                                 0, 0, 0);
         app_assert_status_f(sc, "Failed to set local model pub\r\n");
