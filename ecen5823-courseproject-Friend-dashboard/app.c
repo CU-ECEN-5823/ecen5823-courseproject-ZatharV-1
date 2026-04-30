@@ -388,7 +388,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
         sc = sl_btmesh_test_add_local_model_sub(my_model.elem_index,
                                                 my_model.vendor_id,
                                                 my_model.model_id,
-                                                CUSTOM_CTRL_GRP_ADDR);
+                                                CUSTOM_STATUS_GRP_ADDR);
         app_assert_status_f(sc, "Failed to add local model sub\r\n");
 
         app_log("Set relay ...\r\n");
@@ -450,6 +450,13 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
       app_log("Dashboard received opcode: 0x%02X from 0x%04X\r\n",
               rx_evt->opcode, rx_evt->source_address);
 
+      // ADD raw payload log:
+      app_log("Payload len=%d: ", rx_evt->payload.len);
+      for(int i = 0; i < rx_evt->payload.len; i++) {
+          app_log("0x%02X ", rx_evt->payload.data[i]);
+      }
+      app_log("\r\n");
+
       switch (rx_evt->opcode) {
 
         case lap_data_update: {
@@ -496,6 +503,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
         }
 
         default:
+          app_log(">>> Unknown opcode: 0x%02X\r\n", rx_evt->opcode);
           break;
 
       } // switch opcode
