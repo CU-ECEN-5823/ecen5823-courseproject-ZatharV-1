@@ -72,8 +72,10 @@
 #ifdef PROV_LOCALLY
 // Group Addresses
 // Choose any 16-bit address starting at 0xC000
-#define CUSTOM_STATUS_GRP_ADDR                      0xC001  // Server PUB address
-#define CUSTOM_CTRL_GRP_ADDR                        0xC002  // Server SUB address
+#define CUSTOM_STATUS_GRP_ADDR   0xC001  // Friend PUB (unused)
+#define CUSTOM_TRACK_GRP_ADDR    0xC002  // Track LPN publishes here
+#define CUSTOM_CAR_GRP_ADDR      0xC003  // Car LPN publishes here
+
 
 // The default settings of the network and the node
 #define NET_KEY_IDX                                 0
@@ -116,21 +118,18 @@
 //static uint32_t periodic_timer_ms = 0;
 
 static my_model_t my_model = {
-    .elem_index = PRIMARY_ELEMENT,
-    .vendor_id = MY_VENDOR_ID,
-    .model_id = MY_MODEL_SERVER_ID,  // ✅ Use SERVER not CLIENT
-    .publish = 1,
-    .opcodes_len = NUMBER_OF_OPCODES,
-    .opcodes_data[0] = lap_count_get,
-    .opcodes_data[1] = lap_count_status,
-    .opcodes_data[2] = lap_time_get,
-    .opcodes_data[3] = lap_time_status,
-    .opcodes_data[4] = lap_data_update,
-    .opcodes_data[5] = lap_reset,
-    .opcodes_data[6] = lap_reset_unack,
-    .opcodes_data[7] = update_interval_get,
-    .opcodes_data[8] = update_interval_set,
-    .opcodes_data[9] = update_interval_status
+  .elem_index = PRIMARY_ELEMENT,
+  .vendor_id = MY_VENDOR_ID,
+  .model_id = MY_MODEL_SERVER_ID,  // 0x1111 matches Friend DCD
+  .publish = 1,
+  .opcodes_len = NUMBER_OF_OPCODES,
+  .opcodes_data[0] = lap_count_get,
+  .opcodes_data[1] = lap_count_status,
+  .opcodes_data[2] = lap_time_get,
+  .opcodes_data[3] = lap_time_status,
+  .opcodes_data[4] = lap_data_update,
+  .opcodes_data[5] = car_health_status,
+  .opcodes_data[6] = crash_alert,
 };
 
 
@@ -292,7 +291,7 @@ void sl_bt_on_event(struct sl_bt_msg *evt)
 void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 {
   sl_status_t      sc;
-  char             friend_status[LCD_ROW_LEN];
+//  char             friend_status[LCD_ROW_LEN];
   static int       number_of_friendships = 0; // count of number of current friendships
 
 
@@ -388,12 +387,19 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
                                                 0, 0, 0);
         app_assert_status_f(sc, "Failed to set local model pub\r\n");
 
-        app_log("Add local model sub ...\r\n");
+        app_log("Add local model sub (Track LPN)...\r\n");
         sc = sl_btmesh_test_add_local_model_sub(my_model.elem_index,
                                                 my_model.vendor_id,
                                                 my_model.model_id,
-                                                CUSTOM_STATUS_GRP_ADDR);
-        app_assert_status_f(sc, "Failed to add local model sub\r\n");
+                                                CUSTOM_TRACK_GRP_ADDR);  // 0xC002
+        app_assert_status_f(sc, "Failed to add local model sub Track\r\n");
+
+        app_log("Add local model sub (Car LPN)...\r\n");
+        sc = sl_btmesh_test_add_local_model_sub(my_model.elem_index,
+                                                my_model.vendor_id,
+                                                my_model.model_id,
+                                                CUSTOM_CAR_GRP_ADDR);   // 0xC003
+        app_assert_status_f(sc, "Failed to add local model sub Car\r\n");
 
         app_log("Set relay ...\r\n");
         sc = sl_btmesh_test_set_relay(1, 0, 0);
@@ -444,6 +450,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 
     // -------------------------------
     // Handle vendor model messages
+
     case sl_btmesh_evt_vendor_model_receive_id: {
       sl_btmesh_evt_vendor_model_receive_t *rx_evt =
           (sl_btmesh_evt_vendor_model_receive_t *)&evt->data;
@@ -451,15 +458,8 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
       uint8_t *data = rx_evt->payload.data;
       char lcd_buf[LCD_ROW_LEN];
 
-      app_log("Dashboard received opcode: 0x%02X from 0x%04X\r\n",
+      app_log("Received opcode=0x%02X from=0x%04X\r\n",
               rx_evt->opcode, rx_evt->source_address);
-
-      // ADD raw payload log:
-      app_log("Payload len=%d: ", rx_evt->payload.len);
-      for(int i = 0; i < rx_evt->payload.len; i++) {
-          app_log("0x%02X ", rx_evt->payload.data[i]);
-      }
-      app_log("\r\n");
 
       switch (rx_evt->opcode) {
 
@@ -469,19 +469,17 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           uint32_t lap_time  = data[4] | (data[5] << 8) |
                                (data[6] << 16) | (data[7] << 24);
 
-          app_log("LAP %lu: %lu.%03lus\r\n",
+          app_log("TRACK -> Lap %lu: %lu.%03lus\r\n",
                   lap_count, lap_time/1000, lap_time%1000);
 
-//          memset(lcd_buf, 0, LCD_ROW_LEN);
-//          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
-//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
-//
-//          memset(lcd_buf, 0, LCD_ROW_LEN);
-//          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus", lap_time/1000, lap_time%1000);
-//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
+          memset(lcd_buf, 0, LCD_ROW_LEN);
+          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
+          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
 
-          displayPrintf(DISPLAY_ROW_LAPTIME, "Lap Time = %ld.%03lds", lap_time/1000, lap_time%1000);
-          displayPrintf(DISPLAY_ROW_LAPNUM, "Lap Number = %lu", lap_count);
+          memset(lcd_buf, 0, LCD_ROW_LEN);
+          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus",
+                   lap_time/1000, lap_time%1000);
+          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
           break;
         }
 
@@ -490,13 +488,11 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           int16_t y = (int16_t)((data[2] << 8) | data[3]);
           int16_t z = (int16_t)((data[4] << 8) | data[5]);
 
-          app_log("Car health: x=%d y=%d z=%d\r\n", x, y, z);
+          app_log("CAR -> G: x=%d y=%d z=%d\r\n", x, y, z);
 
-//          memset(lcd_buf, 0, LCD_ROW_LEN);
-//          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
-//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
-
-          displayPrintf(DISPLAY_ROW_ACCELERATION, "G:%d,%d,%d", x, y, z);
+          memset(lcd_buf, 0, LCD_ROW_LEN);
+          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
+          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
           break;
         }
 
@@ -505,20 +501,18 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           int16_t y = (int16_t)((data[2] << 8) | data[3]);
           int16_t z = (int16_t)((data[4] << 8) | data[5]);
 
-          displayPrintf(DISPLAY_ROW_CRASH, "CRASH");
-          app_log("*** CRASH DETECTED! x=%d y=%d z=%d\r\n", x, y, z);
-
-          //sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
+          app_log("CAR -> *** CRASH! x=%d y=%d z=%d\r\n", x, y, z);
+          sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
           break;
         }
 
         default:
-          app_log(">>> Unknown opcode: 0x%02X\r\n", rx_evt->opcode);
+          app_log("Unknown opcode: 0x%02X\r\n", rx_evt->opcode);
           break;
 
-      } // switch opcode
+      }
       break;
-    } // case sl_btmesh_evt_vendor_model_receive_id:
+    }
 
 
     // ----------------------------------------
@@ -603,7 +597,7 @@ void app_button_press_cb(uint8_t button, uint8_t duration)
 static void factory_reset(void)
 {
   // DOS moved log statement here + update the LCD here
-  char   reset_status[LCD_ROW_LEN];
+//  char   reset_status[LCD_ROW_LEN];
 
   app_log("factory reset\r\n");
 

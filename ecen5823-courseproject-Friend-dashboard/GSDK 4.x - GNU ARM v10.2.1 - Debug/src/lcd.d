@@ -10,7 +10,7 @@ src/lcd.o: ../src/lcd.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\dmd\dmd.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\em_types.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\dmd\dmd.h \
- ../src/lcd.h ../src/log.h \
+ ../src/lcd.h ../src/gpio.h ../src/log.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\common\util\app_log\app_log.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h \
  C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-Friend-dashboard\autogen/sl_component_catalog.h \
@@ -100,6 +100,7 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\dmd\dmd.
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\em_types.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\dmd\dmd.h:
 ../src/lcd.h:
+../src/gpio.h:
 ../src/log.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\common\util\app_log\app_log.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h:

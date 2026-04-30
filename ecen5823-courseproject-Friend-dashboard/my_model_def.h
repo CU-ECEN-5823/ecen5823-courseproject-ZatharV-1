@@ -8,31 +8,22 @@
 #define MY_MODEL_SERVER_ID  0x1111
 #define MY_MODEL_CLIENT_ID  0x2222
 
-// Payload lengths
-#define LAP_DATA_LENGTH         8   // lap_count(4) + lap_time(4)
-#define CAR_HEALTH_DATA_LENGTH  7   // x(2) + y(2) + z(2) + crash(1)
+#define LAP_DATA_LENGTH         8
+#define CAR_HEALTH_DATA_LENGTH  7
 
-#define NUMBER_OF_OPCODES   10
+#define NUMBER_OF_OPCODES   7
 
 #define ACK_REQ             (0x1)
 #define STATUS_UPDATE_REQ   (0x2)
 
-// Track LPN opcodes
 typedef enum {
   lap_count_get     = 0x1,
   lap_count_status  = 0x2,
   lap_time_get      = 0x3,
   lap_time_status   = 0x4,
-  lap_data_update   = 0x5,  // Track LPN publishes this
-  lap_reset,
-  lap_reset_unack,
-  // Keep these if needed
-  update_interval_get,
-  update_interval_set,
-  update_interval_status,
-  // Car LPN opcodes
-  car_health_status,  // Car LPN publishes this
-  crash_alert  // Car LPN publishes on crash
+  lap_data_update   = 0x5,
+  car_health_status = 0x6,
+  crash_alert       = 0x7,
 } my_msg_t;
 
 typedef struct {
@@ -44,4 +35,4 @@ typedef struct {
   uint8_t opcodes_data[NUMBER_OF_OPCODES];
 } my_model_t;
 
-#endif /* MY_MODEL_DEF_H_ */
+#endif
