@@ -2,7 +2,7 @@
  * MMA8452.h
  *
  *  Created on: 16-Apr-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *  @author     Atharv More, atharv.more@colorado.edu
  */
 
 #ifndef SRC_MMA8452_H_

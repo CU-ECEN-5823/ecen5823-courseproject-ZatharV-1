@@ -2,10 +2,14 @@
  * BLE_mesh.c
  *
  *  Created on: 20-Apr-2026
- *      Author: athar
+ *
+ *
+ *  @file       BLE_mesh.c
+ *
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
+ *
+ *  @brief      All BT mesh function and operations in this file
  */
-
-
 
 
 #include <stdio.h> // DOS: for snprintf()
@@ -153,6 +157,10 @@ void BTMESH_init()
 {
   app_log("=================\r\n");
   app_log("Track LPN\r\n");
+
+  displayInit();  // Initialize Display
+  displayPrintf(DISPLAY_ROW_NAME, "Track LPN");
+  displayPrintf(DISPLAY_ROW_ASSIGNMENT, "Course Project");
 }
 
 
@@ -194,10 +202,6 @@ void handle_ble_event(struct sl_bt_msg *evt)
       app_log("Node init\r\n");
       sc = sl_btmesh_node_init();
       app_assert_status_f(sc, "Failed to init node\r\n");
-
-      displayInit();  // Initialize Display
-      displayPrintf(DISPLAY_ROW_NAME, "Track LPN");
-      displayPrintf(DISPLAY_ROW_ASSIGNMENT, "Course Project");
 
       // get our BT Device Address and type
       // address type: 0: public
@@ -606,7 +610,7 @@ static void delay_reset_ms(uint32_t ms)
 //}
 
 
-void publish_lap_data(uint32_t lap_count, uint32_t lap_time_ms)
+void publish_lap_data(uint32_t lap_count, uint32_t lap_time_ms, uint32_t min_lap_time_ms)
 {
   sl_status_t sc;
   uint8_t data[LAP_DATA_LENGTH];
@@ -620,6 +624,11 @@ void publish_lap_data(uint32_t lap_count, uint32_t lap_time_ms)
   data[5] = (lap_time_ms >> 8) & 0xFF;
   data[6] = (lap_time_ms >> 16) & 0xFF;
   data[7] = (lap_time_ms >> 24) & 0xFF;
+  data[8] = (min_lap_time_ms & 0xFF);
+  data[9] = (min_lap_time_ms >> 8) & 0xFF;
+  data[10] = (min_lap_time_ms >> 16) & 0xFF;
+  data[11] = (min_lap_time_ms >> 24) & 0xFF;
+
 
   sc = sl_btmesh_vendor_model_set_publication(my_model.elem_index,
                                          my_model.vendor_id,

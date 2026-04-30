@@ -1,3 +1,17 @@
+/*
+ * my_model_def.h
+ *
+ *  Created on: 25-April-2026
+ *      Author: Atharv More
+ *
+ *  @file       my_model_def.h
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
+ *
+ *  @brief      All BT mesh models
+ */
+
+
+
 /***************************************************************************//**
  * @file my_model_def.h
  * @brief Vendor model definitions

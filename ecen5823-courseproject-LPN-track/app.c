@@ -37,6 +37,7 @@
  *
  * Student edit: Add your name and email address here:
  * @student    Atharv More, atharv.more@colorado.edu
+ * @student    Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *
  *

@@ -1,3 +1,16 @@
+/*
+ * my_model_def.h
+ *
+ *  Created on: 25-April-2026
+ *      Author: Atharv More
+ *
+ *  @file       my_model_def.h
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
+ *
+ *  @brief      All BT mesh models
+ */
+
+
 /***************************************************************************//**
  * @file my_model_def.h
  * @brief Vendor model definitions
@@ -75,7 +88,7 @@ typedef enum {
 // Data lengths
 #define LAP_COUNT_LENGTH    4  // uint32_t
 #define LAP_TIME_LENGTH     4  // uint32_t (milliseconds)
-#define LAP_DATA_LENGTH     8  // count + time
+#define LAP_DATA_LENGTH     12  // count + time
 
 
 typedef struct { // DOS: data structure for values we need to save for each model

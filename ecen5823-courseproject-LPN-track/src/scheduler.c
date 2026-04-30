@@ -2,10 +2,10 @@
  * scheduler.c
  *
  *  Created on: 04-Feb-2026
- *      Author: Atharv More
+ *      Author: Shruti Kalyankar
  *
- *  @file       irq.c
- *  @author     Atharv More, atharv.more@colorado.edu
+ *  @file       scheduler.c
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the Event schedulers this file
  */
@@ -27,10 +27,12 @@
 volatile uint64_t lap_time_ms = 0;
 volatile uint64_t prev_car_pass_time_ms = 0;
 volatile uint64_t curr_car_pass_time_ms = 0;
+volatile uint32_t lap_count = 0;
+volatile uint64_t min_lap_time_ms = UINT64_MAX;
 
 EVENTS_t APP_event;
 
-static void lcd_update_lap_info(uint32_t lap_count, uint32_t lap_time_ms);
+static void lcd_update_lap_info(uint32_t lap_count, uint32_t lap_time_ms, uint32_t min_lap_time_ms);
 
 /**
  * @brief Sets Event for LETIMER0_UF
@@ -87,6 +89,10 @@ void schedulerSetEvent_VCNL4040_INT()
   else {
       lap_time_ms = curr_car_pass_time_ms - prev_car_pass_time_ms;
       prev_car_pass_time_ms = curr_car_pass_time_ms;
+      if(lap_count && (lap_time_ms < min_lap_time_ms))
+      {
+          min_lap_time_ms = lap_time_ms;
+      }
   }
 //  APP_event |= VCNL4040_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
   sl_bt_external_signal(VCNL4040_INT);
@@ -141,23 +147,23 @@ EVENTS_t getNextEvent()
 
 void lap_time_logic(void)
 {
-  static uint32_t lap_count = 0;
-  static uint32_t last_lap_start_time = 0;
-  uint32_t current_time = get_LETIMER_ms();
-  uint32_t lap_time_ms = 0;
+//  static uint32_t lap_count = 0;
+//  static uint32_t last_lap_start_time = 0;
+//  uint32_t current_time = get_LETIMER_ms();
+//  uint32_t lap_time_ms = 0;
 
   if (lap_count > 0) {
-    lap_time_ms = current_time - last_lap_start_time;
+//    lap_time_ms = current_time - last_lap_start_time;
 
     // Publish to mesh Friend node
-    publish_lap_data(lap_count, lap_time_ms);
+    publish_lap_data(lap_count, lap_time_ms, min_lap_time_ms);
 
     // Update LCD
-    lcd_update_lap_info(lap_count, lap_time_ms);
+    lcd_update_lap_info(lap_count, lap_time_ms, min_lap_time_ms);
   }
 
   lap_count++;
-  last_lap_start_time = current_time;
+//  last_lap_start_time = current_time;
 }
 
 
@@ -229,10 +235,11 @@ void si7021_I2C()
   }
 }
 
-static void lcd_update_lap_info(uint32_t lap_count, uint32_t lap_time_ms)
+static void lcd_update_lap_info(uint32_t lap_count, uint32_t lap_time_ms, uint32_t min_lap_time_ms)
 {
   displayPrintf(DISPLAY_ROW_LAPTIME, "Lap Time = %ld.%03lds", lap_time_ms/1000, lap_time_ms%1000);
   displayPrintf(DISPLAY_ROW_LAPNUM, "Lap Number = %lu", lap_count);
+  displayPrintf(DISPLAY_ROW_MINLAPTIME, "Min Lap = %ld.%03lds", min_lap_time_ms/1000, min_lap_time_ms%1000);
 }
 
 

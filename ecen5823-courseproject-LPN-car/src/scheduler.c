@@ -2,10 +2,10 @@
  * scheduler.c
  *
  *  Created on: 04-Feb-2026
- *      Author: Atharv More
+ *      Author: Shruti Kalyankar
  *
- *  @file       irq.c
- *  @author     Atharv More, atharv.more@colorado.edu
+ *  @file       scheduler.c
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the Event schedulers this file
  */

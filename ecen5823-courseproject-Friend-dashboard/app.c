@@ -32,7 +32,11 @@
  * suitable for production environments. In addition, this code will not be
  * maintained and there may be no bug maintenance planned for these resources.
  * Silicon Labs may update projects from time to time.
+ *
+ * @student    Shruti Kalyankar, shruti.kalyankar@colorado.edu
+ *
  ******************************************************************************/
+
 
 
 // DOS: For ECEN 5823 this is the code for a BT Mesh Server/Friend.
@@ -105,6 +109,9 @@
 // Used button indexes
 #define BUTTON_PRESS_BUTTON_0                       0
 #define BUTTON_PRESS_BUTTON_1                       1
+
+#define LPN_ADDR_TRACK 0x0773
+#define LPN_ADDR_CAR   0x6243
 
 //static uint8_t temperature[TEMP_DATA_LENGTH] = {0, 0, 0, 0}; // DOS: temperature measurement that the server maintains
 //static unit_t unit[UNIT_DATA_LENGTH] = {
@@ -456,7 +463,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           (sl_btmesh_evt_vendor_model_receive_t *)&evt->data;
 
       uint8_t *data = rx_evt->payload.data;
-      char lcd_buf[LCD_ROW_LEN];
+//      char lcd_buf[LCD_ROW_LEN];
 
       app_log("Received opcode=0x%02X from=0x%04X\r\n",
               rx_evt->opcode, rx_evt->source_address);
@@ -468,18 +475,24 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
                                (data[2] << 16) | (data[3] << 24);
           uint32_t lap_time  = data[4] | (data[5] << 8) |
                                (data[6] << 16) | (data[7] << 24);
+          uint32_t min_lap_time = data[8] | (data[9] << 8) |
+                                  (data[10] << 16) | (data[11] << 24);
 
           app_log("TRACK -> Lap %lu: %lu.%03lus\r\n",
                   lap_count, lap_time/1000, lap_time%1000);
 
-          memset(lcd_buf, 0, LCD_ROW_LEN);
-          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
-          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
+//          memset(lcd_buf, 0, LCD_ROW_LEN);
+//          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
+//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
+          displayPrintf(DISPLAY_ROW_LAPNUM, "Lap: %lu", lap_count);
 
-          memset(lcd_buf, 0, LCD_ROW_LEN);
-          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus",
-                   lap_time/1000, lap_time%1000);
-          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
+//          memset(lcd_buf, 0, LCD_ROW_LEN);
+//          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus",
+//                   lap_time/1000, lap_time%1000);
+//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
+          displayPrintf(DISPLAY_ROW_LAPTIME, "Lap Time = %lu.%03lus", lap_time/1000, lap_time%1000);
+
+          displayPrintf(DISPLAY_ROW_MINLAPTIME, "Min Lap = %lu.%03lus", min_lap_time/1000, min_lap_time%1000);
           break;
         }
 
@@ -490,9 +503,11 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 
           app_log("CAR -> G: x=%d y=%d z=%d\r\n", x, y, z);
 
-          memset(lcd_buf, 0, LCD_ROW_LEN);
-          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
-          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
+//          memset(lcd_buf, 0, LCD_ROW_LEN);
+//          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
+//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
+          displayPrintf(DISPLAY_ROW_ACCELERATION, "G:%d,%d,%d", x, y, z);
+          displayPrintf(DISPLAY_ROW_CRASH, "");
           break;
         }
 
@@ -502,7 +517,8 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           int16_t z = (int16_t)((data[4] << 8) | data[5]);
 
           app_log("CAR -> *** CRASH! x=%d y=%d z=%d\r\n", x, y, z);
-          sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
+//          sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
+          displayPrintf(DISPLAY_ROW_CRASH, "*** IMPACT ***");
           break;
         }
 
@@ -519,6 +535,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
     // Handle vendor Friend - Friendship events
 
     case sl_btmesh_evt_friend_friendship_established_id:
+      {
       number_of_friendships++;
 
       //memset(friend_status, 0, LCD_ROW_LEN);
@@ -529,12 +546,24 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
       //snprintf(friend_status, LCD_ROW_LEN, "NumFriends=%d", number_of_friendships); // number of friendships
       //sl_btmesh_LCD_write(friend_status, LCD_ROW_3);
 
-      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Est.");
-      app_log("  ***Friendship Established\r\n"); // DOS
+      uint16_t lpn_addr = evt->data.evt_friend_friendship_established.lpn_address;
+
+      if(lpn_addr == LPN_ADDR_TRACK)
+      {
+          displayPrintf(DISPLAY_ROW_TRACKSTATUS, "Track Friend Est.");
+          app_log("  ***Track Friendship Established\r\n"); // DOS
+      }
+      else if (lpn_addr == LPN_ADDR_CAR)
+      {
+          displayPrintf(DISPLAY_ROW_CARSTATUS, "Car Friend Est.");
+          app_log("  ***Car Friendship Established\r\n"); // DOS
+      }
 
       break;
+      }
 
     case sl_btmesh_evt_friend_friendship_terminated_id:
+      {
       number_of_friendships--;
 
 //      memset(friend_status, 0, LCD_ROW_LEN);
@@ -545,10 +574,21 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 //      snprintf(friend_status, LCD_ROW_LEN, "NumFriends=%d", number_of_friendships); // number of friendships
 //      sl_btmesh_LCD_write(friend_status, LCD_ROW_3);
 
-      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Term.");
-      app_log("  ***Friendship terminated\r\n"); // DOS
+      uint16_t lpn_addr = evt->data.evt_friend_friendship_terminated.lpn_address;
+
+      if(lpn_addr == LPN_ADDR_TRACK)
+      {
+          displayPrintf(DISPLAY_ROW_TRACKSTATUS, "Track Friend Term.");
+          app_log("  ***Track Friendship Terminated\r\n"); // DOS
+      }
+      else if (lpn_addr == LPN_ADDR_CAR)
+      {
+          displayPrintf(DISPLAY_ROW_CARSTATUS, "CAR Friend Term.");
+          app_log("  ***Car Friendship Terminated\r\n"); // DOS
+      }
 
       break;
+      }
 
 
     // -------------------------------

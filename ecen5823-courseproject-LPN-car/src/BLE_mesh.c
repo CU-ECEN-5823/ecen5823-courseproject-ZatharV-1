@@ -2,7 +2,13 @@
  * BLE_mesh.c
  *
  *  Created on: 20-Apr-2026
- *      Author: athar
+ *
+ *
+ *  @file       BLE_mesh.c
+ *
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
+ *
+ *  @brief      All BT mesh function and operations in this file
  */
 
 
@@ -272,6 +278,13 @@ void handle_ble_event(struct sl_bt_msg *evt)
 
 void publish_car_health(int16_t x, int16_t y, int16_t z, bool is_crash)
 {
+  if(is_crash)
+  {
+      displayPrintf(DISPLAY_ROW_CRASH, "*** IMPACT ***");
+  }
+  displayPrintf(DISPLAY_ROW_ACCELERATION, "G:%d,%d,%d", x, y, z);
+
+
     uint8_t payload[CAR_HEALTH_DATA_LENGTH];
     payload[0] = (x >> 8) & 0xFF;
     payload[1] = x & 0xFF;

@@ -2,10 +2,10 @@
  * scheduler.h
  *
  *  Created on: 04-Feb-2026
- *      Author: Atharv More
+ *      Author: Shruti Kalyankar
  *
- *  @file       irq.h
- *  @author     Atharv More, atharv.more@colorado.edu
+ *  @file       scheduler.h
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Event schedulers header file
  */

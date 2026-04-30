@@ -2,12 +2,12 @@
  * timers.c
  *
  *  Created on: 28-Jan-2026
- *      Author: Atharv More
+ *      Author: Shruti Kalyankar
  *
  *
  *  @file       timers.c
  *
- *  @author     Atharv More, atharv.more@colorado.edu
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
  *
  *  @brief      Add all the timers related functions in this file.
  *

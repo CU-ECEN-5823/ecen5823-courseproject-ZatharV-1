@@ -2,7 +2,13 @@
  * BLE_mesh.h
  *
  *  Created on: 20-Apr-2026
- *      Author: athar
+ *
+ *
+ *  @file       BLE_mesh.h
+ *
+ *  @author     Shruti Kalyankar, shruti.kalyankar@colorado.edu
+ *
+ *  @brief      All BT mesh function and operations in this file
  */
 
 #ifndef SRC_BLE_MESH_H_

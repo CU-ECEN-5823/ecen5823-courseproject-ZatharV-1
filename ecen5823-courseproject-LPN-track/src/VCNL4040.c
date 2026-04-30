@@ -2,7 +2,11 @@
  * VCNL4040.c
  *
  *  Created on: 14-Apr-2026
- *      Author: Atharv More, Shruti Kalyankar
+ *      Author: Atharv More
+ *
+ *      @author     Atharv More, atharv.more@colorado.edu
+ *
+ *      @brief  VCNL4040 proximity sensor driver
  *
  */
 
