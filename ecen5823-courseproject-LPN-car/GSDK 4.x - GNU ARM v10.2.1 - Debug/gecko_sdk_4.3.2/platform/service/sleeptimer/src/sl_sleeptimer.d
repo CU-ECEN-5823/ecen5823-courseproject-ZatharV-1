@@ -62,11 +62,11 @@ gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
  ../gecko_sdk_4.3.2/platform/service/sleeptimer/src/sli_sleeptimer_hal.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_sleeptimer_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_sleeptimer_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_atomic.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sli_power_manager.h \
@@ -133,11 +133,11 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 ../gecko_sdk_4.3.2/platform/service/sleeptimer/src/sli_sleeptimer_hal.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_sleeptimer_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_sleeptimer_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_atomic.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sli_power_manager.h:

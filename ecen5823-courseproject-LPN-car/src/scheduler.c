@@ -81,7 +81,7 @@ void schedulerSetEvent_VCNL4040_INT()
       lap_time_ms = curr_car_pass_time_ms - prev_car_pass_time_ms;
       prev_car_pass_time_ms = curr_car_pass_time_ms;
   }
-  APP_event |= VCNL4040_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
+  APP_event |= MMA8452_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
   CORE_EXIT_CRITICAL();         // Exit critical section
 }
 
@@ -108,10 +108,10 @@ EVENTS_t getNextEvent()
       event = LETIMER0_COMP1;
       APP_event &= ~LETIMER0_COMP1;
   }
-  else if(APP_event & VCNL4040_INT)
+  else if(APP_event & MMA8452_INT)
   {
-      event = VCNL4040_INT;
-      APP_event &= ~VCNL4040_INT;
+      event = MMA8452_INT;
+      APP_event &= ~MMA8452_INT;
   }
   else if(APP_event & I2C_TRANSFER_COMPLETE)
   {

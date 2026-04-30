@@ -63,8 +63,8 @@ gecko_sdk_4.3.2/platform/emlib/src/em_dbg.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu_compat.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
@@ -136,8 +136,8 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu_compat.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:

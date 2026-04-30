@@ -19,7 +19,7 @@ typedef enum
   LETIMER0_UF = 1,
   LETIMER0_COMP1 = 2,
   I2C_TRANSFER_COMPLETE = 4,
-  VCNL4040_INT = 8
+  MMA8452_INT = 8
 }EVENTS_t;
 
 extern EVENTS_t APP_event;

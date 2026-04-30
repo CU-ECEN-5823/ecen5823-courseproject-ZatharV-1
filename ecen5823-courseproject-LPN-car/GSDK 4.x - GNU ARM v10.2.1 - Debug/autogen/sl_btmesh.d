@@ -5,13 +5,13 @@ autogen/sl_btmesh.o: ../autogen/sl_btmesh.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\cmsis\core\include\cmsis_gcc.h \
  ../autogen/sl_btmesh.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_btmesh_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_btmesh_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_api.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_stack_init.h \
@@ -27,13 +27,13 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\cmsis\core\include\cmsis
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\cmsis\core\include\cmsis_gcc.h:
 ../autogen/sl_btmesh.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_btmesh_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_btmesh_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_api.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_stack_init.h:

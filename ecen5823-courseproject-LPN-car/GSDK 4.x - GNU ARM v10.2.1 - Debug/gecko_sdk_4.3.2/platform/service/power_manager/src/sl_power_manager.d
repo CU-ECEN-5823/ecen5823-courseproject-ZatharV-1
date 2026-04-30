@@ -1,7 +1,7 @@
 gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o: \
  ../gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
@@ -12,8 +12,8 @@ gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
  ../gecko_sdk_4.3.2/platform/service/power_manager/src/sli_power_manager_private.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sli_power_manager.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h \
@@ -71,7 +71,7 @@ gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_dmareq.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_ports.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_pins.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_sleeptimer_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_sleeptimer_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_atomic.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_emu.h \
@@ -79,7 +79,7 @@ gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
@@ -90,8 +90,8 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\cmsis\core\include\cmsis
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
 ../gecko_sdk_4.3.2/platform/service/power_manager/src/sli_power_manager_private.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sli_power_manager.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h:
@@ -149,7 +149,7 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_dmareq.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_ports.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_pins.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_sleeptimer_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_sleeptimer_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_atomic.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_emu.h:

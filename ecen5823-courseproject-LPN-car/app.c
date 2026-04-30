@@ -49,7 +49,7 @@
 #include "src/timers.h"
 #include "src/scheduler.h"
 #include "src/irq.h"
-#include "src/VCNL4040.h"
+#include "src/MMA8452.h"
 #include "src/BLE_mesh.h"
 
 
@@ -221,78 +221,40 @@ SL_WEAK void app_init(void)
  *****************************************************************************/
 SL_WEAK void app_process_action(void)
 {
-  // Put your application code here for A1 to A4.
-  // This is called repeatedly from the main while(1) loop
-  // Notice: This function is not passed or has access to Bluetooth stack events.
-  //         We will create/use a scheme that is far more energy efficient in
-  //         later assignments.
+  EVENTS_t event = getNextEvent();
 
+  switch(event)
+  {
+    case LETIMER0_UF:
+      // Periodic 1s telemetry publish
+      if (lpn_is_active()) {
+          mma_data_t data = MMA8452Q_read_val();
+          publish_car_health(data.x, data.y, data.z, false);
+          LOG_INFO("Periodic publish: x=%d y=%d z=%d\r", data.x, data.y, data.z);
+      }
+      break;
 
-//  EVENTS_t event = getNextEvent();
-//
-//  switch(event)
-//  {
-//    case LETIMER0_UF:
-//      break;
-//    case VCNL4040_INT:
-//      VCNL4040_clear_interrupt();
-//      lap_time_logic();
-////      LOG_INFO("VCNL_INT_triggerred\r");
-//      break;
-//    case LETIMER0_COMP1:
-//    case I2C_TRANSFER_COMPLETE:
-////      si7021_I2C();
-//      break;
-//    default:
-//      break;
-//  }
+    case MMA8452_INT:
+      // Crash detected - clear interrupt and publish immediately
+      MMA8452_clear_interrupt();
+      LOG_INFO("Crash detected!\r");
+      if (lpn_is_active()) {
+          mma_data_t data = MMA8452Q_read_val();
+          publish_car_health(data.x, data.y, data.z, true);
+          LOG_INFO("Crash published: x=%d y=%d z=%d\r", data.x, data.y, data.z);
+      }
+      break;
 
+    case LETIMER0_COMP1:
+      break;
 
-//  while(1)
-//  {
-//      uint8_t pin_state = read_int_pin();
-//
-//      // 2. Check if the sensor has pulled the pin Low
-//      if (pin_state == 0) {
-//          LOG_INFO("Object Detected (Pin is LOW)!\r\n");
-//
-//          // Optional: Read proximity value to see what triggered it
-////          VCNL4040_read_sensor_data();
-//
-//          // 3. IMPORTANT: Clear the interrupt on the sensor
-//          // This is the only way to make the pin go HIGH (1) again.
-//          VCNL4040_clear_interrupt();
-//
-//          LOG_INFO("Interrupt Cleared. Waiting for next trigger...\r\n");
-//      }
-//  }
+    case I2C_TRANSFER_COMPLETE:
+      break;
 
-//  VCNL4040_read_proximity();
-//  VCNL4040_clear_interrupt();
-
-//  static int led_status = 0;
-//  if(led_status)
-//  {
-//    gpioLed0SetOff();
-//    led_status = 0;
-//  }
-//  else
-//  {
-//      led_status = 1;
-//      gpioLed0SetOn();
-//  }
-
-
-//  if(read_int_pin())
-//  {
-//      LOG_INFO("Pin set\r");
-//  }
-//  else
-//  {
-//      LOG_INFO("Pin Clear\r");
-//  }
-//  delayApprox(1000);
-
+    case EVT_NONE:
+    default:
+      break;
+  }
 
 } // app_process_action()
 

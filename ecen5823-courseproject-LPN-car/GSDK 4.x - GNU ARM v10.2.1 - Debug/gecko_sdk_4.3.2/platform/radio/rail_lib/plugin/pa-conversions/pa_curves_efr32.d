@@ -59,7 +59,7 @@ gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o:
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_pa_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_pa_config.h \
  ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.h \
  ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/efr32xg1x/sl_rail_util_pa_curves.h \
  ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curve_types_efr32.h
@@ -122,7 +122,7 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_pa_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_pa_config.h:
 ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.h:
 ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/efr32xg1x/sl_rail_util_pa_curves.h:
 ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curve_types_efr32.h:

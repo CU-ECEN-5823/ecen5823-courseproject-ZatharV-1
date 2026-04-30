@@ -64,8 +64,8 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_nvic.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\hardware\board\inc\sl_board_init.h \
@@ -78,7 +78,7 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_pa_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_pa_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curves_efr32.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\efr32xg1x/sl_rail_util_pa_curves.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curve_types_efr32.h \
@@ -94,11 +94,11 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\common\util\app_log\app_log.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_iostream_handles.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_iostream_init_usart_instances.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_iostream_handles.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_iostream_init_usart_instances.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
@@ -106,25 +106,25 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\dmadrv\inc\dmadrv.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\common\inc\ecode.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_ldma.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/dmadrv_config.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/app_log_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/dmadrv_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/app_log_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\common\util\app_timer\app_timer.h \
  ../autogen/sl_bluetooth.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_bluetooth_config.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_bluetooth_connection_config.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_bluetooth_advertiser_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_bluetooth_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_bluetooth_connection_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_bluetooth_advertiser_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
  ../autogen/sl_btmesh.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_btmesh_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_btmesh_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_api.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_stack_init.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_bgapi.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\btmesh\common\btmesh_wstk_lcd\sl_btmesh_wstk_lcd.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_btmesh_wstk_lcd_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_btmesh_wstk_lcd_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\debug\inc\sl_debug_swo.h \
  ../autogen/sl_i2cspm_instances.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h \
@@ -206,8 +206,8 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_nvic.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\hardware\board\inc\sl_board_init.h:
@@ -220,7 +220,7 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_pa_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_pa_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curves_efr32.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\efr32xg1x/sl_rail_util_pa_curves.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curve_types_efr32.h:
@@ -236,11 +236,11 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\common\util\app_log\app_log.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_iostream_handles.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_iostream_init_usart_instances.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_iostream_handles.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_iostream_init_usart_instances.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_power_manager_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_power_manager_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
@@ -248,25 +248,25 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\dmadrv\inc\dmadrv.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\common\inc\ecode.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_ldma.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/dmadrv_config.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/app_log_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/dmadrv_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/app_log_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\common\util\app_timer\app_timer.h:
 ../autogen/sl_bluetooth.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_bluetooth_config.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_bluetooth_connection_config.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_bluetooth_advertiser_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_bluetooth_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_bluetooth_connection_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_bluetooth_advertiser_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api_compatibility.h:
 ../autogen/sl_btmesh.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_btmesh_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_btmesh_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_api.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_stack_init.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_bgapi.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\btmesh\common\btmesh_wstk_lcd\sl_btmesh_wstk_lcd.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_btmesh_wstk_lcd_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_btmesh_wstk_lcd_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\debug\inc\sl_debug_swo.h:
 ../autogen/sl_i2cspm_instances.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h:

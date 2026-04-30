@@ -61,7 +61,7 @@ gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_r
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_pins.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_assert_error_codes.h \
  ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_power_manager_init_config.h
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_power_manager_init_config.h
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h:
@@ -123,4 +123,4 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_pins.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_assert_error_codes.h:
 ../gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_power_manager_init_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_power_manager_init_config.h:

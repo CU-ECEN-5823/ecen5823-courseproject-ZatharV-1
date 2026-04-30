@@ -65,8 +65,8 @@ gecko_sdk_4.3.2/app/btmesh/common/app_btmesh_util/app_btmesh_util.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\nvm3\inc\nvm3_default.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
  ../gecko_sdk_4.3.2/app/btmesh/common/app_btmesh_util/app_btmesh_util.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/app_btmesh_util_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/app_btmesh_util_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_api.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\nvm3\inc\nvm3.h:
@@ -134,7 +134,7 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emdrv\nvm3\inc\nvm3_default.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
 ../gecko_sdk_4.3.2/app/btmesh/common/app_btmesh_util/app_btmesh_util.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/app_btmesh_util_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/app_btmesh_util_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_btmesh_api.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h:

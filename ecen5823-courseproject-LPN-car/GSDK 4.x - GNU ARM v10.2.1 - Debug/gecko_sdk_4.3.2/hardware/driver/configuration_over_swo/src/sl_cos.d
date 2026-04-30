@@ -1,9 +1,9 @@
 gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o: \
  ../gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.c \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\hardware\driver\configuration_over_swo\inc\sl_cos.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_pti_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_pti_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h \
@@ -64,10 +64,10 @@ gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\efr32bg13p_af_pins.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\debug\inc\sl_debug_swo.h
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\hardware\driver\configuration_over_swo\inc\sl_cos.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_rail_util_pti_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_rail_util_pti_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h:

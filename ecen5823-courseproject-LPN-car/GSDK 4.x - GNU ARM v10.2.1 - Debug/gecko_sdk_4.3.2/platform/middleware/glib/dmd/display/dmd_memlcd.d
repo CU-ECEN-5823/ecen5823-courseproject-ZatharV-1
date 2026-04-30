@@ -69,13 +69,13 @@ gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o: \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu_compat.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\sli_em_cmu.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_memlcd_usart_config.h \
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_memlcd_usart_config.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\hardware\driver\memlcd\src\ls013b7dh03\sl_memlcd_display.h
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\dmd\dmd.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\middleware\glib\em_types.h:
@@ -146,11 +146,11 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\autogen/sl_component_catalog.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/emlib_core_debug_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\autogen/sl_component_catalog.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/emlib_core_debug_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu_compat.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\sli_em_cmu.h:
-C:\Users\Owner\SimplicityStudio\v5_workspace\btmesh_vendor_client_3\config/sl_memlcd_usart_config.h:
+C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-LPN-car\config/sl_memlcd_usart_config.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\hardware\driver\memlcd\src\ls013b7dh03\sl_memlcd_display.h:
