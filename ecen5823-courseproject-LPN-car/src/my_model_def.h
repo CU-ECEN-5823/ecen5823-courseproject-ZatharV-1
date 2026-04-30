@@ -44,7 +44,7 @@
 #define MY_VENDOR_ID                    0x1111
 
 #define MY_MODEL_SERVER_ID              0x1111
-#define MY_MODEL_CLIENT_ID              0x2222
+#define MY_MODEL_CLIENT_ID              0x3333
 
 #define CAR_HEALTH_DATA_LENGTH          7
 #define LAP_DATA_LENGTH                1

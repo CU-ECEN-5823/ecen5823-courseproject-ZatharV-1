@@ -34,6 +34,6 @@
 
 
 #define VENDOR_MODEL_0_CID 0x1111
-#define VENDOR_MODEL_0_MID 0x2222
+#define VENDOR_MODEL_0_MID 0x3333
 
 #endif // SL_BTMESH_DCD_H

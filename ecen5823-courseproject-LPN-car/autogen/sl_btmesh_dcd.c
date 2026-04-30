@@ -47,7 +47,7 @@ const uint8_t __mesh_dcd[] = {
       U16TOA(0x0000), /* Configuration Server */
       U16TOA(0x0002), /* Health Server */
     /* Vendor Models */
-      U16TOA(0x1111), U16TOA(0x2222), /* Vendor Model 0 */
+      U16TOA(0x1111), U16TOA(0x3333), /* Vendor Model 0 */
 };
 
 const size_t __mesh_dcd_len = sizeof(__mesh_dcd);
