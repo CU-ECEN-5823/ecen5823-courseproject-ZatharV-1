@@ -64,4 +64,5 @@ gecko_sdk_4.3.2/platform/service/udelay/src \
 gecko_sdk_4.3.2/protocol/bluetooth/src \
 gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager \
 gecko_sdk_4.3.2/util/third_party/mbedtls/library \
+src \
 

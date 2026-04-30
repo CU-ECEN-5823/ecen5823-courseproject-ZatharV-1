@@ -103,7 +103,8 @@ app.o: ../app.c \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\button\inc\sl_button.h \
  C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-Friend-dashboard\autogen/sl_simple_button_instances.h \
  c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\btmesh\common\btmesh_wstk_lcd\sl_btmesh_wstk_lcd.h \
- C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-Friend-dashboard\config/sl_btmesh_wstk_lcd_config.h
+ C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-Friend-dashboard\config/sl_btmesh_wstk_lcd_config.h \
+ ../src/lcd.h
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_common.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32bg13p\include\em_device.h:
@@ -209,3 +210,4 @@ c:\users\owner\simplicitystudio\sdks\gecko_sdk\platform\driver\button\inc\sl_but
 C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-Friend-dashboard\autogen/sl_simple_button_instances.h:
 c:\users\owner\simplicitystudio\sdks\gecko_sdk\app\btmesh\common\btmesh_wstk_lcd\sl_btmesh_wstk_lcd.h:
 C:\Users\Owner\SimplicityStudio\v5_workspace\ecen5823-courseproject-Friend-dashboard\config/sl_btmesh_wstk_lcd_config.h:
+../src/lcd.h:

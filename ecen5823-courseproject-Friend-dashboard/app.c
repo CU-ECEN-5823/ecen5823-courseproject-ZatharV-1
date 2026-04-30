@@ -64,6 +64,7 @@
 #include "sl_simple_button_instances.h"
 
 #include "sl_btmesh_wstk_lcd.h"
+#include "src/lcd.h"
 
 #include "em_gpio.h" // DOS: for gpio
 
@@ -188,8 +189,11 @@ SL_WEAK void app_init(void)
   app_log("Friend/Dashboard\r\n");
   app_button_press_enable();
 
-  sl_btmesh_LCD_write("Dashboard", LCD_ROW_1);
+  //sl_btmesh_LCD_write("Dashboard", LCD_ROW_1);
 
+  displayInit();  // Initialize Display
+  displayPrintf(DISPLAY_ROW_NAME, "Dashboard");
+  displayPrintf(DISPLAY_ROW_ASSIGNMENT, "Course Project");
   static sl_simple_timer_t logging_timer;
   sl_simple_timer_start(&logging_timer, 500, logging_timer_cb, NULL, true);
 }
@@ -254,20 +258,20 @@ void sl_bt_on_event(struct sl_bt_msg *evt)
       if (sc != SL_STATUS_OK) {
           app_log("sl_bt_system_get_identity_address() returned != 0 status=0x%04x", (unsigned int) sc);
       } else {
-          char   myAddressStr[LCD_ROW_LEN];
-          memset(myAddressStr, 0, LCD_ROW_LEN);
-          // handle % format, no printf() capability in sl_btmesh_LCD_write(), by
-          // using snprintf() prior to calling sl_btmesh_LCD_write() as snprintf() can
-          // handle all of the % format conversion characters
-          snprintf(myAddressStr, LCD_ROW_LEN, "%02x:%02x:%02x:%02x:%02x:%02x",
-                   myAddress.addr[5],
-                   myAddress.addr[4],
-                   myAddress.addr[3],
-                   myAddress.addr[2],
-                   myAddress.addr[1],
-                   myAddress.addr[0]
-                   );
-          sl_btmesh_LCD_write(myAddressStr, LCD_ROW_4);
+//          char   myAddressStr[LCD_ROW_LEN];
+//          memset(myAddressStr, 0, LCD_ROW_LEN);
+//          // handle % format, no printf() capability in sl_btmesh_LCD_write(), by
+//          // using snprintf() prior to calling sl_btmesh_LCD_write() as snprintf() can
+//          // handle all of the % format conversion characters
+//          snprintf(myAddressStr, LCD_ROW_LEN, "%02x:%02x:%02x:%02x:%02x:%02x",
+//                   myAddress.addr[5],
+//                   myAddress.addr[4],
+//                   myAddress.addr[3],
+//                   myAddress.addr[2],
+//                   myAddress.addr[1],
+//                   myAddress.addr[0]
+//                   );
+//          sl_btmesh_LCD_write(myAddressStr, LCD_ROW_4);
       }
       break;
     // -------------------------------
@@ -468,13 +472,16 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           app_log("LAP %lu: %lu.%03lus\r\n",
                   lap_count, lap_time/1000, lap_time%1000);
 
-          memset(lcd_buf, 0, LCD_ROW_LEN);
-          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
-          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
+//          memset(lcd_buf, 0, LCD_ROW_LEN);
+//          snprintf(lcd_buf, LCD_ROW_LEN, "Lap: %lu", lap_count);
+//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_2);
+//
+//          memset(lcd_buf, 0, LCD_ROW_LEN);
+//          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus", lap_time/1000, lap_time%1000);
+//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
 
-          memset(lcd_buf, 0, LCD_ROW_LEN);
-          snprintf(lcd_buf, LCD_ROW_LEN, "%lu.%03lus", lap_time/1000, lap_time%1000);
-          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_3);
+          displayPrintf(DISPLAY_ROW_LAPTIME, "Lap Time = %ld.%03lds", lap_time/1000, lap_time%1000);
+          displayPrintf(DISPLAY_ROW_LAPNUM, "Lap Number = %lu", lap_count);
           break;
         }
 
@@ -485,9 +492,11 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 
           app_log("Car health: x=%d y=%d z=%d\r\n", x, y, z);
 
-          memset(lcd_buf, 0, LCD_ROW_LEN);
-          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
-          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
+//          memset(lcd_buf, 0, LCD_ROW_LEN);
+//          snprintf(lcd_buf, LCD_ROW_LEN, "G:%d,%d,%d", x, y, z);
+//          sl_btmesh_LCD_write(lcd_buf, LCD_ROW_4);
+
+          displayPrintf(DISPLAY_ROW_ACCELERATION, "G:%d,%d,%d", x, y, z);
           break;
         }
 
@@ -496,9 +505,10 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
           int16_t y = (int16_t)((data[2] << 8) | data[3]);
           int16_t z = (int16_t)((data[4] << 8) | data[5]);
 
+          displayPrintf(DISPLAY_ROW_CRASH, "CRASH");
           app_log("*** CRASH DETECTED! x=%d y=%d z=%d\r\n", x, y, z);
 
-          sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
+          //sl_btmesh_LCD_write("*** IMPACT ***", LCD_ROW_4);
           break;
         }
 
@@ -517,14 +527,15 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
     case sl_btmesh_evt_friend_friendship_established_id:
       number_of_friendships++;
 
-      memset(friend_status, 0, LCD_ROW_LEN);
-      snprintf(friend_status, LCD_ROW_LEN, "Friend Est."); // friendship established
-      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
+      //memset(friend_status, 0, LCD_ROW_LEN);
+      //snprintf(friend_status, LCD_ROW_LEN, "Friend Est."); // friendship established
+      //sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
 
-      memset(friend_status, 0, LCD_ROW_LEN);
-      snprintf(friend_status, LCD_ROW_LEN, "NumFriends=%d", number_of_friendships); // number of friendships
-      sl_btmesh_LCD_write(friend_status, LCD_ROW_3);
+      //memset(friend_status, 0, LCD_ROW_LEN);
+      //snprintf(friend_status, LCD_ROW_LEN, "NumFriends=%d", number_of_friendships); // number of friendships
+      //sl_btmesh_LCD_write(friend_status, LCD_ROW_3);
 
+      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Est.");
       app_log("  ***Friendship Established\r\n"); // DOS
 
       break;
@@ -532,14 +543,15 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
     case sl_btmesh_evt_friend_friendship_terminated_id:
       number_of_friendships--;
 
-      memset(friend_status, 0, LCD_ROW_LEN);
-      snprintf(friend_status, LCD_ROW_LEN, "Friend Term."); // friendship terminated
-      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
+//      memset(friend_status, 0, LCD_ROW_LEN);
+//      snprintf(friend_status, LCD_ROW_LEN, "Friend Term."); // friendship terminated
+//      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
 
-      memset(friend_status, 0, LCD_ROW_LEN);
-      snprintf(friend_status, LCD_ROW_LEN, "NumFriends=%d", number_of_friendships); // number of friendships
-      sl_btmesh_LCD_write(friend_status, LCD_ROW_3);
+//      memset(friend_status, 0, LCD_ROW_LEN);
+//      snprintf(friend_status, LCD_ROW_LEN, "NumFriends=%d", number_of_friendships); // number of friendships
+//      sl_btmesh_LCD_write(friend_status, LCD_ROW_3);
 
+      displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Term.");
       app_log("  ***Friendship terminated\r\n"); // DOS
 
       break;
@@ -595,10 +607,11 @@ static void factory_reset(void)
 
   app_log("factory reset\r\n");
 
-  memset(reset_status, 0, LCD_ROW_LEN);
-  snprintf(reset_status, LCD_ROW_LEN, "Factory Reset");
-  sl_btmesh_LCD_write(reset_status, LCD_ROW_2);
+//  memset(reset_status, 0, LCD_ROW_LEN);
+//  snprintf(reset_status, LCD_ROW_LEN, "Factory Reset");
+//  sl_btmesh_LCD_write(reset_status, LCD_ROW_2);
 
+  displayPrintf(DISPLAY_ROW_RESETSTATUS, "Factory Reset");
   sl_btmesh_node_reset();
 
   delay_reset_ms(100);
