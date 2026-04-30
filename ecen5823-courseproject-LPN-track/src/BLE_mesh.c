@@ -28,6 +28,8 @@
 #include "src/my_model_def.h"
 
 #include "lcd.h"
+#include "scheduler.h"
+#include "VCNL4040.h"
 
 #define INCLUDE_LOG_DEBUG 1
 #include "log.h"
@@ -48,7 +50,7 @@
 // Group Addresses
 // Choose any 16-bit address starting at 0xC000
 #define CUSTOM_STATUS_GRP_ADDR                      0xC001  // Server PUB address
-#define CUSTOM_CTRL_GRP_ADDR                        0xC002  // Server SUB address
+#define CUSTOM_CTRL_GRP_ADDR_TRACK                        0xC002  // Server SUB address
 
 // The default settings of the network and the node
 #define NET_KEY_IDX                                 0
@@ -232,78 +234,15 @@ void handle_ble_event(struct sl_bt_msg *evt)
     // -------------------------------
     // Handle Button Presses
     // DOS: See app_button_press_cb() below.
-//    case sl_bt_evt_system_external_signal_id: {
-//
-//      uint8_t opcode = 0, length = 0, data = 0;
-//
-//      // DOS: Get the temp measurement from the Server - PB0 press
-//      if(evt->data.evt_system_external_signal.extsignals & EX_B0_PRESS) {
-//          opcode = temperature_get;
-//          app_log("PB0 Pressed.\r\n");
-//      }
-//
-//      // DOS: update interval set in the Server - PB0 long press
-//      if(evt->data.evt_system_external_signal.extsignals & EX_B0_LONG_PRESS) {
-//          opcode = update_interval_set_unack;
-//          length = 1;
-//          data = periods[period_idx];
-//          if(period_idx == sizeof(periods) - 1) {
-//              period_idx = 0;
-//          } else {
-//              period_idx++;
-//          }
-////          app_log("PB0 Long Pressed, period_idx=%d.\r\n", period_idx);
-//      }
-//
-//      // DOS: Get the units from the Server - PB1 press
-//      if(evt->data.evt_system_external_signal.extsignals & EX_B1_PRESS) {
-//          opcode = unit_get;
-//          app_log("PB1 Pressed.\r\n");
-//      }
-//
-//      // DOS: Toggle the units in the Server - PB1 long press
-//      if(evt->data.evt_system_external_signal.extsignals & EX_B1_LONG_PRESS) {
-//          if (unit == celsius) {
-//              opcode = unit_set_unack;
-//              length = 1;
-//              data = fahrenheit;
-//          } else {
-//            opcode = unit_set;
-//            length = 1;
-//            data = celsius;
-//          }
-//          app_log("PB1 Long Pressed.\r\n");
-//      }
-//
-//      // DOS: Set the message data to publish, i.e. queue the data for publishing.
-//
-//      // Student edit: Un-comment this code to send the Request message to the Server node.
-//
-//       sc = sl_btmesh_vendor_model_set_publication(my_model.elem_index,
-//                                                   my_model.vendor_id,
-//                                                   my_model.model_id,
-//                                                   opcode,
-//                                                   1, // DOS: the final payload "chunk"
-//                                                   length,
-//                                                   &data);
-//       if(sc != SL_STATUS_OK) {
-//         app_log("Set publication error: 0x%04lX\r\n", sc);
-//       } else {
-//         app_log("Set publication done. Publishing...\r\n");
-//         // DOS: Publish the queued message to the group address.
-//         sc = sl_btmesh_vendor_model_publish(my_model.elem_index,
-//                                             my_model.vendor_id,
-//                                             my_model.model_id);
-//         if (sc != SL_STATUS_OK) {
-//           app_log("Publish error = 0x%04lX\r\n", sc);
-//         } else {
-//           app_log("Publish done.\r\n");
-//         }
-//
-//       } // else
-//
-//    } // case item
-//    break;
+    case sl_bt_evt_system_external_signal_id:{
+      uint32_t signals = evt->data.evt_system_external_signal.extsignals;
+      if (signals & VCNL4040_INT)
+      {
+          VCNL4040_clear_interrupt();
+          lap_time_logic();
+      }
+    }
+    break;
 
     // -------------------------------
     // Default event handler.
@@ -394,7 +333,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
                                               &period,
                                               &retrans,
                                               &credentials);
-      if (!sc && pub_address == CUSTOM_CTRL_GRP_ADDR) {
+      if (!sc && pub_address == CUSTOM_CTRL_GRP_ADDR_TRACK) {
         app_log("Configuration done already.\r\n");
       } else {
         app_log("Pub setting result = 0x%04lX, pub setting address = 0x%04X\r\n", sc, pub_address);
@@ -417,7 +356,7 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
                                                 APP_KEY_IDX,
                                                 my_model.vendor_id,
                                                 my_model.model_id,
-                                                CUSTOM_CTRL_GRP_ADDR,
+                                                CUSTOM_CTRL_GRP_ADDR_TRACK,
                                                 DEFAULT_TTL,
                                                 0, 0, 0);
         app_assert_status_f(sc, "Failed to set local model pub\r\n");

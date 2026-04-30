@@ -526,7 +526,6 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 //      memset(friend_status, 0, LCD_ROW_LEN);
 //      snprintf(friend_status, LCD_ROW_LEN, "Friend Est."); // friendship established
 //      sl_btmesh_LCD_write(friend_status, LCD_ROW_2);
-      MMA8452Q_init();
       lpn_active = true;
       displayPrintf(DISPLAY_ROW_FRIENDSTATUS, "Friend Est.");
       app_log("  ***Friendship Established\r\n"); // DOS

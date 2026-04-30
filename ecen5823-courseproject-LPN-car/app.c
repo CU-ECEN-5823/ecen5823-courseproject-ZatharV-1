@@ -188,8 +188,8 @@ SL_WEAK void app_init(void)
 
   I2C0_init();
 
+  MMA8452Q_init();
   BTMESH_init();
-//  VCNL4040_init();
 
 } // app_init()
 

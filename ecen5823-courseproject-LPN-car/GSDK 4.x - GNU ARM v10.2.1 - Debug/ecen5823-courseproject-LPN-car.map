@@ -19687,852 +19687,852 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.1
                 0x00000320                _start
                 0x00000320                _mainCRTStartup
  .text.app_init
-                0x00000394       0x28 ./app.o
+                0x00000394       0x2c ./app.o
                 0x00000394                app_init
  .text.app_process_action
-                0x000003bc       0xf0 ./app.o
-                0x000003bc                app_process_action
+                0x000003c0       0xf0 ./app.o
+                0x000003c0                app_process_action
  .text.sl_btmesh_init
-                0x000004ac        0xc ./autogen/sl_btmesh.o
-                0x000004ac                sl_btmesh_init
+                0x000004b0        0xc ./autogen/sl_btmesh.o
+                0x000004b0                sl_btmesh_init
  .text.sl_device_init_clocks
-                0x000004b8       0x48 ./autogen/sl_device_init_clocks.o
-                0x000004b8                sl_device_init_clocks
+                0x000004bc       0x48 ./autogen/sl_device_init_clocks.o
+                0x000004bc                sl_device_init_clocks
  .text.sl_platform_init
-                0x00000500       0x9c ./autogen/sl_event_handler.o
-                0x00000500                sl_platform_init
+                0x00000504       0x9c ./autogen/sl_event_handler.o
+                0x00000504                sl_platform_init
  .text.sl_i2cspm_init_instances
-                0x0000059c       0x1c ./autogen/sl_i2cspm_init.o
-                0x0000059c                sl_i2cspm_init_instances
+                0x000005a0       0x1c ./autogen/sl_i2cspm_init.o
+                0x000005a0                sl_i2cspm_init_instances
  .text.sl_iostream_usart_init_vcom
-                0x000005b8       0xa8 ./autogen/sl_iostream_init_usart_instances.o
-                0x000005b8                sl_iostream_usart_init_vcom
+                0x000005bc       0xa8 ./autogen/sl_iostream_init_usart_instances.o
+                0x000005bc                sl_iostream_usart_init_vcom
  .text.events_handler
-                0x00000660       0x18 ./autogen/sl_iostream_init_usart_instances.o
+                0x00000664       0x18 ./autogen/sl_iostream_init_usart_instances.o
  .text.sl_iostream_usart_init_instances
-                0x00000678       0x1c ./autogen/sl_iostream_init_usart_instances.o
-                0x00000678                sl_iostream_usart_init_instances
+                0x0000067c       0x1c ./autogen/sl_iostream_init_usart_instances.o
+                0x0000067c                sl_iostream_usart_init_instances
  .text.USART0_RX_IRQHandler
-                0x00000694        0xc ./autogen/sl_iostream_init_usart_instances.o
-                0x00000694                USART0_RX_IRQHandler
+                0x00000698        0xc ./autogen/sl_iostream_init_usart_instances.o
+                0x00000698                USART0_RX_IRQHandler
  .text.sl_iostream_usart_vcom_sleep_on_isr_exit
-                0x000006a0        0xc ./autogen/sl_iostream_init_usart_instances.o
-                0x000006a0                sl_iostream_usart_vcom_sleep_on_isr_exit
+                0x000006a4        0xc ./autogen/sl_iostream_init_usart_instances.o
+                0x000006a4                sl_iostream_usart_vcom_sleep_on_isr_exit
  .text.log_append_byte_array_le
-                0x000006ac       0x30 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+                0x000006b0       0x30 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
  .text.log_append_byte_array_be
-                0x000006dc       0x40 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+                0x000006e0       0x40 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
  .text.sl_btmesh_log_on_node_reset
-                0x0000071c       0x2c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
-                0x0000071c                sl_btmesh_log_on_node_reset
+                0x00000720       0x2c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+                0x00000720                sl_btmesh_log_on_node_reset
  .text.sl_btmesh_log_btmesh_events
-                0x00000748     0x807c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
-                0x00000748                sl_btmesh_log_btmesh_events
+                0x0000074c     0x807c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+                0x0000074c                sl_btmesh_log_btmesh_events
  .text.sl_btmesh_log_bt_connection_events
-                0x000087c4       0xf0 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
-                0x000087c4                sl_btmesh_log_bt_connection_events
+                0x000087c8       0xf0 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+                0x000087c8                sl_btmesh_log_bt_connection_events
  .text.lpn_establish_friendship
-                0x000088b4       0x8c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+                0x000088b8       0x8c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
  .text.set_configuration_timer
-                0x00008940       0x8c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+                0x00008944       0x8c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
  .text.sl_btmesh_lpn_feature_init
-                0x000089cc      0x290 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
-                0x000089cc                sl_btmesh_lpn_feature_init
+                0x000089d0      0x290 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+                0x000089d0                sl_btmesh_lpn_feature_init
  .text.lpn_node_configured_timer_cb
-                0x00008c5c       0x44 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+                0x00008c60       0x44 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
  .text.sl_btmesh_lpn_feature_deinit
-                0x00008ca0      0x154 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
-                0x00008ca0                sl_btmesh_lpn_feature_deinit
+                0x00008ca4      0x154 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+                0x00008ca4                sl_btmesh_lpn_feature_deinit
  .text.sl_btmesh_lpn_on_event
-                0x00008df4      0x1dc ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
-                0x00008df4                sl_btmesh_lpn_on_event
+                0x00008df8      0x1dc ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+                0x00008df8                sl_btmesh_lpn_on_event
  .text.graphPrintCenter.constprop.0
-                0x00008fd0       0x84 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+                0x00008fd4       0x84 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
  .text.graphInit
-                0x00009054      0x140 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
-                0x00009054                graphInit
+                0x00009058      0x140 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+                0x00009058                graphInit
  .text.graphWriteString
-                0x00009194       0x40 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
-                0x00009194                graphWriteString
+                0x00009198       0x40 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+                0x00009198                graphWriteString
  .text.graphDrawArrow
-                0x000091d4       0x60 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
-                0x000091d4                graphDrawArrow
+                0x000091d8       0x60 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+                0x000091d8                graphDrawArrow
  .text.refresh_page
-                0x00009234       0x78 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
+                0x00009238       0x78 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
  .text.sl_btmesh_LCD_write_paged
-                0x000092ac       0xf8 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
-                0x000092ac                sl_btmesh_LCD_write_paged
+                0x000092b0       0xf8 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
+                0x000092b0                sl_btmesh_LCD_write_paged
  .text.sl_btmesh_LCD_init
-                0x000093a4       0x1c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
-                0x000093a4                sl_btmesh_LCD_init
+                0x000093a8       0x1c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
+                0x000093a8                sl_btmesh_LCD_init
  .text.app_log_check_level
-                0x000093c0       0x40 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
-                0x000093c0                app_log_check_level
+                0x000093c4       0x40 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+                0x000093c4                app_log_check_level
  .text.app_log_init
-                0x00009400       0x38 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
-                0x00009400                app_log_init
+                0x00009404       0x38 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+                0x00009404                app_log_init
  .text.sl_status_print
-                0x00009438       0x14 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
-                0x00009438                sl_status_print
+                0x0000943c       0x14 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+                0x0000943c                sl_status_print
  .text._app_log_status_string
-                0x0000944c       0x40 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
-                0x0000944c                _app_log_status_string
+                0x00009450       0x40 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+                0x00009450                _app_log_status_string
  .text.remove_app_timer
-                0x0000948c       0x2c ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x00009490       0x2c ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
  .text.app_timer_stop
-                0x000094b8       0x34 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
-                0x000094b8                app_timer_stop
+                0x000094bc       0x34 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x000094bc                app_timer_stop
  .text.app_timer_start
-                0x000094ec       0xec ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
-                0x000094ec                app_timer_start
+                0x000094f0       0xec ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x000094f0                app_timer_start
  .text.app_timer_callback
-                0x000095d8       0x68 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x000095dc       0x68 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
  .text.sli_app_timer_step
-                0x00009640       0x4c ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
-                0x00009640                sli_app_timer_step
+                0x00009644       0x4c ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x00009644                sli_app_timer_step
  .text.sli_app_timer_sleep_on_isr_exit
-                0x0000968c       0x14 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
-                0x0000968c                sli_app_timer_sleep_on_isr_exit
+                0x00009690       0x14 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x00009690                sli_app_timer_sleep_on_isr_exit
  .text.sli_app_timer_is_ok_to_sleep
-                0x000096a0       0x10 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
-                0x000096a0                sli_app_timer_is_ok_to_sleep
+                0x000096a4       0x10 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+                0x000096a4                sli_app_timer_is_ok_to_sleep
  .text.sl_board_init
-                0x000096b0       0x1c ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
-                0x000096b0                sl_board_init
+                0x000096b4       0x1c ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
+                0x000096b4                sl_board_init
  .text.sl_board_preinit
-                0x000096cc        0xc ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
-                0x000096cc                sl_board_preinit
+                0x000096d0        0xc ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
+                0x000096d0                sl_board_preinit
  .text.sl_cos_send_config
-                0x000096d8       0x28 ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
-                0x000096d8                sl_cos_send_config
+                0x000096dc       0x28 ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
+                0x000096dc                sl_cos_send_config
  .text.sli_memlcd_spi_init
-                0x00009700       0x8c ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
-                0x00009700                sli_memlcd_spi_init
+                0x00009704       0x8c ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
+                0x00009704                sli_memlcd_spi_init
  .text.extcomin_toggle
-                0x0000978c       0x10 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+                0x00009790       0x10 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
  .text.sl_memlcd_power_on.part.0
-                0x0000979c       0x2c ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+                0x000097a0       0x2c ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
  .text.sl_memlcd_clear
-                0x000097c8       0x4c ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
-                0x000097c8                sl_memlcd_clear
+                0x000097cc       0x4c ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+                0x000097cc                sl_memlcd_clear
  .text.sl_memlcd_configure
-                0x00009814       0x60 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
-                0x00009814                sl_memlcd_configure
+                0x00009818       0x60 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+                0x00009818                sl_memlcd_configure
  .text.sl_memlcd_draw
-                0x00009874       0xb8 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
-                0x00009874                sl_memlcd_draw
+                0x00009878       0xb8 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+                0x00009878                sl_memlcd_draw
  .text.sl_memlcd_get
-                0x0000992c       0x18 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
-                0x0000992c                sl_memlcd_get
+                0x00009930       0x18 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+                0x00009930                sl_memlcd_get
  .text.sl_memlcd_init
-                0x00009944       0x20 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
-                0x00009944                sl_memlcd_init
+                0x00009948       0x20 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
+                0x00009948                sl_memlcd_init
  .text.sl_mx25_flash_shutdown
-                0x00009964      0x114 ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
-                0x00009964                sl_mx25_flash_shutdown
+                0x00009968      0x114 ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+                0x00009968                sl_mx25_flash_shutdown
  .text.Reset_Handler
-                0x00009a78       0x60 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
-                0x00009a78                Reset_Handler
+                0x00009a7c       0x60 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
+                0x00009a7c                Reset_Handler
  .text.SystemMaxCoreClockGet
-                0x00009ad8        0x8 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009ad8                SystemMaxCoreClockGet
+                0x00009adc        0x8 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009adc                SystemMaxCoreClockGet
  .text.SystemHFClockGet
-                0x00009ae0       0x54 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009ae0                SystemHFClockGet
+                0x00009ae4       0x54 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009ae4                SystemHFClockGet
  .text.SystemCoreClockGet
-                0x00009b34       0x24 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009b34                SystemCoreClockGet
+                0x00009b38       0x24 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009b38                SystemCoreClockGet
  .text.SystemHFXOClockGet
-                0x00009b58        0xc ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009b58                SystemHFXOClockGet
+                0x00009b5c        0xc ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009b5c                SystemHFXOClockGet
  .text.SystemHFXOClockSet
-                0x00009b64       0x20 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009b64                SystemHFXOClockSet
+                0x00009b68       0x20 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009b68                SystemHFXOClockSet
  .text.SystemInit
-                0x00009b84       0x1c ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009b84                SystemInit
+                0x00009b88       0x1c ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009b88                SystemInit
  .text.SystemLFXOClockGet
-                0x00009ba0        0xc ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
-                0x00009ba0                SystemLFXOClockGet
+                0x00009ba4        0xc ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+                0x00009ba4                SystemLFXOClockGet
  .text.bootloader_init
-                0x00009bac       0x4c ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
-                0x00009bac                bootloader_init
- .text._sbrk    0x00009bf8       0x20 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
-                0x00009bf8                _sbrk
+                0x00009bb0       0x4c ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
+                0x00009bb0                bootloader_init
+ .text._sbrk    0x00009bfc       0x20 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+                0x00009bfc                _sbrk
  .text.sl_debug_swo_init
-                0x00009c18       0xcc ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
-                0x00009c18                sl_debug_swo_init
+                0x00009c1c       0xcc ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
+                0x00009c1c                sl_debug_swo_init
  .text.sl_debug_swo_write_u8
-                0x00009ce4       0x44 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
-                0x00009ce4                sl_debug_swo_write_u8
+                0x00009ce8       0x44 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
+                0x00009ce8                sl_debug_swo_write_u8
  .text.I2CSPM_Init
-                0x00009d28       0xc8 ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
-                0x00009d28                I2CSPM_Init
+                0x00009d2c       0xc8 ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
+                0x00009d2c                I2CSPM_Init
  .text.I2CSPM_Transfer
-                0x00009df0       0x20 ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
-                0x00009df0                I2CSPM_Transfer
+                0x00009df4       0x20 ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
+                0x00009df4                I2CSPM_Transfer
  .text.StartTransfer
-                0x00009e10      0x178 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x00009e14      0x178 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
  .text.DMADRV_AllocateChannel
-                0x00009f88       0x60 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x00009f88                DMADRV_AllocateChannel
+                0x00009f8c       0x60 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x00009f8c                DMADRV_AllocateChannel
  .text.DMADRV_DeInit
-                0x00009fe8       0x44 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x00009fe8                DMADRV_DeInit
+                0x00009fec       0x44 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x00009fec                DMADRV_DeInit
  .text.DMADRV_FreeChannel
-                0x0000a02c       0x4c ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a02c                DMADRV_FreeChannel
+                0x0000a030       0x4c ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a030                DMADRV_FreeChannel
  .text.DMADRV_Init
-                0x0000a078       0x6c ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a078                DMADRV_Init
+                0x0000a07c       0x6c ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a07c                DMADRV_Init
  .text.DMADRV_PauseTransfer
-                0x0000a0e4       0x40 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a0e4                DMADRV_PauseTransfer
+                0x0000a0e8       0x40 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a0e8                DMADRV_PauseTransfer
  .text.DMADRV_ResumeTransfer
-                0x0000a124       0x40 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a124                DMADRV_ResumeTransfer
+                0x0000a128       0x40 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a128                DMADRV_ResumeTransfer
  .text.DMADRV_StopTransfer
-                0x0000a164       0x40 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a164                DMADRV_StopTransfer
+                0x0000a168       0x40 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a168                DMADRV_StopTransfer
  .text.DMADRV_TransferCompletePending
-                0x0000a1a4       0x50 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a1a4                DMADRV_TransferCompletePending
+                0x0000a1a8       0x50 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a1a8                DMADRV_TransferCompletePending
  .text.DMADRV_TransferDone
-                0x0000a1f4       0x44 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a1f4                DMADRV_TransferDone
+                0x0000a1f8       0x44 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a1f8                DMADRV_TransferDone
  .text.LDMA_IRQHandler
-                0x0000a238       0x8c ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
-                0x0000a238                LDMA_IRQHandler
+                0x0000a23c       0x8c ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+                0x0000a23c                LDMA_IRQHandler
  .text.nvm3_initDefault
-                0x0000a2c4       0x14 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
-                0x0000a2c4                nvm3_initDefault
+                0x0000a2c8       0x14 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+                0x0000a2c8                nvm3_initDefault
  .text.nvm3_halFlashWriteWords
-                0x0000a2d8       0x40 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+                0x0000a2dc       0x40 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
  .text.nvm3_halFlashPageErase
-                0x0000a318       0x44 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+                0x0000a31c       0x44 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
  .text.nvm3_lockBegin
-                0x0000a35c       0x10 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
-                0x0000a35c                nvm3_lockBegin
+                0x0000a360       0x10 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
+                0x0000a360                nvm3_lockBegin
  .text.nvm3_lockEnd
-                0x0000a36c        0xc ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
-                0x0000a36c                nvm3_lockEnd
+                0x0000a370        0xc ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
+                0x0000a370                nvm3_lockEnd
  .text.setHfLeConfig
-                0x0000a378       0x44 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a37c       0x44 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.flashWaitStateControl
-                0x0000a3bc       0x48 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a3c0       0x48 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.flashWaitStateMax
-                0x0000a404       0x28 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a408       0x28 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.EMU_VScaleWait
-                0x0000a42c       0x1c ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a430       0x1c ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.EMU_VScaleGet
-                0x0000a448       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .text.syncReg  0x0000a45c       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a44c       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .text.syncReg  0x0000a460       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.CMU_UpdateWaitStates
-                0x0000a474       0x20 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000a474                CMU_UpdateWaitStates
+                0x0000a478       0x20 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a478                CMU_UpdateWaitStates
  .text.CMU_ClockEnable
-                0x0000a494       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000a494                CMU_ClockEnable
+                0x0000a498       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a498                CMU_ClockEnable
  .text.CMU_ClockPrescGet
-                0x0000a514       0xcc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000a514                CMU_ClockPrescGet
+                0x0000a518       0xcc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a518                CMU_ClockPrescGet
  .text.CMU_ClockPrescSet
-                0x0000a5e0      0x1c4 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000a5e0                CMU_ClockPrescSet
+                0x0000a5e4      0x1c4 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a5e4                CMU_ClockPrescSet
  .text.CMU_ClockSelectGet
-                0x0000a7a4       0xbc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000a7a4                CMU_ClockSelectGet
+                0x0000a7a8       0xbc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a7a8                CMU_ClockSelectGet
  .text.lfClkGet
-                0x0000a860       0x84 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a864       0x84 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.CMU_ClockFreqGet
-                0x0000a8e4      0x194 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000a8e4                CMU_ClockFreqGet
+                0x0000a8e8      0x194 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000a8e8                CMU_ClockFreqGet
  .text.sli_em_cmu_HFClockSelectCLKIN0
-                0x0000aa78       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aa78                sli_em_cmu_HFClockSelectCLKIN0
+                0x0000aa7c       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000aa7c                sli_em_cmu_HFClockSelectCLKIN0
  .text.CMU_LF_ClockPrecisionGet
-                0x0000aaa8       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aaa8                CMU_LF_ClockPrecisionGet
+                0x0000aaac       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000aaac                CMU_LF_ClockPrecisionGet
  .text.CMU_LFXOPrecisionSet
-                0x0000aacc        0xc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aacc                CMU_LFXOPrecisionSet
+                0x0000aad0        0xc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000aad0                CMU_LFXOPrecisionSet
  .text.CMU_HFXOPrecisionSet
-                0x0000aad8        0xc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aad8                CMU_HFXOPrecisionSet
+                0x0000aadc        0xc ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000aadc                CMU_HFXOPrecisionSet
  .text.CMU_OscillatorTuningSet
-                0x0000aae4       0xc4 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aae4                CMU_OscillatorTuningSet
+                0x0000aae8       0xc4 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000aae8                CMU_OscillatorTuningSet
  .text.CMU_OscillatorTuningWait
-                0x0000aba8       0x4c ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aba8                CMU_OscillatorTuningWait
+                0x0000abac       0x4c ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000abac                CMU_OscillatorTuningWait
  .text.CMU_OscillatorTuningOptimize
-                0x0000abf4       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000abf4                CMU_OscillatorTuningOptimize
+                0x0000abf8       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000abf8                CMU_OscillatorTuningOptimize
  .text.CMU_OscillatorEnable
-                0x0000ac18      0x148 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000ac18                CMU_OscillatorEnable
+                0x0000ac1c      0x148 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000ac1c                CMU_OscillatorEnable
  .text.sli_em_cmu_HFClockSelectLFOsc
-                0x0000ad60       0x50 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000ad60                sli_em_cmu_HFClockSelectLFOsc
+                0x0000ad64       0x50 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000ad64                sli_em_cmu_HFClockSelectLFOsc
  .text.sli_em_cmu_HFClockSelectHFXO
-                0x0000adb0       0x60 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000adb0                sli_em_cmu_HFClockSelectHFXO
+                0x0000adb4       0x60 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000adb4                sli_em_cmu_HFClockSelectHFXO
  .text.sli_em_cmu_HFClockSelectHFRCO
-                0x0000ae10       0x74 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000ae10                sli_em_cmu_HFClockSelectHFRCO
+                0x0000ae14       0x74 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000ae14                sli_em_cmu_HFClockSelectHFRCO
  .text.sli_em_cmu_HFClockSelectHFRCODIV2
-                0x0000ae84       0x38 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000ae84                sli_em_cmu_HFClockSelectHFRCODIV2
+                0x0000ae88       0x38 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000ae88                sli_em_cmu_HFClockSelectHFRCODIV2
  .text.CMU_ClockSelectSet
-                0x0000aebc      0x1c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000aebc                CMU_ClockSelectSet
+                0x0000aec0      0x1c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000aec0                CMU_ClockSelectSet
  .text.CMU_HFXOInit
-                0x0000b084       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000b084                CMU_HFXOInit
+                0x0000b088       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000b088                CMU_HFXOInit
  .text.CMU_LFXOInit
-                0x0000b104       0x44 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x0000b104                CMU_LFXOInit
+                0x0000b108       0x44 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x0000b108                CMU_LFXOInit
  .text.CORE_InIrqContext
-                0x0000b148       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
-                0x0000b148                CORE_InIrqContext
+                0x0000b14c       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+                0x0000b14c                CORE_InIrqContext
  .text.EMU_LDOStatusGet
-                0x0000b15c       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b160       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.lpGetDevinfoVrefLowHigh
-                0x0000b170       0x94 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b174       0x94 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.EMU_VScaleWait
-                0x0000b204       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b208       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.vScaleDownEM23Setup
-                0x0000b21c       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b220       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.vScaleAfterWakeup
-                0x0000b24c       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b250       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.emState.part.0
-                0x0000b278       0xe0 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b27c       0xe0 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.emState.constprop.0
-                0x0000b358       0x48 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b35c       0x48 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
  .text.EMU_EM23Init
-                0x0000b3a0       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b3a0                EMU_EM23Init
+                0x0000b3a4       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b3a4                EMU_EM23Init
  .text.EMU_EnterEM2
-                0x0000b3c4       0x70 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b3c4                EMU_EnterEM2
+                0x0000b3c8       0x70 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b3c8                EMU_EnterEM2
  .text.EMU_EnterEM3
-                0x0000b434       0x88 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b434                EMU_EnterEM3
+                0x0000b438       0x88 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b438                EMU_EnterEM3
  .text.EMU_EM4Init
-                0x0000b4bc       0x54 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b4bc                EMU_EM4Init
+                0x0000b4c0       0x54 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b4c0                EMU_EM4Init
  .text.EMU_VScaleEM01
-                0x0000b510       0x5c ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b510                EMU_VScaleEM01
+                0x0000b514       0x5c ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b514                EMU_VScaleEM01
  .text.EMU_VScaleEM01ByClock
-                0x0000b56c       0x50 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b56c                EMU_VScaleEM01ByClock
+                0x0000b570       0x50 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b570                EMU_VScaleEM01ByClock
  .text.EMU_EM01Init
-                0x0000b5bc       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b5bc                EMU_EM01Init
+                0x0000b5c0       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b5c0                EMU_EM01Init
  .text.EMU_DCDCModeSet
-                0x0000b5d0       0x68 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b5d0                EMU_DCDCModeSet
+                0x0000b5d4       0x68 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b5d4                EMU_DCDCModeSet
  .text.EMU_DCDCOutputVoltageSet
-                0x0000b638      0x1d8 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b638                EMU_DCDCOutputVoltageSet
+                0x0000b63c      0x1d8 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b63c                EMU_DCDCOutputVoltageSet
  .text.EMU_DCDCOptimizeSlice
-                0x0000b810       0xd0 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b810                EMU_DCDCOptimizeSlice
+                0x0000b814       0xd0 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b814                EMU_DCDCOptimizeSlice
  .text.EMU_DCDCLnRcoBandSet
-                0x0000b8e0       0x28 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b8e0                EMU_DCDCLnRcoBandSet
+                0x0000b8e4       0x28 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b8e4                EMU_DCDCLnRcoBandSet
  .text.EMU_DCDCInit
-                0x0000b908       0xe8 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
-                0x0000b908                EMU_DCDCInit
+                0x0000b90c       0xe8 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+                0x0000b90c                EMU_DCDCInit
  .text.GPIO_DbgLocationSet
-                0x0000b9f0       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
-                0x0000b9f0                GPIO_DbgLocationSet
+                0x0000b9f4       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+                0x0000b9f4                GPIO_DbgLocationSet
  .text.GPIO_ExtIntConfig
-                0x0000ba08       0x8c ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
-                0x0000ba08                GPIO_ExtIntConfig
+                0x0000ba0c       0x8c ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+                0x0000ba0c                GPIO_ExtIntConfig
  .text.GPIO_PinModeSet
-                0x0000ba94       0x78 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
-                0x0000ba94                GPIO_PinModeSet
+                0x0000ba98       0x78 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+                0x0000ba98                GPIO_PinModeSet
  .text.I2C_BusFreqSet
-                0x0000bb0c       0x88 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
-                0x0000bb0c                I2C_BusFreqSet
+                0x0000bb10       0x88 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+                0x0000bb10                I2C_BusFreqSet
  .text.I2C_Init
-                0x0000bb94       0x38 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
-                0x0000bb94                I2C_Init
+                0x0000bb98       0x38 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+                0x0000bb98                I2C_Init
  .text.I2C_Transfer
-                0x0000bbcc      0x1fc ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
-                0x0000bbcc                I2C_Transfer
+                0x0000bbd0      0x1fc ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+                0x0000bbd0                I2C_Transfer
  .text.I2C_TransferInit
-                0x0000bdc8       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
-                0x0000bdc8                I2C_TransferInit
+                0x0000bdcc       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+                0x0000bdcc                I2C_TransferInit
  .text.LDMA_DeInit
-                0x0000be48       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
-                0x0000be48                LDMA_DeInit
+                0x0000be4c       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+                0x0000be4c                LDMA_DeInit
  .text.LDMA_EnableChannelRequest
-                0x0000be74       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
-                0x0000be74                LDMA_EnableChannelRequest
+                0x0000be78       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+                0x0000be78                LDMA_EnableChannelRequest
  .text.LDMA_Init
-                0x0000be88       0x54 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
-                0x0000be88                LDMA_Init
+                0x0000be8c       0x54 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+                0x0000be8c                LDMA_Init
  .text.LDMA_StartTransfer
-                0x0000bedc       0xa4 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
-                0x0000bedc                LDMA_StartTransfer
+                0x0000bee0       0xa4 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+                0x0000bee0                LDMA_StartTransfer
  .text.LDMA_StopTransfer
-                0x0000bf80       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
-                0x0000bf80                LDMA_StopTransfer
+                0x0000bf84       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+                0x0000bf84                LDMA_StopTransfer
  .text.LDMA_TransferDone
-                0x0000bfac       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
-                0x0000bfac                LDMA_TransferDone
+                0x0000bfb0       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+                0x0000bfb0                LDMA_TransferDone
  .text.MSC_Init
-                0x0000bfdc       0x20 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x0000bfdc                MSC_Init
+                0x0000bfe0       0x20 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x0000bfe0                MSC_Init
  .text.MSC_Deinit
-                0x0000bffc       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x0000bffc                MSC_Deinit
+                0x0000c000       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x0000c000                MSC_Deinit
  .text.MSC_LoadVerifyAddress
-                0x0000c010       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x0000c010                MSC_LoadVerifyAddress
+                0x0000c014       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x0000c014                MSC_LoadVerifyAddress
  .text.MSC_LoadWriteData
-                0x0000c040       0x48 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x0000c040                MSC_LoadWriteData
+                0x0000c044       0x48 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x0000c044                MSC_LoadWriteData
  .text.MSC_WriteWordI
-                0x0000c088       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x0000c088                MSC_WriteWordI
+                0x0000c08c       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x0000c08c                MSC_WriteWordI
  .text.MSC_ErasePage
-                0x0000c108       0x9c ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x0000c108                MSC_ErasePage
+                0x0000c10c       0x9c ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x0000c10c                MSC_ErasePage
  .text.RTCC_ChannelInit
-                0x0000c1a4       0x34 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
-                0x0000c1a4                RTCC_ChannelInit
+                0x0000c1a8       0x34 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
+                0x0000c1a8                RTCC_ChannelInit
  .text.RTCC_Enable
-                0x0000c1d8        0xc ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
-                0x0000c1d8                RTCC_Enable
+                0x0000c1dc        0xc ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
+                0x0000c1dc                RTCC_Enable
  .text.RTCC_Init
-                0x0000c1e4       0x68 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
-                0x0000c1e4                RTCC_Init
+                0x0000c1e8       0x68 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
+                0x0000c1e8                RTCC_Init
  .text.SYSTEM_ChipRevisionGet
-                0x0000c24c       0x3c ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
-                0x0000c24c                SYSTEM_ChipRevisionGet
+                0x0000c250       0x3c ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+                0x0000c250                SYSTEM_ChipRevisionGet
  .text.SYSTEM_GetUnique
-                0x0000c288       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
-                0x0000c288                SYSTEM_GetUnique
+                0x0000c28c       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+                0x0000c28c                SYSTEM_GetUnique
  .text.SYSTEM_GetFlashPageSize
-                0x0000c298       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
-                0x0000c298                SYSTEM_GetFlashPageSize
+                0x0000c29c       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+                0x0000c29c                SYSTEM_GetFlashPageSize
  .text.USART_BaudrateAsyncSet
-                0x0000c2b0       0x64 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
-                0x0000c2b0                USART_BaudrateAsyncSet
+                0x0000c2b4       0x64 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
+                0x0000c2b4                USART_BaudrateAsyncSet
  .text.USART_BaudrateSyncSet
-                0x0000c314       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
-                0x0000c314                USART_BaudrateSyncSet
+                0x0000c318       0x24 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
+                0x0000c318                USART_BaudrateSyncSet
  .text.USART_Reset
-                0x0000c338       0x50 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
-                0x0000c338                USART_Reset
+                0x0000c33c       0x50 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
+                0x0000c33c                USART_Reset
  .text.setLineDirty
-                0x0000c388       0x20 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+                0x0000c38c       0x20 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
  .text.DMD_getDisplayGeometry
-                0x0000c3a8       0x1c ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
-                0x0000c3a8                DMD_getDisplayGeometry
+                0x0000c3ac       0x1c ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+                0x0000c3ac                DMD_getDisplayGeometry
  .text.DMD_setClippingArea
-                0x0000c3c4       0x40 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
-                0x0000c3c4                DMD_setClippingArea
+                0x0000c3c8       0x40 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+                0x0000c3c8                DMD_setClippingArea
  .text.DMD_writeColor
-                0x0000c404      0x124 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
-                0x0000c404                DMD_writeColor
+                0x0000c408      0x124 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+                0x0000c408                DMD_writeColor
  .text.DMD_init
-                0x0000c528       0x54 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
-                0x0000c528                DMD_init
+                0x0000c52c       0x54 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+                0x0000c52c                DMD_init
  .text.DMD_updateDisplay
-                0x0000c57c       0x80 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
-                0x0000c57c                DMD_updateDisplay
+                0x0000c580       0x80 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+                0x0000c580                DMD_updateDisplay
  .text.GLIB_contextInit
-                0x0000c5fc       0x54 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
-                0x0000c5fc                GLIB_contextInit
+                0x0000c600       0x54 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
+                0x0000c600                GLIB_contextInit
  .text.RAIL_InitTxPowerCurvesAlt
-                0x0000c650       0x20 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
-                0x0000c650                RAIL_InitTxPowerCurvesAlt
+                0x0000c654       0x20 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+                0x0000c654                RAIL_InitTxPowerCurvesAlt
  .text.RAIL_ConvertDbmToRaw
-                0x0000c670       0xf0 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
-                0x0000c670                RAIL_ConvertDbmToRaw
+                0x0000c674       0xf0 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+                0x0000c674                RAIL_ConvertDbmToRaw
  .text.RAIL_ConvertRawToDbm
-                0x0000c760       0xd8 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
-                0x0000c760                RAIL_ConvertRawToDbm
+                0x0000c764       0xd8 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+                0x0000c764                RAIL_ConvertRawToDbm
  .text.sl_rail_util_pa_init
-                0x0000c838       0x18 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
-                0x0000c838                sl_rail_util_pa_init
+                0x0000c83c       0x18 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+                0x0000c83c                sl_rail_util_pa_init
  .text.sl_rail_util_pa_get_tx_power_config_2p4ghz
-                0x0000c850        0x8 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
-                0x0000c850                sl_rail_util_pa_get_tx_power_config_2p4ghz
+                0x0000c854        0x8 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+                0x0000c854                sl_rail_util_pa_get_tx_power_config_2p4ghz
  .text.sl_rail_util_pti_init
-                0x0000c858       0x30 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
-                0x0000c858                sl_rail_util_pti_init
+                0x0000c85c       0x30 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
+                0x0000c85c                sl_rail_util_pti_init
  .text.ecp_crypto_device_init.isra.0
-                0x0000c888       0x38 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+                0x0000c88c       0x38 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
  .text.crypto_mpi_div_mod
-                0x0000c8c0      0x224 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+                0x0000c8c4      0x224 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
  .text.mbedtls_internal_ecp_randomize_jac
-                0x0000cae4      0x174 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
-                0x0000cae4                mbedtls_internal_ecp_randomize_jac
+                0x0000cae8      0x174 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+                0x0000cae8                mbedtls_internal_ecp_randomize_jac
  .text.mbedtls_internal_ecp_add_mixed
-                0x0000cc58      0x1f0 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
-                0x0000cc58                mbedtls_internal_ecp_add_mixed
+                0x0000cc5c      0x1f0 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+                0x0000cc5c                mbedtls_internal_ecp_add_mixed
  .text.mbedtls_internal_ecp_double_jac
-                0x0000ce48      0x16c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
-                0x0000ce48                mbedtls_internal_ecp_double_jac
+                0x0000ce4c      0x16c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+                0x0000ce4c                mbedtls_internal_ecp_double_jac
  .text.mbedtls_internal_ecp_normalize_jac
-                0x0000cfb4       0xe0 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
-                0x0000cfb4                mbedtls_internal_ecp_normalize_jac
+                0x0000cfb8       0xe0 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+                0x0000cfb8                mbedtls_internal_ecp_normalize_jac
  .text.psa_status_to_mbedtls
-                0x0000d094       0x20 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+                0x0000d098       0x20 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
  .text.mbedtls_cipher_cmac_starts
-                0x0000d0b4       0x88 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
-                0x0000d0b4                mbedtls_cipher_cmac_starts
+                0x0000d0b8       0x88 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+                0x0000d0b8                mbedtls_cipher_cmac_starts
  .text.mbedtls_cipher_cmac_update
-                0x0000d13c       0x24 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
-                0x0000d13c                mbedtls_cipher_cmac_update
+                0x0000d140       0x24 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+                0x0000d140                mbedtls_cipher_cmac_update
  .text.mbedtls_cipher_cmac_finish
-                0x0000d160       0x30 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
-                0x0000d160                mbedtls_cipher_cmac_finish
+                0x0000d164       0x30 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+                0x0000d164                mbedtls_cipher_cmac_finish
  .text.psa_status_to_mbedtls
-                0x0000d190       0x54 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d194       0x54 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
  .text.mbedtls_sha256_starts
-                0x0000d1e4       0x24 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
-                0x0000d1e4                mbedtls_sha256_starts
+                0x0000d1e8       0x24 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d1e8                mbedtls_sha256_starts
  .text.mbedtls_sha256_update
-                0x0000d208       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
-                0x0000d208                mbedtls_sha256_update
+                0x0000d20c       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d20c                mbedtls_sha256_update
  .text.mbedtls_sha256_finish
-                0x0000d21c       0x20 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
-                0x0000d21c                mbedtls_sha256_finish
+                0x0000d220       0x20 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d220                mbedtls_sha256_finish
  .text.mbedtls_sha1_starts
-                0x0000d23c       0x18 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
-                0x0000d23c                mbedtls_sha1_starts
+                0x0000d240       0x18 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d240                mbedtls_sha1_starts
  .text.mbedtls_sha1_update
-                0x0000d254       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
-                0x0000d254                mbedtls_sha1_update
+                0x0000d258       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d258                mbedtls_sha1_update
  .text.mbedtls_sha1_finish
-                0x0000d268       0x20 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
-                0x0000d268                mbedtls_sha1_finish
+                0x0000d26c       0x20 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+                0x0000d26c                mbedtls_sha1_finish
  .text.aes_ccm_radio
-                0x0000d288      0x21c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
+                0x0000d28c      0x21c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
  .text.crypto_management_acquire
-                0x0000d4a4       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
-                0x0000d4a4                crypto_management_acquire
+                0x0000d4a8       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x0000d4a8                crypto_management_acquire
  .text.crypto_management_release
-                0x0000d4b8       0x34 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
-                0x0000d4b8                crypto_management_release
+                0x0000d4bc       0x34 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x0000d4bc                crypto_management_release
  .text.crypto_management_acquire_preemption
-                0x0000d4ec       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
-                0x0000d4ec                crypto_management_acquire_preemption
+                0x0000d4f0       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x0000d4f0                crypto_management_acquire_preemption
  .text.crypto_management_release_preemption
-                0x0000d500       0x18 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
-                0x0000d500                crypto_management_release_preemption
+                0x0000d504       0x18 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x0000d504                crypto_management_release_preemption
  .text.crypto_hash_process.isra.0
-                0x0000d518       0xdc ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+                0x0000d51c       0xdc ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
  .text.sli_crypto_transparent_hash_setup
-                0x0000d5f4       0x60 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
-                0x0000d5f4                sli_crypto_transparent_hash_setup
+                0x0000d5f8       0x60 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+                0x0000d5f8                sli_crypto_transparent_hash_setup
  .text.sli_crypto_transparent_hash_update
-                0x0000d654      0x104 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
-                0x0000d654                sli_crypto_transparent_hash_update
+                0x0000d658      0x104 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+                0x0000d658                sli_crypto_transparent_hash_update
  .text.sli_crypto_transparent_hash_finish
-                0x0000d758       0xd4 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
-                0x0000d758                sli_crypto_transparent_hash_finish
+                0x0000d75c       0xd4 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+                0x0000d75c                sli_crypto_transparent_hash_finish
  .text.sli_crypto_cmac_compute
-                0x0000d82c      0x208 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+                0x0000d830      0x208 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
  .text.sli_crypto_transparent_mac_sign_setup
-                0x0000da34       0x80 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
-                0x0000da34                sli_crypto_transparent_mac_sign_setup
+                0x0000da38       0x80 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+                0x0000da38                sli_crypto_transparent_mac_sign_setup
  .text.sli_crypto_transparent_mac_update
-                0x0000dab4       0xcc ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
-                0x0000dab4                sli_crypto_transparent_mac_update
+                0x0000dab8       0xcc ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+                0x0000dab8                sli_crypto_transparent_mac_update
  .text.sli_crypto_transparent_mac_sign_finish
-                0x0000db80       0x68 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
-                0x0000db80                sli_crypto_transparent_mac_sign_finish
+                0x0000db84       0x68 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+                0x0000db84                sli_crypto_transparent_mac_sign_finish
  .text.sli_crypto_trng_soft_reset
-                0x0000dbe8       0x50 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
+                0x0000dbec       0x50 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
  .text.sli_crypto_trng_get_random
-                0x0000dc38      0x1ac ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
-                0x0000dc38                sli_crypto_trng_get_random
+                0x0000dc3c      0x1ac ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
+                0x0000dc3c                sli_crypto_trng_get_random
  .text.sl_device_init_dcdc
-                0x0000dde4       0x2c ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
-                0x0000dde4                sl_device_init_dcdc
+                0x0000dde8       0x2c ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+                0x0000dde8                sl_device_init_dcdc
  .text.sl_device_init_hfxo
-                0x0000de10       0x74 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
-                0x0000de10                sl_device_init_hfxo
+                0x0000de14       0x74 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+                0x0000de14                sl_device_init_hfxo
  .text.sl_device_init_lfxo
-                0x0000de84       0x28 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
-                0x0000de84                sl_device_init_lfxo
+                0x0000de88       0x28 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+                0x0000de88                sl_device_init_lfxo
  .text.sl_device_init_nvic
-                0x0000deac       0x3c ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
-                0x0000deac                sl_device_init_nvic
+                0x0000deb0       0x3c ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
+                0x0000deb0                sl_device_init_nvic
  .text.sl_iostream_set_default
-                0x0000dee8       0x18 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
-                0x0000dee8                sl_iostream_set_default
+                0x0000deec       0x18 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
+                0x0000deec                sl_iostream_set_default
  .text.sl_iostream_get_default
-                0x0000df00       0x18 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
-                0x0000df00                sl_iostream_get_default
+                0x0000df04       0x18 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
+                0x0000df04                sl_iostream_get_default
  .text.sl_iostream_stdlib_disable_buffering
-                0x0000df18       0x14 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
-                0x0000df18                sl_iostream_stdlib_disable_buffering
+                0x0000df1c       0x14 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
+                0x0000df1c                sl_iostream_stdlib_disable_buffering
  .text.dma_irq_handler
-                0x0000df2c       0x64 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+                0x0000df30       0x64 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
  .text.uart_read
-                0x0000df90      0x174 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+                0x0000df94      0x174 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
  .text.__NVIC_EnableIRQ
-                0x0000e104       0x1c ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+                0x0000e108       0x1c ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
  .text.__NVIC_ClearPendingIRQ
-                0x0000e120       0x20 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+                0x0000e124       0x20 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
  .text.uart_deinit
-                0x0000e140       0x98 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+                0x0000e144       0x98 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
  .text.sli_iostream_uart_context_init
-                0x0000e1d8      0x140 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
-                0x0000e1d8                sli_iostream_uart_context_init
+                0x0000e1dc      0x140 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+                0x0000e1dc                sli_iostream_uart_context_init
  .text.sl_iostream_usart_init
-                0x0000e318      0x16c ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
-                0x0000e318                sl_iostream_usart_init
+                0x0000e31c      0x16c ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
+                0x0000e31c                sl_iostream_usart_init
  .text.ARM_MPU_Disable
-                0x0000e484       0x28 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+                0x0000e488       0x28 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
  .text.sl_mpu_disable_execute_from_ram
-                0x0000e4ac       0xf8 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
-                0x0000e4ac                sl_mpu_disable_execute_from_ram
+                0x0000e4b0       0xf8 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+                0x0000e4b0                sl_mpu_disable_execute_from_ram
  .text.sl_mpu_disable_execute
-                0x0000e5a4       0xd4 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
-                0x0000e5a4                sl_mpu_disable_execute
+                0x0000e5a8       0xd4 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+                0x0000e5a8                sl_mpu_disable_execute
  .text.mpu_fault_handler
-                0x0000e678       0x24 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
-                0x0000e678                mpu_fault_handler
+                0x0000e67c       0x24 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+                0x0000e67c                mpu_fault_handler
  .text.get_lowest_em
-                0x0000e69c       0x1c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e6a0       0x1c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
  .text.power_manager_notify_em_transition
-                0x0000e6b8       0x5c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e6bc       0x5c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
  .text.clock_restore
-                0x0000e714       0x58 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e718       0x58 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
  .text.on_clock_wakeup_timeout
-                0x0000e76c       0x24 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e770       0x24 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
  .text.update_em1_requirement
-                0x0000e790       0x34 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e794       0x34 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
  .text.sl_power_manager_init
-                0x0000e7c4       0x68 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000e7c4                sl_power_manager_init
+                0x0000e7c8       0x68 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e7c8                sl_power_manager_init
  .text.sli_power_manager_update_em_requirement
-                0x0000e82c       0xbc ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000e82c                sli_power_manager_update_em_requirement
+                0x0000e830       0xbc ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e830                sli_power_manager_update_em_requirement
  .text.sli_power_manager_get_restore_delay
-                0x0000e8e8       0x34 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000e8e8                sli_power_manager_get_restore_delay
+                0x0000e8ec       0x34 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e8ec                sli_power_manager_get_restore_delay
  .text.sl_power_manager_subscribe_em_transition_event
-                0x0000e91c       0x24 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000e91c                sl_power_manager_subscribe_em_transition_event
+                0x0000e920       0x24 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e920                sl_power_manager_subscribe_em_transition_event
  .text.sli_power_manager_convert_delay_us_to_tick
-                0x0000e940       0x20 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000e940                sli_power_manager_convert_delay_us_to_tick
+                0x0000e944       0x20 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e944                sli_power_manager_convert_delay_us_to_tick
  .text.sl_power_manager_sleep
-                0x0000e960      0x1e8 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000e960                sl_power_manager_sleep
+                0x0000e964      0x1e8 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000e964                sl_power_manager_sleep
  .text.sl_power_manager_is_latest_wakeup_internal
-                0x0000eb48       0x20 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
-                0x0000eb48                sl_power_manager_is_latest_wakeup_internal
+                0x0000eb4c       0x20 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+                0x0000eb4c                sl_power_manager_is_latest_wakeup_internal
  .text.sli_power_manager_em23_voltage_scaling_enable_fast_wakeup
-                0x0000eb68       0x4c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000eb68                sli_power_manager_em23_voltage_scaling_enable_fast_wakeup
+                0x0000eb6c       0x4c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000eb6c                sli_power_manager_em23_voltage_scaling_enable_fast_wakeup
  .text.sli_power_manager_init_hardware
-                0x0000ebb4       0xc0 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ebb4                sli_power_manager_init_hardware
+                0x0000ebb8       0xc0 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ebb8                sli_power_manager_init_hardware
  .text.EMU_EM23PostsleepHook
-                0x0000ec74       0x3c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ec74                EMU_EM23PostsleepHook
+                0x0000ec78       0x3c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ec78                EMU_EM23PostsleepHook
  .text.sli_power_manager_restore_states
-                0x0000ecb0       0x50 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ecb0                sli_power_manager_restore_states
+                0x0000ecb4       0x50 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ecb4                sli_power_manager_restore_states
  .text.sli_power_manager_apply_em
-                0x0000ed00       0x2c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ed00                sli_power_manager_apply_em
+                0x0000ed04       0x2c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ed04                sli_power_manager_apply_em
  .text.sli_power_manager_get_wakeup_process_time_overhead
-                0x0000ed2c       0x1c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ed2c                sli_power_manager_get_wakeup_process_time_overhead
+                0x0000ed30       0x1c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ed30                sli_power_manager_get_wakeup_process_time_overhead
  .text.sli_power_manager_low_frequency_restore
-                0x0000ed48       0x2c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ed48                sli_power_manager_low_frequency_restore
+                0x0000ed4c       0x2c ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ed4c                sli_power_manager_low_frequency_restore
  .text.sli_power_manager_is_high_freq_accuracy_clk_used
-                0x0000ed74        0xc ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
-                0x0000ed74                sli_power_manager_is_high_freq_accuracy_clk_used
+                0x0000ed78        0xc ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+                0x0000ed78                sli_power_manager_is_high_freq_accuracy_clk_used
  .text.update_delta_list
-                0x0000ed80       0x38 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000ed84       0x38 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
  .text.delta_list_insert_timer
-                0x0000edb8       0x5c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000edbc       0x5c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
  .text.set_comparator_for_next_timer
-                0x0000ee14       0x5c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000ee18       0x5c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
  .text.create_timer
-                0x0000ee70       0x70 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000ee74       0x70 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
  .text.delta_list_remove_timer
-                0x0000eee0       0x38 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000eee4       0x38 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
  .text.sl_sleeptimer_init
-                0x0000ef18       0x74 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000ef18                sl_sleeptimer_init
+                0x0000ef1c       0x74 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000ef1c                sl_sleeptimer_init
  .text.sl_sleeptimer_stop_timer
-                0x0000ef8c       0x50 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000ef8c                sl_sleeptimer_stop_timer
+                0x0000ef90       0x50 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000ef90                sl_sleeptimer_stop_timer
  .text.sl_sleeptimer_is_timer_running
-                0x0000efdc       0x38 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000efdc                sl_sleeptimer_is_timer_running
+                0x0000efe0       0x38 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000efe0                sl_sleeptimer_is_timer_running
  .text.sl_sleeptimer_get_remaining_time_of_first_timer
-                0x0000f014       0x64 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f014                sl_sleeptimer_get_remaining_time_of_first_timer
+                0x0000f018       0x64 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f018                sl_sleeptimer_get_remaining_time_of_first_timer
  .text.sli_sleeptimer_is_power_manager_timer_next_to_expire
-                0x0000f078       0x28 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f078                sli_sleeptimer_is_power_manager_timer_next_to_expire
+                0x0000f07c       0x28 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f07c                sli_sleeptimer_is_power_manager_timer_next_to_expire
  .text.sl_sleeptimer_get_tick_count64
-                0x0000f0a0       0x34 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f0a0                sl_sleeptimer_get_tick_count64
+                0x0000f0a4       0x34 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f0a4                sl_sleeptimer_get_tick_count64
  .text.sl_sleeptimer_get_timer_frequency
-                0x0000f0d4        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f0d4                sl_sleeptimer_get_timer_frequency
+                0x0000f0d8        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f0d8                sl_sleeptimer_get_timer_frequency
  .text.sl_sleeptimer_ms32_to_tick
-                0x0000f0e0       0x3c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f0e0                sl_sleeptimer_ms32_to_tick
+                0x0000f0e4       0x3c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f0e4                sl_sleeptimer_ms32_to_tick
  .text.sl_sleeptimer_start_periodic_timer_ms
-                0x0000f11c       0x78 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f11c                sl_sleeptimer_start_periodic_timer_ms
+                0x0000f120       0x78 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f120                sl_sleeptimer_start_periodic_timer_ms
  .text.sl_sleeptimer_get_max_ms32_conversion
-                0x0000f194        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f194                sl_sleeptimer_get_max_ms32_conversion
+                0x0000f198        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f198                sl_sleeptimer_get_max_ms32_conversion
  .text.sl_sleeptimer_tick_to_ms
-                0x0000f1a0       0x44 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f1a0                sl_sleeptimer_tick_to_ms
+                0x0000f1a4       0x44 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f1a4                sl_sleeptimer_tick_to_ms
  .text.sl_sleeptimer_tick64_to_ms
-                0x0000f1e4       0x68 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f1e4                sl_sleeptimer_tick64_to_ms
+                0x0000f1e8       0x68 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f1e8                sl_sleeptimer_tick64_to_ms
  .text.process_timer_irq
-                0x0000f24c      0x144 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f24c                process_timer_irq
+                0x0000f250      0x144 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f250                process_timer_irq
  .text.sl_sleeptimer_is_power_manager_early_restore_timer_latest_to_expire
-                0x0000f390       0x18 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
-                0x0000f390                sl_sleeptimer_is_power_manager_early_restore_timer_latest_to_expire
+                0x0000f394       0x18 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000f394                sl_sleeptimer_is_power_manager_early_restore_timer_latest_to_expire
  .text.sleeptimer_hal_init_timer
-                0x0000f3a8       0x88 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f3a8                sleeptimer_hal_init_timer
+                0x0000f3ac       0x88 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f3ac                sleeptimer_hal_init_timer
  .text.sleeptimer_hal_get_counter
-                0x0000f430        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f430                sleeptimer_hal_get_counter
+                0x0000f434        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f434                sleeptimer_hal_get_counter
  .text.sleeptimer_hal_set_compare
-                0x0000f43c       0x5c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f43c                sleeptimer_hal_set_compare
+                0x0000f440       0x5c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f440                sleeptimer_hal_set_compare
  .text.sleeptimer_hal_enable_int
-                0x0000f498       0x1c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f498                sleeptimer_hal_enable_int
+                0x0000f49c       0x1c ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f49c                sleeptimer_hal_enable_int
  .text.sleeptimer_hal_disable_int
-                0x0000f4b4       0x30 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f4b4                sleeptimer_hal_disable_int
+                0x0000f4b8       0x30 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f4b8                sleeptimer_hal_disable_int
  .text.sleeptimer_hal_set_int
-                0x0000f4e4       0x10 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f4e4                sleeptimer_hal_set_int
+                0x0000f4e8       0x10 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f4e8                sleeptimer_hal_set_int
  .text.sli_sleeptimer_hal_is_int_status_set
-                0x0000f4f4       0x20 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f4f4                sli_sleeptimer_hal_is_int_status_set
+                0x0000f4f8       0x20 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f4f8                sli_sleeptimer_hal_is_int_status_set
  .text.RTCC_IRQHandler
-                0x0000f514       0x30 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f514                RTCC_IRQHandler
+                0x0000f518       0x30 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f518                RTCC_IRQHandler
  .text.sleeptimer_hal_get_timer_frequency
-                0x0000f544        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f544                sleeptimer_hal_get_timer_frequency
+                0x0000f548        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f548                sleeptimer_hal_get_timer_frequency
  .text.sleeptimer_hal_get_clock_accuracy
-                0x0000f550        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f550                sleeptimer_hal_get_clock_accuracy
+                0x0000f554        0xc ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f554                sleeptimer_hal_get_clock_accuracy
  .text.sli_sleeptimer_set_pm_em_requirement
-                0x0000f55c       0x30 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
-                0x0000f55c                sli_sleeptimer_set_pm_em_requirement
+                0x0000f560       0x30 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+                0x0000f560                sli_sleeptimer_set_pm_em_requirement
  .text.sl_udelay_wait
-                0x0000f58c       0x40 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
-                0x0000f58c                sl_udelay_wait
+                0x0000f590       0x40 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
+                0x0000f590                sl_udelay_wait
  .text.sl_bt_stack_init
-                0x0000f5cc       0x18 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
-                0x0000f5cc                sl_bt_stack_init
+                0x0000f5d0       0x18 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
+                0x0000f5d0                sl_bt_stack_init
  .text.mbedtls_cipher_info_from_type
-                0x0000f5e4       0x18 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
-                0x0000f5e4                mbedtls_cipher_info_from_type
+                0x0000f5e8       0x18 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+                0x0000f5e8                mbedtls_cipher_info_from_type
  .text.mbedtls_cipher_info_from_values
-                0x0000f5fc       0x28 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
-                0x0000f5fc                mbedtls_cipher_info_from_values
+                0x0000f600       0x28 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+                0x0000f600                mbedtls_cipher_info_from_values
  .text.mbedtls_cipher_setup
-                0x0000f624       0x30 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
-                0x0000f624                mbedtls_cipher_setup
+                0x0000f628       0x30 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+                0x0000f628                mbedtls_cipher_setup
  .text.mbedtls_cipher_setkey
-                0x0000f654       0x40 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
-                0x0000f654                mbedtls_cipher_setkey
+                0x0000f658       0x40 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+                0x0000f658                mbedtls_cipher_setkey
  .text.mbedtls_cipher_update
-                0x0000f694       0x88 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
-                0x0000f694                mbedtls_cipher_update
+                0x0000f698       0x88 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+                0x0000f698                mbedtls_cipher_update
  .text.mbedtls_ecdh_compute_shared
-                0x0000f71c       0x54 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
-                0x0000f71c                mbedtls_ecdh_compute_shared
+                0x0000f720       0x54 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
+                0x0000f720                mbedtls_ecdh_compute_shared
  .text.ecp_normalize_jac
-                0x0000f770       0x30 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000f774       0x30 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
  .text.mbedtls_mpi_mul_mod
-                0x0000f7a0       0xa0 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000f7a4       0xa0 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
  .text.mbedtls_ecp_check_pubkey
-                0x0000f840      0x120 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
-                0x0000f840                mbedtls_ecp_check_pubkey
+                0x0000f844      0x120 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000f844                mbedtls_ecp_check_pubkey
  .text.mbedtls_ecp_check_privkey
-                0x0000f960       0x3c ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
-                0x0000f960                mbedtls_ecp_check_privkey
+                0x0000f964       0x3c ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000f964                mbedtls_ecp_check_privkey
  .text.ecp_mul_restartable_internal.isra.0
-                0x0000f99c      0x3d0 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000f9a0      0x3d0 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
  .text.mbedtls_ecp_mul_restartable
-                0x0000fd6c       0x18 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
-                0x0000fd6c                mbedtls_ecp_mul_restartable
+                0x0000fd70       0x18 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000fd70                mbedtls_ecp_mul_restartable
  .text.mbedtls_ecp_gen_privkey
-                0x0000fd84       0x3c ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
-                0x0000fd84                mbedtls_ecp_gen_privkey
+                0x0000fd88       0x3c ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+                0x0000fd88                mbedtls_ecp_gen_privkey
  .text.mbedtls_ecp_group_load
-                0x0000fdc0       0x8c ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
-                0x0000fdc0                mbedtls_ecp_group_load
+                0x0000fdc4       0x8c ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
+                0x0000fdc4                mbedtls_ecp_group_load
  .text.mbedtls_entropy_init
-                0x0000fe4c       0x34 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
-                0x0000fe4c                mbedtls_entropy_init
+                0x0000fe50       0x34 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
+                0x0000fe50                mbedtls_entropy_init
  .text.mbedtls_md_info_from_type
-                0x0000fe80       0x18 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0000fe80                mbedtls_md_info_from_type
+                0x0000fe84       0x18 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x0000fe84                mbedtls_md_info_from_type
  .text.mbedtls_md_setup
-                0x0000fe98       0x74 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0000fe98                mbedtls_md_setup
+                0x0000fe9c       0x74 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x0000fe9c                mbedtls_md_setup
  .text.mbedtls_md_starts
-                0x0000ff0c       0x30 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0000ff0c                mbedtls_md_starts
+                0x0000ff10       0x30 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x0000ff10                mbedtls_md_starts
  .text.mbedtls_md_update
-                0x0000ff3c       0x28 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0000ff3c                mbedtls_md_update
+                0x0000ff40       0x28 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x0000ff40                mbedtls_md_update
  .text.mbedtls_md_finish
-                0x0000ff64       0x28 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0000ff64                mbedtls_md_finish
+                0x0000ff68       0x28 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x0000ff68                mbedtls_md_finish
  .text.mbedtls_md_hmac_starts
-                0x0000ff8c       0xc0 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0000ff8c                mbedtls_md_hmac_starts
+                0x0000ff90       0xc0 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x0000ff90                mbedtls_md_hmac_starts
  .text.mbedtls_md_hmac_update
-                0x0001004c       0x20 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0001004c                mbedtls_md_hmac_update
+                0x00010050       0x20 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x00010050                mbedtls_md_hmac_update
  .text.mbedtls_md_hmac_finish
-                0x0001006c       0x54 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
-                0x0001006c                mbedtls_md_hmac_finish
+                0x00010070       0x54 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+                0x00010070                mbedtls_md_hmac_finish
  .text.mbedtls_platform_zeroize
-                0x000100c0       0x14 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
-                0x000100c0                mbedtls_platform_zeroize
+                0x000100c4       0x14 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
+                0x000100c4                mbedtls_platform_zeroize
  .text.lpn_is_active
-                0x000100d4        0xc ./src/BLE_mesh.o
-                0x000100d4                lpn_is_active
+                0x000100d8        0xc ./src/BLE_mesh.o
+                0x000100d8                lpn_is_active
  .text.BTMESH_init
-                0x000100e0       0x34 ./src/BLE_mesh.o
-                0x000100e0                BTMESH_init
+                0x000100e4       0x34 ./src/BLE_mesh.o
+                0x000100e4                BTMESH_init
  .text.handle_ble_event
-                0x00010114      0x138 ./src/BLE_mesh.o
-                0x00010114                handle_ble_event
+                0x00010118      0x138 ./src/BLE_mesh.o
+                0x00010118                handle_ble_event
  .text.publish_car_health
-                0x0001024c       0xc0 ./src/BLE_mesh.o
-                0x0001024c                publish_car_health
+                0x00010250       0xc0 ./src/BLE_mesh.o
+                0x00010250                publish_car_health
  .text.sl_btmesh_on_event
-                0x0001030c      0x720 ./src/BLE_mesh.o
-                0x0001030c                sl_btmesh_on_event
+                0x00010310      0x71c ./src/BLE_mesh.o
+                0x00010310                sl_btmesh_on_event
  .text.MMA8452Q_init
                 0x00010a2c      0x1d4 ./src/MMA8452.o
                 0x00010a2c                MMA8452Q_init
@@ -32422,119 +32422,119 @@ LOAD linker stubs
  .comment       0x00000049       0x4a C:/Users/athar/SimplicityStudio/SDKs/gecko_sdk_3//protocol/bluetooth/lib/EFR32XG13/GCC/libbluetooth.a(sl_bt_class_scanner.c.obj)
 
 .debug_info     0x00000000    0x90750
- .debug_info    0x00000000     0x2f05 ./app.o
- .debug_info    0x00002f05      0x10b ./main.o
- .debug_info    0x00003010      0x506 ./autogen/gatt_db.o
- .debug_info    0x00003516     0x2c50 ./autogen/sl_bluetooth.o
- .debug_info    0x00006166       0xa3 ./autogen/sl_board_default_init.o
- .debug_info    0x00006209     0x6a05 ./autogen/sl_btmesh.o
- .debug_info    0x0000cc0e      0x2ef ./autogen/sl_btmesh_dcd.o
- .debug_info    0x0000cefd      0x8e4 ./autogen/sl_device_init_clocks.o
- .debug_info    0x0000d7e1      0x72f ./autogen/sl_event_handler.o
- .debug_info    0x0000df10      0x529 ./autogen/sl_i2cspm_init.o
- .debug_info    0x0000e439     0x15d3 ./autogen/sl_iostream_init_usart_instances.o
- .debug_info    0x0000fa0c      0x22a ./autogen/sl_power_manager_handler.o
- .debug_info    0x0000fc36    0x1a1b8 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
- .debug_info    0x00029dee     0x7f94 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
- .debug_info    0x00031d82      0xa9c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
- .debug_info    0x0003281e      0x946 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
- .debug_info    0x00033164      0x5d8 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
- .debug_info    0x0003373c      0xa7c ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
- .debug_info    0x000341b8      0x4b4 ./gecko_sdk_4.3.2/hardware/board/src/sl_board_control_gpio.o
- .debug_info    0x0003466c      0x2a8 ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
- .debug_info    0x00034914      0x541 ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_info    0x00034e55      0xb9d ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
- .debug_info    0x000359f2     0x1297 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
- .debug_info    0x00036c89      0x1a4 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
- .debug_info    0x00036e2d      0xe6a ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_info    0x00037c97      0x4f8 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
- .debug_info    0x0003818f      0xa87 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
- .debug_info    0x00038c16     0x133d ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
- .debug_info    0x00039f53      0x24b ./gecko_sdk_4.3.2/platform/bootloader/app_properties/app_properties.o
- .debug_info    0x0003a19e      0x312 ./gecko_sdk_4.3.2/platform/common/src/sl_slist.o
- .debug_info    0x0003a4b0      0x205 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
- .debug_info    0x0003a6b5      0xf30 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
- .debug_info    0x0003b5e5      0xc09 ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
- .debug_info    0x0003c1ee     0x19c1 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
- .debug_info    0x0003dbaf      0x642 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
- .debug_info    0x0003e1f1      0x920 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
- .debug_info    0x0003eb11      0x3f8 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
- .debug_info    0x0003ef09     0x4038 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .debug_info    0x00042f41     0x1024 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
- .debug_info    0x00043f65     0x39d3 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
- .debug_info    0x00047938     0x35e7 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
- .debug_info    0x0004af1f      0xf2e ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
- .debug_info    0x0004be4d      0xe1e ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
- .debug_info    0x0004cc6b     0x15d9 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
- .debug_info    0x0004e244      0x788 ./gecko_sdk_4.3.2/platform/emlib/src/em_letimer.o
- .debug_info    0x0004e9cc      0xe27 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
- .debug_info    0x0004f7f3      0xcee ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
- .debug_info    0x000504e1      0xbeb ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
- .debug_info    0x000510cc     0x1328 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
- .debug_info    0x000523f4      0x9d8 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
- .debug_info    0x00052dcc      0x1c5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_narrow_6x8.o
- .debug_info    0x00052f91      0x1c5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_normal_8x8.o
- .debug_info    0x00053156      0xd90 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
- .debug_info    0x00053ee6      0xa86 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_line.o
- .debug_info    0x0005496c      0x62a ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_polygon.o
- .debug_info    0x00054f96      0x602 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_rectangle.o
- .debug_info    0x00055598      0x97c ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_string.o
- .debug_info    0x00055f14      0xde5 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
- .debug_info    0x00056cf9      0x380 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
- .debug_info    0x00057079       0xb2 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.o
- .debug_info    0x0005712b      0x243 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
- .debug_info    0x0005736e      0xac3 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
- .debug_info    0x00057e31     0x276e ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
- .debug_info    0x0005a59f     0x10cb ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
- .debug_info    0x0005b66a      0x7b8 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
- .debug_info    0x0005be22      0x382 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_entropy_hardware.o
- .debug_info    0x0005c1a4       0x8d ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_mbedtls.o
- .debug_info    0x0005c231     0x1225 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
- .debug_info    0x0005d456      0xd42 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
- .debug_info    0x0005e198     0x1039 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
- .debug_info    0x0005f1d1     0x170d ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
- .debug_info    0x000608de      0xd0c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
- .debug_info    0x000615ea      0x1c2 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_psa_trng.o
- .debug_info    0x000617ac      0x26f ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_info    0x00061a1b      0x1df ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_info    0x00061bfa      0x8bb ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_info    0x000624b5      0x1b0 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_info    0x00062665      0x5f1 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_info    0x00062c56      0x5f8 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
- .debug_info    0x0006324e      0x584 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_retarget_stdio.o
- .debug_info    0x000637d2      0x895 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
- .debug_info    0x00064067     0x1bf0 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
- .debug_info    0x00065c57     0x1933 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
- .debug_info    0x0006758a      0xa86 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
- .debug_info    0x00068010     0x1551 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
- .debug_info    0x00069561      0x106 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_debug.o
- .debug_info    0x00069667     0x100e ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
- .debug_info    0x0006a675     0x1a06 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
- .debug_info    0x0006c07b     0x1a54 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
- .debug_info    0x0006dacf       0xba ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_init.o
- .debug_info    0x0006db89       0xa3 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_process_action.o
- .debug_info    0x0006dc2c      0x136 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
- .debug_info    0x0006dd62       0x26 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
- .debug_info    0x0006dd88      0x165 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_mbedtls_context.o
- .debug_info    0x0006deed      0x97b ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
- .debug_info    0x0006e868       0xc0 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_advertiser_config.o
- .debug_info    0x0006e928       0xe7 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_connection_config.o
- .debug_info    0x0006ea0f       0xb9 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_dynamic_gattdb_config.o
- .debug_info    0x0006eac8      0x337 ./gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
- .debug_info    0x0006edff     0x4526 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/bignum.o
- .debug_info    0x00073325     0x1a23 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ccm.o
- .debug_info    0x00074d48     0x1577 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
- .debug_info    0x000762bf      0xc6d ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher_wrap.o
- .debug_info    0x00076f2c      0x8ae ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/constant_time.o
- .debug_info    0x000777da      0xf71 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ctr_drbg.o
- .debug_info    0x0007874b     0x17de ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
- .debug_info    0x00079f29     0x4736 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
- .debug_info    0x0007e65f      0x748 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
- .debug_info    0x0007eda7      0xaaf ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
- .debug_info    0x0007f856      0xe70 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
- .debug_info    0x000806c6      0x11a ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
- .debug_info    0x000807e0      0x2ba ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/sha256.o
- .debug_info    0x00080a9a     0xa495 ./src/BLE_mesh.o
+ .debug_info    0x00000000     0x2f1c ./app.o
+ .debug_info    0x00002f1c      0x10b ./main.o
+ .debug_info    0x00003027      0x506 ./autogen/gatt_db.o
+ .debug_info    0x0000352d     0x2c50 ./autogen/sl_bluetooth.o
+ .debug_info    0x0000617d       0xa3 ./autogen/sl_board_default_init.o
+ .debug_info    0x00006220     0x6a05 ./autogen/sl_btmesh.o
+ .debug_info    0x0000cc25      0x2ef ./autogen/sl_btmesh_dcd.o
+ .debug_info    0x0000cf14      0x8e4 ./autogen/sl_device_init_clocks.o
+ .debug_info    0x0000d7f8      0x72f ./autogen/sl_event_handler.o
+ .debug_info    0x0000df27      0x529 ./autogen/sl_i2cspm_init.o
+ .debug_info    0x0000e450     0x15d3 ./autogen/sl_iostream_init_usart_instances.o
+ .debug_info    0x0000fa23      0x22a ./autogen/sl_power_manager_handler.o
+ .debug_info    0x0000fc4d    0x1a1b8 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+ .debug_info    0x00029e05     0x7f94 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+ .debug_info    0x00031d99      0xa9c ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+ .debug_info    0x00032835      0x946 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
+ .debug_info    0x0003317b      0x5d8 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+ .debug_info    0x00033753      0xa7c ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+ .debug_info    0x000341cf      0x4b4 ./gecko_sdk_4.3.2/hardware/board/src/sl_board_control_gpio.o
+ .debug_info    0x00034683      0x2a8 ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
+ .debug_info    0x0003492b      0x541 ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_info    0x00034e6c      0xb9d ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
+ .debug_info    0x00035a09     0x1297 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+ .debug_info    0x00036ca0      0x1a4 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
+ .debug_info    0x00036e44      0xe6a ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_info    0x00037cae      0x4f8 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
+ .debug_info    0x000381a6      0xa87 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+ .debug_info    0x00038c2d     0x133d ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
+ .debug_info    0x00039f6a      0x24b ./gecko_sdk_4.3.2/platform/bootloader/app_properties/app_properties.o
+ .debug_info    0x0003a1b5      0x312 ./gecko_sdk_4.3.2/platform/common/src/sl_slist.o
+ .debug_info    0x0003a4c7      0x205 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_info    0x0003a6cc      0xf30 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
+ .debug_info    0x0003b5fc      0xc09 ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
+ .debug_info    0x0003c205     0x19c1 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+ .debug_info    0x0003dbc6      0x642 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+ .debug_info    0x0003e208      0x920 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+ .debug_info    0x0003eb28      0x3f8 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
+ .debug_info    0x0003ef20     0x4038 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_info    0x00042f58     0x1024 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_info    0x00043f7c     0x39d3 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_info    0x0004794f     0x35e7 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+ .debug_info    0x0004af36      0xf2e ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_info    0x0004be64      0xe1e ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+ .debug_info    0x0004cc82     0x15d9 ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+ .debug_info    0x0004e25b      0x788 ./gecko_sdk_4.3.2/platform/emlib/src/em_letimer.o
+ .debug_info    0x0004e9e3      0xe27 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_info    0x0004f80a      0xcee ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
+ .debug_info    0x000504f8      0xbeb ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_info    0x000510e3     0x1328 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
+ .debug_info    0x0005240b      0x9d8 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+ .debug_info    0x00052de3      0x1c5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_narrow_6x8.o
+ .debug_info    0x00052fa8      0x1c5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_normal_8x8.o
+ .debug_info    0x0005316d      0xd90 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
+ .debug_info    0x00053efd      0xa86 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_line.o
+ .debug_info    0x00054983      0x62a ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_polygon.o
+ .debug_info    0x00054fad      0x602 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_rectangle.o
+ .debug_info    0x000555af      0x97c ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_string.o
+ .debug_info    0x00055f2b      0xde5 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+ .debug_info    0x00056d10      0x380 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+ .debug_info    0x00057090       0xb2 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.o
+ .debug_info    0x00057142      0x243 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
+ .debug_info    0x00057385      0xac3 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_info    0x00057e48     0x276e ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+ .debug_info    0x0005a5b6     0x10cb ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+ .debug_info    0x0005b681      0x7b8 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+ .debug_info    0x0005be39      0x382 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_entropy_hardware.o
+ .debug_info    0x0005c1bb       0x8d ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_mbedtls.o
+ .debug_info    0x0005c248     0x1225 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
+ .debug_info    0x0005d46d      0xd42 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_info    0x0005e1af     0x1039 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+ .debug_info    0x0005f1e8     0x170d ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+ .debug_info    0x000608f5      0xd0c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
+ .debug_info    0x00061601      0x1c2 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_psa_trng.o
+ .debug_info    0x000617c3      0x26f ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_info    0x00061a32      0x1df ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_info    0x00061c11      0x8bb ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_info    0x000624cc      0x1b0 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_info    0x0006267c      0x5f1 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_info    0x00062c6d      0x5f8 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
+ .debug_info    0x00063265      0x584 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_retarget_stdio.o
+ .debug_info    0x000637e9      0x895 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
+ .debug_info    0x0006407e     0x1bf0 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+ .debug_info    0x00065c6e     0x1933 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
+ .debug_info    0x000675a1      0xa86 ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+ .debug_info    0x00068027     0x1551 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+ .debug_info    0x00069578      0x106 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_debug.o
+ .debug_info    0x0006967e     0x100e ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+ .debug_info    0x0006a68c     0x1a06 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+ .debug_info    0x0006c092     0x1a54 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+ .debug_info    0x0006dae6       0xba ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_init.o
+ .debug_info    0x0006dba0       0xa3 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_process_action.o
+ .debug_info    0x0006dc43      0x136 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
+ .debug_info    0x0006dd79       0x26 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+ .debug_info    0x0006dd9f      0x165 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_mbedtls_context.o
+ .debug_info    0x0006df04      0x97b ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
+ .debug_info    0x0006e87f       0xc0 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_advertiser_config.o
+ .debug_info    0x0006e93f       0xe7 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_connection_config.o
+ .debug_info    0x0006ea26       0xb9 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_dynamic_gattdb_config.o
+ .debug_info    0x0006eadf      0x337 ./gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
+ .debug_info    0x0006ee16     0x4526 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/bignum.o
+ .debug_info    0x0007333c     0x1a23 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ccm.o
+ .debug_info    0x00074d5f     0x1577 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+ .debug_info    0x000762d6      0xc6d ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher_wrap.o
+ .debug_info    0x00076f43      0x8ae ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/constant_time.o
+ .debug_info    0x000777f1      0xf71 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ctr_drbg.o
+ .debug_info    0x00078762     0x17de ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
+ .debug_info    0x00079f40     0x4736 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+ .debug_info    0x0007e676      0x748 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
+ .debug_info    0x0007edbe      0xaaf ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
+ .debug_info    0x0007f86d      0xe70 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+ .debug_info    0x000806dd      0x11a ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
+ .debug_info    0x000807f7      0x2ba ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/sha256.o
+ .debug_info    0x00080ab1     0xa47e ./src/BLE_mesh.o
  .debug_info    0x0008af2f      0x7ff ./src/MMA8452.o
  .debug_info    0x0008b72e      0xf2b ./src/gpio.o
  .debug_info    0x0008c659      0xc72 ./src/i2c.o
@@ -33136,357 +33136,357 @@ LOAD linker stubs
  .debug_ranges  0x000060b0       0x48 ./src/scheduler.o
  .debug_ranges  0x000060f8       0x50 ./src/timers.o
 
-.debug_line     0x00000000    0x3817d
- .debug_line    0x00000000      0x5ce ./app.o
- .debug_line    0x000005ce      0x153 ./main.o
- .debug_line    0x00000721      0x187 ./autogen/gatt_db.o
- .debug_line    0x000008a8      0x44b ./autogen/sl_bluetooth.o
- .debug_line    0x00000cf3       0xb1 ./autogen/sl_board_default_init.o
- .debug_line    0x00000da4      0x387 ./autogen/sl_btmesh.o
- .debug_line    0x0000112b      0x211 ./autogen/sl_btmesh_dcd.o
- .debug_line    0x0000133c      0x299 ./autogen/sl_device_init_clocks.o
- .debug_line    0x000015d5      0xb8f ./autogen/sl_event_handler.o
- .debug_line    0x00002164      0x283 ./autogen/sl_i2cspm_init.o
- .debug_line    0x000023e7      0x5fe ./autogen/sl_iostream_init_usart_instances.o
- .debug_line    0x000029e5      0x33b ./autogen/sl_power_manager_handler.o
- .debug_line    0x00002d20     0x4fb8 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
- .debug_line    0x00007cd8     0x1102 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
- .debug_line    0x00008dda      0x81b ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
- .debug_line    0x000095f5      0x8e2 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
- .debug_line    0x00009ed7      0x5bf ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
- .debug_line    0x0000a496      0x62a ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
- .debug_line    0x0000aac0      0x373 ./gecko_sdk_4.3.2/hardware/board/src/sl_board_control_gpio.o
- .debug_line    0x0000ae33      0x16c ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
- .debug_line    0x0000af9f      0x4f3 ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_line    0x0000b492      0x564 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
- .debug_line    0x0000b9f6      0x753 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
- .debug_line    0x0000c149      0x229 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
- .debug_line    0x0000c372      0x44e ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_line    0x0000c7c0      0x353 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
- .debug_line    0x0000cb13      0x407 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
- .debug_line    0x0000cf1a      0x85b ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
- .debug_line    0x0000d775      0x1bf ./gecko_sdk_4.3.2/platform/bootloader/app_properties/app_properties.o
- .debug_line    0x0000d934      0x28e ./gecko_sdk_4.3.2/platform/common/src/sl_slist.o
- .debug_line    0x0000dbc2      0x2bb ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
- .debug_line    0x0000de7d      0x584 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
- .debug_line    0x0000e401      0x53d ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
- .debug_line    0x0000e93e      0xac9 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
- .debug_line    0x0000f407      0x2f0 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
- .debug_line    0x0000f6f7      0x550 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
- .debug_line    0x0000fc47      0x32b ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
- .debug_line    0x0000ff72     0x2415 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .debug_line    0x00012387      0x953 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
- .debug_line    0x00012cda     0x16ec ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
- .debug_line    0x000143c6     0x1986 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
- .debug_line    0x00015d4c      0x655 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
- .debug_line    0x000163a1      0x9f5 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
- .debug_line    0x00016d96      0x68c ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
- .debug_line    0x00017422      0x58c ./gecko_sdk_4.3.2/platform/emlib/src/em_letimer.o
- .debug_line    0x000179ae      0x87a ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
- .debug_line    0x00018228      0x4c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
- .debug_line    0x000186f0      0x44b ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
- .debug_line    0x00018b3b      0xa23 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
- .debug_line    0x0001955e      0xa80 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
- .debug_line    0x00019fde      0x1b5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_narrow_6x8.o
- .debug_line    0x0001a193      0x1b5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_normal_8x8.o
- .debug_line    0x0001a348      0x613 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
- .debug_line    0x0001a95b      0x60d ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_line.o
- .debug_line    0x0001af68      0x547 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_polygon.o
- .debug_line    0x0001b4af      0x44a ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_rectangle.o
- .debug_line    0x0001b8f9      0x610 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_string.o
- .debug_line    0x0001bf09      0x8a8 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
- .debug_line    0x0001c7b1      0x210 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
- .debug_line    0x0001c9c1       0xff ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.o
- .debug_line    0x0001cac0      0x2cd ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
- .debug_line    0x0001cd8d      0x5d9 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
- .debug_line    0x0001d366     0x1430 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
- .debug_line    0x0001e796      0x925 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
- .debug_line    0x0001f0bb      0x565 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
- .debug_line    0x0001f620      0x3b1 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_entropy_hardware.o
- .debug_line    0x0001f9d1       0x8b ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_mbedtls.o
- .debug_line    0x0001fa5c      0xb26 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
- .debug_line    0x00020582      0x39d ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
- .debug_line    0x0002091f      0x9e2 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
- .debug_line    0x00021301      0xbae ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
- .debug_line    0x00021eaf      0x7ed ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
- .debug_line    0x0002269c      0x344 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_psa_trng.o
- .debug_line    0x000229e0      0x225 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_line    0x00022c05      0x240 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_line    0x00022e45      0x2f9 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_line    0x0002313e      0x236 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_line    0x00023374      0x312 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_line    0x00023686      0x569 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
- .debug_line    0x00023bef      0x401 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_retarget_stdio.o
- .debug_line    0x00023ff0      0x1fc ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
- .debug_line    0x000241ec      0xe88 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
- .debug_line    0x00025074      0x912 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
- .debug_line    0x00025986      0x72a ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
- .debug_line    0x000260b0      0xd11 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
- .debug_line    0x00026dc1       0xf7 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_debug.o
- .debug_line    0x00026eb8      0x6dc ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
- .debug_line    0x00027594     0x10e4 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
- .debug_line    0x00028678      0x90a ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
- .debug_line    0x00028f82       0xe9 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_init.o
- .debug_line    0x0002906b       0xf2 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_process_action.o
- .debug_line    0x0002915d      0x21e ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
- .debug_line    0x0002937b       0x78 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
- .debug_line    0x000293f3      0x19f ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_mbedtls_context.o
- .debug_line    0x00029592      0x311 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
- .debug_line    0x000298a3      0x1be ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_advertiser_config.o
- .debug_line    0x00029a61      0x1be ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_connection_config.o
- .debug_line    0x00029c1f      0x1bb ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_dynamic_gattdb_config.o
- .debug_line    0x00029dda      0x373 ./gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
- .debug_line    0x0002a14d     0x36ee ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/bignum.o
- .debug_line    0x0002d83b      0xacb ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ccm.o
- .debug_line    0x0002e306      0xba1 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
- .debug_line    0x0002eea7      0x377 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher_wrap.o
- .debug_line    0x0002f21e      0x881 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/constant_time.o
- .debug_line    0x0002fa9f      0x9be ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ctr_drbg.o
- .debug_line    0x0003045d      0x827 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
- .debug_line    0x00030c84     0x1a8b ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
- .debug_line    0x0003270f      0x330 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
- .debug_line    0x00032a3f      0x7d4 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
- .debug_line    0x00033213      0x9b8 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
- .debug_line    0x00033bcb      0x10a ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
- .debug_line    0x00033cd5      0x3f8 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/sha256.o
- .debug_line    0x000340cd      0xf60 ./src/BLE_mesh.o
- .debug_line    0x0003502d      0x544 ./src/MMA8452.o
- .debug_line    0x00035571      0x52b ./src/gpio.o
- .debug_line    0x00035a9c      0x5fd ./src/i2c.o
- .debug_line    0x00036099      0x5ab ./src/irq.o
- .debug_line    0x00036644      0x834 ./src/lcd.o
- .debug_line    0x00036e78      0x351 ./src/log.o
- .debug_line    0x000371c9      0x19d ./src/oscillators.o
- .debug_line    0x00037366      0x73c ./src/scheduler.o
- .debug_line    0x00037aa2      0x6db ./src/timers.o
+.debug_line     0x00000000    0x38170
+ .debug_line    0x00000000      0x5cf ./app.o
+ .debug_line    0x000005cf      0x153 ./main.o
+ .debug_line    0x00000722      0x187 ./autogen/gatt_db.o
+ .debug_line    0x000008a9      0x44b ./autogen/sl_bluetooth.o
+ .debug_line    0x00000cf4       0xb1 ./autogen/sl_board_default_init.o
+ .debug_line    0x00000da5      0x387 ./autogen/sl_btmesh.o
+ .debug_line    0x0000112c      0x211 ./autogen/sl_btmesh_dcd.o
+ .debug_line    0x0000133d      0x299 ./autogen/sl_device_init_clocks.o
+ .debug_line    0x000015d6      0xb8f ./autogen/sl_event_handler.o
+ .debug_line    0x00002165      0x283 ./autogen/sl_i2cspm_init.o
+ .debug_line    0x000023e8      0x5fe ./autogen/sl_iostream_init_usart_instances.o
+ .debug_line    0x000029e6      0x33b ./autogen/sl_power_manager_handler.o
+ .debug_line    0x00002d21     0x4fb8 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+ .debug_line    0x00007cd9     0x1102 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+ .debug_line    0x00008ddb      0x81b ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+ .debug_line    0x000095f6      0x8e2 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
+ .debug_line    0x00009ed8      0x5bf ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+ .debug_line    0x0000a497      0x62a ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+ .debug_line    0x0000aac1      0x373 ./gecko_sdk_4.3.2/hardware/board/src/sl_board_control_gpio.o
+ .debug_line    0x0000ae34      0x16c ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
+ .debug_line    0x0000afa0      0x4f3 ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_line    0x0000b493      0x564 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
+ .debug_line    0x0000b9f7      0x753 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+ .debug_line    0x0000c14a      0x229 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
+ .debug_line    0x0000c373      0x44e ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_line    0x0000c7c1      0x353 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
+ .debug_line    0x0000cb14      0x407 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+ .debug_line    0x0000cf1b      0x85b ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
+ .debug_line    0x0000d776      0x1bf ./gecko_sdk_4.3.2/platform/bootloader/app_properties/app_properties.o
+ .debug_line    0x0000d935      0x28e ./gecko_sdk_4.3.2/platform/common/src/sl_slist.o
+ .debug_line    0x0000dbc3      0x2bb ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_line    0x0000de7e      0x584 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
+ .debug_line    0x0000e402      0x53d ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
+ .debug_line    0x0000e93f      0xac9 ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+ .debug_line    0x0000f408      0x2f0 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+ .debug_line    0x0000f6f8      0x550 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+ .debug_line    0x0000fc48      0x32b ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
+ .debug_line    0x0000ff73     0x2415 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_line    0x00012388      0x953 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_line    0x00012cdb     0x16ec ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_line    0x000143c7     0x1986 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+ .debug_line    0x00015d4d      0x655 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_line    0x000163a2      0x9f5 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+ .debug_line    0x00016d97      0x68c ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+ .debug_line    0x00017423      0x58c ./gecko_sdk_4.3.2/platform/emlib/src/em_letimer.o
+ .debug_line    0x000179af      0x87a ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_line    0x00018229      0x4c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
+ .debug_line    0x000186f1      0x44b ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_line    0x00018b3c      0xa23 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
+ .debug_line    0x0001955f      0xa80 ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+ .debug_line    0x00019fdf      0x1b5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_narrow_6x8.o
+ .debug_line    0x0001a194      0x1b5 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_normal_8x8.o
+ .debug_line    0x0001a349      0x613 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
+ .debug_line    0x0001a95c      0x60d ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_line.o
+ .debug_line    0x0001af69      0x547 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_polygon.o
+ .debug_line    0x0001b4b0      0x44a ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_rectangle.o
+ .debug_line    0x0001b8fa      0x610 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_string.o
+ .debug_line    0x0001bf0a      0x8a8 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+ .debug_line    0x0001c7b2      0x210 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+ .debug_line    0x0001c9c2       0xff ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.o
+ .debug_line    0x0001cac1      0x2cd ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
+ .debug_line    0x0001cd8e      0x5d9 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_line    0x0001d367     0x1430 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+ .debug_line    0x0001e797      0x925 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+ .debug_line    0x0001f0bc      0x565 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+ .debug_line    0x0001f621      0x3b1 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_entropy_hardware.o
+ .debug_line    0x0001f9d2       0x8b ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_mbedtls.o
+ .debug_line    0x0001fa5d      0xb26 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
+ .debug_line    0x00020583      0x39d ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_line    0x00020920      0x9e2 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+ .debug_line    0x00021302      0xbae ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+ .debug_line    0x00021eb0      0x7ed ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
+ .debug_line    0x0002269d      0x344 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_psa_trng.o
+ .debug_line    0x000229e1      0x225 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_line    0x00022c06      0x240 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_line    0x00022e46      0x2f9 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_line    0x0002313f      0x236 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_line    0x00023375      0x312 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_line    0x00023687      0x569 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
+ .debug_line    0x00023bf0      0x401 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_retarget_stdio.o
+ .debug_line    0x00023ff1      0x1fc ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
+ .debug_line    0x000241ed      0xe88 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+ .debug_line    0x00025075      0x912 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
+ .debug_line    0x00025987      0x72a ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+ .debug_line    0x000260b1      0xd11 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+ .debug_line    0x00026dc2       0xf7 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_debug.o
+ .debug_line    0x00026eb9      0x6dc ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+ .debug_line    0x00027595     0x10e4 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+ .debug_line    0x00028679      0x90a ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+ .debug_line    0x00028f83       0xe9 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_init.o
+ .debug_line    0x0002906c       0xf2 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_process_action.o
+ .debug_line    0x0002915e      0x21e ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
+ .debug_line    0x0002937c       0x78 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+ .debug_line    0x000293f4      0x19f ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_mbedtls_context.o
+ .debug_line    0x00029593      0x311 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
+ .debug_line    0x000298a4      0x1be ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_advertiser_config.o
+ .debug_line    0x00029a62      0x1be ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_connection_config.o
+ .debug_line    0x00029c20      0x1bb ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_dynamic_gattdb_config.o
+ .debug_line    0x00029ddb      0x373 ./gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
+ .debug_line    0x0002a14e     0x36ee ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/bignum.o
+ .debug_line    0x0002d83c      0xacb ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ccm.o
+ .debug_line    0x0002e307      0xba1 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+ .debug_line    0x0002eea8      0x377 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher_wrap.o
+ .debug_line    0x0002f21f      0x881 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/constant_time.o
+ .debug_line    0x0002faa0      0x9be ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ctr_drbg.o
+ .debug_line    0x0003045e      0x827 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
+ .debug_line    0x00030c85     0x1a8b ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+ .debug_line    0x00032710      0x330 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
+ .debug_line    0x00032a40      0x7d4 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
+ .debug_line    0x00033214      0x9b8 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+ .debug_line    0x00033bcc      0x10a ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
+ .debug_line    0x00033cd6      0x3f8 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/sha256.o
+ .debug_line    0x000340ce      0xf52 ./src/BLE_mesh.o
+ .debug_line    0x00035020      0x544 ./src/MMA8452.o
+ .debug_line    0x00035564      0x52b ./src/gpio.o
+ .debug_line    0x00035a8f      0x5fd ./src/i2c.o
+ .debug_line    0x0003608c      0x5ab ./src/irq.o
+ .debug_line    0x00036637      0x834 ./src/lcd.o
+ .debug_line    0x00036e6b      0x351 ./src/log.o
+ .debug_line    0x000371bc      0x19d ./src/oscillators.o
+ .debug_line    0x00037359      0x73c ./src/scheduler.o
+ .debug_line    0x00037a95      0x6db ./src/timers.o
 
 .debug_str      0x00000000    0x1e940
- .debug_str     0x00000000     0x2b40 ./app.o
-                               0x2d4b (size before relaxing)
- .debug_str     0x00002b40       0x4e ./main.o
+ .debug_str     0x00000000     0x2b4e ./app.o
+                               0x2d59 (size before relaxing)
+ .debug_str     0x00002b4e       0x4e ./main.o
                                 0x244 (size before relaxing)
- .debug_str     0x00002b8e      0x36e ./autogen/gatt_db.o
+ .debug_str     0x00002b9c      0x36e ./autogen/gatt_db.o
                                 0x5b2 (size before relaxing)
- .debug_str     0x00002efc      0x11e ./autogen/sl_bluetooth.o
+ .debug_str     0x00002f0a      0x11e ./autogen/sl_bluetooth.o
                                0x2c1e (size before relaxing)
- .debug_str     0x0000301a       0x4f ./autogen/sl_board_default_init.o
+ .debug_str     0x00003028       0x4f ./autogen/sl_board_default_init.o
                                 0x224 (size before relaxing)
- .debug_str     0x00003069     0x816b ./autogen/sl_btmesh.o
+ .debug_str     0x00003077     0x816b ./autogen/sl_btmesh.o
                                0x8649 (size before relaxing)
- .debug_str     0x0000b1d4      0x2a9 ./autogen/sl_btmesh_dcd.o
+ .debug_str     0x0000b1e2      0x2a9 ./autogen/sl_btmesh_dcd.o
                                 0x4c4 (size before relaxing)
- .debug_str     0x0000b47d      0x64d ./autogen/sl_device_init_clocks.o
+ .debug_str     0x0000b48b      0x64d ./autogen/sl_device_init_clocks.o
                                 0x89f (size before relaxing)
- .debug_str     0x0000baca      0x3e1 ./autogen/sl_event_handler.o
+ .debug_str     0x0000bad8      0x3e1 ./autogen/sl_event_handler.o
                                 0x690 (size before relaxing)
- .debug_str     0x0000beab      0x1bf ./autogen/sl_i2cspm_init.o
+ .debug_str     0x0000beb9      0x1bf ./autogen/sl_i2cspm_init.o
                                 0x6a9 (size before relaxing)
- .debug_str     0x0000c06a     0x129c ./autogen/sl_iostream_init_usart_instances.o
+ .debug_str     0x0000c078     0x129c ./autogen/sl_iostream_init_usart_instances.o
                                0x1be4 (size before relaxing)
- .debug_str     0x0000d306      0x114 ./autogen/sl_power_manager_handler.o
+ .debug_str     0x0000d314      0x114 ./autogen/sl_power_manager_handler.o
                                 0x3f4 (size before relaxing)
- .debug_str     0x0000d41a       0xa1 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
+ .debug_str     0x0000d428       0xa1 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_event_log/sl_btmesh_event_log.o
                                0xa9e1 (size before relaxing)
- .debug_str     0x0000d4bb      0x667 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
+ .debug_str     0x0000d4c9      0x667 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_lpn/sl_btmesh_lpn.o
                                0x8b88 (size before relaxing)
- .debug_str     0x0000db22      0x34f ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
+ .debug_str     0x0000db30      0x34f ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_graphics.o
                                 0x6c1 (size before relaxing)
- .debug_str     0x0000de71      0x188 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
+ .debug_str     0x0000de7f      0x188 ./gecko_sdk_4.3.2/app/btmesh/common/btmesh_wstk_lcd/sl_btmesh_wstk_lcd.o
                                 0x505 (size before relaxing)
- .debug_str     0x0000dff9      0x1d9 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
+ .debug_str     0x0000e007      0x1d9 ./gecko_sdk_4.3.2/app/common/util/app_log/app_log.o
                                 0x530 (size before relaxing)
- .debug_str     0x0000e1d2      0x251 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
+ .debug_str     0x0000e1e0      0x251 ./gecko_sdk_4.3.2/app/common/util/app_timer/app_timer.o
                                 0x6f5 (size before relaxing)
- .debug_str     0x0000e423      0x41b ./gecko_sdk_4.3.2/hardware/board/src/sl_board_control_gpio.o
+ .debug_str     0x0000e431      0x41b ./gecko_sdk_4.3.2/hardware/board/src/sl_board_control_gpio.o
                                 0x6a7 (size before relaxing)
- .debug_str     0x0000e83e       0x4d ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
+ .debug_str     0x0000e84c       0x4d ./gecko_sdk_4.3.2/hardware/board/src/sl_board_init.o
                                 0x503 (size before relaxing)
- .debug_str     0x0000e88b      0x33a ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_str     0x0000e899      0x33a ./gecko_sdk_4.3.2/hardware/driver/configuration_over_swo/src/sl_cos.o
                                 0x5bf (size before relaxing)
- .debug_str     0x0000ebc5      0x1f5 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
+ .debug_str     0x0000ebd3      0x1f5 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/memlcd_usart/sl_memlcd_spi.o
                                 0xb37 (size before relaxing)
- .debug_str     0x0000edba      0x25a ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
+ .debug_str     0x0000edc8      0x25a ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd.o
                                 0xcaf (size before relaxing)
- .debug_str     0x0000f014       0x58 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
+ .debug_str     0x0000f022       0x58 ./gecko_sdk_4.3.2/hardware/driver/memlcd/src/sl_memlcd_display.o
                                 0x2d1 (size before relaxing)
- .debug_str     0x0000f06c       0x9e ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_str     0x0000f07a       0x9e ./gecko_sdk_4.3.2/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
                                 0xba2 (size before relaxing)
- .debug_str     0x0000f10a      0x237 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
+ .debug_str     0x0000f118      0x237 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/startup_efr32bg13p.o
                                 0x459 (size before relaxing)
- .debug_str     0x0000f341      0x18e ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
+ .debug_str     0x0000f34f      0x18e ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG13P/Source/system_efr32bg13p.o
                                 0x6ef (size before relaxing)
- .debug_str     0x0000f4cf      0x660 ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
+ .debug_str     0x0000f4dd      0x660 ./gecko_sdk_4.3.2/platform/bootloader/api/btl_interface.o
                                 0xa5f (size before relaxing)
- .debug_str     0x0000fb2f       0x47 ./gecko_sdk_4.3.2/platform/bootloader/app_properties/app_properties.o
+ .debug_str     0x0000fb3d       0x47 ./gecko_sdk_4.3.2/platform/bootloader/app_properties/app_properties.o
                                 0x34e (size before relaxing)
- .debug_str     0x0000fb76       0xdc ./gecko_sdk_4.3.2/platform/common/src/sl_slist.o
+ .debug_str     0x0000fb84       0xdc ./gecko_sdk_4.3.2/platform/common/src/sl_slist.o
                                 0x2e4 (size before relaxing)
- .debug_str     0x0000fc52       0xd2 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_str     0x0000fc60       0xd2 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
                                 0x2d7 (size before relaxing)
- .debug_str     0x0000fd24      0x243 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
+ .debug_str     0x0000fd32      0x243 ./gecko_sdk_4.3.2/platform/driver/debug/src/sl_debug_swo.o
                                 0xb2c (size before relaxing)
- .debug_str     0x0000ff67      0x16d ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
+ .debug_str     0x0000ff75      0x16d ./gecko_sdk_4.3.2/platform/driver/i2cspm/src/sl_i2cspm.o
                                 0xa98 (size before relaxing)
- .debug_str     0x000100d4      0x9da ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
+ .debug_str     0x000100e2      0x9da ./gecko_sdk_4.3.2/platform/emdrv/dmadrv/src/dmadrv.o
                                 0xd53 (size before relaxing)
- .debug_str     0x00010aae      0x382 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+ .debug_str     0x00010abc      0x382 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
                                 0x5f2 (size before relaxing)
- .debug_str     0x00010e30      0x1d8 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+ .debug_str     0x00010e3e      0x1d8 ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_hal_flash.o
                                 0x5ed (size before relaxing)
- .debug_str     0x00011008      0x20b ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
+ .debug_str     0x00011016      0x20b ./gecko_sdk_4.3.2/platform/emdrv/nvm3/src/nvm3_lock.o
                                 0x463 (size before relaxing)
- .debug_str     0x00011213     0x1262 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_str     0x00011221     0x1262 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
                                0x1d64 (size before relaxing)
- .debug_str     0x00012475      0x2f5 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_str     0x00012483      0x2f5 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
                                 0x908 (size before relaxing)
- .debug_str     0x0001276a      0x918 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_str     0x00012778      0x918 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
                                 0xc59 (size before relaxing)
- .debug_str     0x00013082      0xfd5 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
+ .debug_str     0x00013090      0xfd5 ./gecko_sdk_4.3.2/platform/emlib/src/em_emu.o
                                0x200b (size before relaxing)
- .debug_str     0x00014057      0x14e ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_str     0x00014065      0x14e ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
                                 0x853 (size before relaxing)
- .debug_str     0x000141a5      0x1c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
+ .debug_str     0x000141b3      0x1c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_i2c.o
                                 0x91f (size before relaxing)
- .debug_str     0x0001436d       0x6e ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
+ .debug_str     0x0001437b       0x6e ./gecko_sdk_4.3.2/platform/emlib/src/em_ldma.o
                                 0xda2 (size before relaxing)
- .debug_str     0x000143db      0x25c ./gecko_sdk_4.3.2/platform/emlib/src/em_letimer.o
+ .debug_str     0x000143e9      0x25c ./gecko_sdk_4.3.2/platform/emlib/src/em_letimer.o
                                 0x4d1 (size before relaxing)
- .debug_str     0x00014637      0x159 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_str     0x00014645      0x159 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
                                 0x708 (size before relaxing)
- .debug_str     0x00014790      0x518 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
+ .debug_str     0x0001479e      0x518 ./gecko_sdk_4.3.2/platform/emlib/src/em_rtcc.o
                                 0xa7c (size before relaxing)
- .debug_str     0x00014ca8      0x838 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_str     0x00014cb6      0x838 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
                                 0xe9d (size before relaxing)
- .debug_str     0x000154e0      0x3a8 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
+ .debug_str     0x000154ee      0x3a8 ./gecko_sdk_4.3.2/platform/emlib/src/em_usart.o
                                 0xdb2 (size before relaxing)
- .debug_str     0x00015888      0x23d ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
+ .debug_str     0x00015896      0x23d ./gecko_sdk_4.3.2/platform/middleware/glib/dmd/display/dmd_memlcd.o
                                 0x5a5 (size before relaxing)
- .debug_str     0x00015ac5       0x62 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_narrow_6x8.o
+ .debug_str     0x00015ad3       0x62 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_narrow_6x8.o
                                 0x349 (size before relaxing)
- .debug_str     0x00015b27       0x75 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_normal_8x8.o
+ .debug_str     0x00015b35       0x75 ./gecko_sdk_4.3.2/platform/middleware/glib/fonts/glib_font_normal_8x8.o
                                 0x349 (size before relaxing)
- .debug_str     0x00015b9c      0x186 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
+ .debug_str     0x00015baa      0x186 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib.o
                                 0x640 (size before relaxing)
- .debug_str     0x00015d22       0xce ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_line.o
+ .debug_str     0x00015d30       0xce ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_line.o
                                 0x56b (size before relaxing)
- .debug_str     0x00015df0      0x10d ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_polygon.o
+ .debug_str     0x00015dfe      0x10d ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_polygon.o
                                 0x559 (size before relaxing)
- .debug_str     0x00015efd       0x84 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_rectangle.o
+ .debug_str     0x00015f0b       0x84 ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_rectangle.o
                                 0x548 (size before relaxing)
- .debug_str     0x00015f81      0x12c ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_string.o
+ .debug_str     0x00015f8f      0x12c ./gecko_sdk_4.3.2/platform/middleware/glib/glib/glib_string.o
                                 0x5ba (size before relaxing)
- .debug_str     0x000160ad      0x98b ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+ .debug_str     0x000160bb      0x98b ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
                                 0xc58 (size before relaxing)
- .debug_str     0x00016a38       0xf6 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+ .debug_str     0x00016a46       0xf6 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
                                 0x586 (size before relaxing)
- .debug_str     0x00016b2e       0x87 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.o
+ .debug_str     0x00016b3c       0x87 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_power_manager_init/sl_rail_util_power_manager_init.o
                                 0x287 (size before relaxing)
- .debug_str     0x00016bb5       0xe6 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
+ .debug_str     0x00016bc3       0xe6 ./gecko_sdk_4.3.2/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
                                 0x3d8 (size before relaxing)
- .debug_str     0x00016c9b      0x146 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_str     0x00016ca9      0x146 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
                                 0x610 (size before relaxing)
- .debug_str     0x00016de1      0x577 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
+ .debug_str     0x00016def      0x577 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_ecp.o
                                 0xcd2 (size before relaxing)
- .debug_str     0x00017358     0x10b9 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
+ .debug_str     0x00017366     0x10b9 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_cmac.o
                                0x137a (size before relaxing)
- .debug_str     0x00018411      0x297 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
+ .debug_str     0x0001841f      0x297 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/mbedtls_sha.o
                                 0x509 (size before relaxing)
- .debug_str     0x000186a8       0xec ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_entropy_hardware.o
+ .debug_str     0x000186b6       0xec ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_entropy_hardware.o
                                 0x384 (size before relaxing)
- .debug_str     0x00018794       0x56 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_mbedtls.o
+ .debug_str     0x000187a2       0x56 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/sl_mbedtls.o
                                 0x240 (size before relaxing)
- .debug_str     0x000187ea      0x230 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
+ .debug_str     0x000187f8      0x230 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_protocol_crypto/src/sli_protocol_crypto_crypto.o
                                 0x71d (size before relaxing)
- .debug_str     0x00018a1a       0xd3 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_str     0x00018a28       0xd3 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
                                 0x7b7 (size before relaxing)
- .debug_str     0x00018aed      0x1be ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+ .debug_str     0x00018afb      0x1be ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
                                 0x830 (size before relaxing)
- .debug_str     0x00018cab      0x242 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+ .debug_str     0x00018cb9      0x242 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
                                 0xad0 (size before relaxing)
- .debug_str     0x00018eed      0x1b5 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
+ .debug_str     0x00018efb      0x1b5 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_crypto_trng_driver.o
                                 0x9ca (size before relaxing)
- .debug_str     0x000190a2       0xaa ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_psa_trng.o
+ .debug_str     0x000190b0       0xaa ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/sli_psa_trng.o
                                 0x31f (size before relaxing)
- .debug_str     0x0001914c       0x4d ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_str     0x0001915a       0x4d ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_dcdc_s1.o
                                 0x48b (size before relaxing)
- .debug_str     0x00019199       0x55 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_str     0x000191a7       0x55 ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_emu_s1.o
                                 0x3ac (size before relaxing)
- .debug_str     0x000191ee       0x4d ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_str     0x000191fc       0x4d ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_hfxo_s1.o
                                 0x7e2 (size before relaxing)
- .debug_str     0x0001923b       0x4d ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_str     0x00019249       0x4d ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_lfxo_s1.o
                                 0x32f (size before relaxing)
- .debug_str     0x00019288       0x4a ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_str     0x00019296       0x4a ./gecko_sdk_4.3.2/platform/service/device_init/src/sl_device_init_nvic.o
                                 0x60d (size before relaxing)
- .debug_str     0x000192d2      0x119 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
+ .debug_str     0x000192e0      0x119 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream.o
                                 0x3fb (size before relaxing)
- .debug_str     0x000193eb      0x158 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_retarget_stdio.o
+ .debug_str     0x000193f9      0x158 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_retarget_stdio.o
                                 0x408 (size before relaxing)
- .debug_str     0x00019543      0x345 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
+ .debug_str     0x00019551      0x345 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_stdlib_config.o
                                 0x5b5 (size before relaxing)
- .debug_str     0x00019888      0x222 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
+ .debug_str     0x00019896      0x222 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_uart.o
                                 0xd86 (size before relaxing)
- .debug_str     0x00019aaa       0xf0 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
+ .debug_str     0x00019ab8       0xf0 ./gecko_sdk_4.3.2/platform/service/iostream/src/sl_iostream_usart.o
                                0x13c7 (size before relaxing)
- .debug_str     0x00019b9a      0x1fc ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
+ .debug_str     0x00019ba8      0x1fc ./gecko_sdk_4.3.2/platform/service/mpu/src/sl_mpu.o
                                 0x514 (size before relaxing)
- .debug_str     0x00019d96      0x9b2 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
+ .debug_str     0x00019da4      0x9b2 ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager.o
                                0x10e2 (size before relaxing)
- .debug_str     0x0001a748       0x7a ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_debug.o
+ .debug_str     0x0001a756       0x7a ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_debug.o
                                 0x2de (size before relaxing)
- .debug_str     0x0001a7c2      0x1cf ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
+ .debug_str     0x0001a7d0      0x1cf ./gecko_sdk_4.3.2/platform/service/power_manager/src/sl_power_manager_hal_s0_s1.o
                                 0xe95 (size before relaxing)
- .debug_str     0x0001a991      0x526 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
+ .debug_str     0x0001a99f      0x526 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer.o
                                 0xc44 (size before relaxing)
- .debug_str     0x0001aeb7      0x188 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+ .debug_str     0x0001aec5      0x188 ./gecko_sdk_4.3.2/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
                                0x1483 (size before relaxing)
- .debug_str     0x0001b03f       0x40 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_init.o
+ .debug_str     0x0001b04d       0x40 ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_init.o
                                 0x1f3 (size before relaxing)
- .debug_str     0x0001b07f       0x4a ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_process_action.o
+ .debug_str     0x0001b08d       0x4a ./gecko_sdk_4.3.2/platform/service/system/src/sl_system_process_action.o
                                 0x220 (size before relaxing)
- .debug_str     0x0001b0c9       0x63 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
+ .debug_str     0x0001b0d7       0x63 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay.o
                                 0x275 (size before relaxing)
- .debug_str     0x0001b12c       0x54 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+ .debug_str     0x0001b13a       0x54 ./gecko_sdk_4.3.2/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
                                  0xc3 (size before relaxing)
- .debug_str     0x0001b180      0x162 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_mbedtls_context.o
+ .debug_str     0x0001b18e      0x162 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_mbedtls_context.o
                                 0x349 (size before relaxing)
- .debug_str     0x0001b2e2      0x647 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
+ .debug_str     0x0001b2f0      0x647 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sl_bt_stack_init.o
                                 0xb13 (size before relaxing)
- .debug_str     0x0001b929       0x70 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_advertiser_config.o
+ .debug_str     0x0001b937       0x70 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_advertiser_config.o
                                 0x27d (size before relaxing)
- .debug_str     0x0001b999       0x70 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_connection_config.o
+ .debug_str     0x0001b9a7       0x70 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_connection_config.o
                                 0x29a (size before relaxing)
- .debug_str     0x0001ba09       0x60 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_dynamic_gattdb_config.o
+ .debug_str     0x0001ba17       0x60 ./gecko_sdk_4.3.2/protocol/bluetooth/src/sli_bt_dynamic_gattdb_config.o
                                 0x274 (size before relaxing)
- .debug_str     0x0001ba69       0x5c ./gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
+ .debug_str     0x0001ba77       0x5c ./gecko_sdk_4.3.2/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
                                 0x2cc (size before relaxing)
- .debug_str     0x0001bac5      0x56b ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/bignum.o
+ .debug_str     0x0001bad3      0x56b ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/bignum.o
                                 0x8d1 (size before relaxing)
- .debug_str     0x0001c030      0x38f ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ccm.o
+ .debug_str     0x0001c03e      0x38f ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ccm.o
                                0x1242 (size before relaxing)
- .debug_str     0x0001c3bf      0x299 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
+ .debug_str     0x0001c3cd      0x299 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher.o
                                0x1390 (size before relaxing)
- .debug_str     0x0001c658      0x191 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher_wrap.o
+ .debug_str     0x0001c666      0x191 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/cipher_wrap.o
                                0x122e (size before relaxing)
- .debug_str     0x0001c7e9      0x12e ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/constant_time.o
+ .debug_str     0x0001c7f7      0x12e ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/constant_time.o
                                 0x3ef (size before relaxing)
- .debug_str     0x0001c917      0x249 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ctr_drbg.o
+ .debug_str     0x0001c925      0x249 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ctr_drbg.o
                                 0x566 (size before relaxing)
- .debug_str     0x0001cb60      0x51b ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
+ .debug_str     0x0001cb6e      0x51b ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecdh.o
                                 0x9c1 (size before relaxing)
- .debug_str     0x0001d07b      0x51f ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
+ .debug_str     0x0001d089      0x51f ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp.o
                                 0xe54 (size before relaxing)
- .debug_str     0x0001d59a       0xb7 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
+ .debug_str     0x0001d5a8       0xb7 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/ecp_curves.o
                                 0x4f2 (size before relaxing)
- .debug_str     0x0001d651      0x1c1 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
+ .debug_str     0x0001d65f      0x1c1 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/entropy.o
                                 0x515 (size before relaxing)
- .debug_str     0x0001d812      0x325 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
+ .debug_str     0x0001d820      0x325 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/md.o
                                 0x6c9 (size before relaxing)
- .debug_str     0x0001db37       0x50 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
+ .debug_str     0x0001db45       0x50 ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/platform_util.o
                                 0x24a (size before relaxing)
- .debug_str     0x0001db87       0x3d ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/sha256.o
+ .debug_str     0x0001db95       0x3d ./gecko_sdk_4.3.2/util/third_party/mbedtls/library/sha256.o
                                 0x33a (size before relaxing)
- .debug_str     0x0001dbc4      0x4b5 ./src/BLE_mesh.o
-                               0xafbb (size before relaxing)
+ .debug_str     0x0001dbd2      0x4a7 ./src/BLE_mesh.o
+                               0xafad (size before relaxing)
  .debug_str     0x0001e079      0x265 ./src/MMA8452.o
                                 0x569 (size before relaxing)
  .debug_str     0x0001e2de      0x170 ./src/gpio.o

@@ -40,7 +40,8 @@ void schedulerSetEvent_LE_UF()
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();        // Enter critical section
   // Accessing LE_event
-  APP_event |= LETIMER0_UF;  // Set LETIMER0 UF event flag
+//  APP_event |= LETIMER0_UF;  // Set LETIMER0 UF event flag
+  sl_bt_external_signal(LETIMER0_UF);
   LETIMER0_current_time += LETIMER_PERIOD_MS;
   CORE_EXIT_CRITICAL();         // Exit critical section
 }
@@ -53,7 +54,8 @@ void schedulerSetEvent_LE_COMP1()
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();        // Enter critical section
   // Accessing LE_event
-  APP_event |= LETIMER0_COMP1;  // Set LETIMER0 COMP1 event flag
+//  APP_event |= LETIMER0_COMP1;  // Set LETIMER0 COMP1 event flag
+  sl_bt_external_signal(LETIMER0_COMP1);
   CORE_EXIT_CRITICAL();         // Exit critical section
 }
 
@@ -65,7 +67,8 @@ void schedulerSetEvent_I2C_Transfer_Complete()
   CORE_DECLARE_IRQ_STATE;
   CORE_ENTER_CRITICAL();        // Enter critical section
   // Accessing LE_event
-  APP_event |= I2C_TRANSFER_COMPLETE;  // Set I2C_TRANSFER_COMPLETE_FLAG
+//  APP_event |= I2C_TRANSFER_COMPLETE;  // Set I2C_TRANSFER_COMPLETE_FLAG
+  sl_bt_external_signal(I2C_TRANSFER_COMPLETE);
   CORE_EXIT_CRITICAL();         // Exit critical section
 }
 
@@ -85,7 +88,8 @@ void schedulerSetEvent_VCNL4040_INT()
       lap_time_ms = curr_car_pass_time_ms - prev_car_pass_time_ms;
       prev_car_pass_time_ms = curr_car_pass_time_ms;
   }
-  APP_event |= VCNL4040_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
+//  APP_event |= VCNL4040_INT;  // Set I2C_TRANSFER_COMPLETE_FLAG
+  sl_bt_external_signal(VCNL4040_INT);
   CORE_EXIT_CRITICAL();         // Exit critical section
 }
 
